@@ -4,5 +4,7 @@ Virtualbox habe ich vorinstalliert.
 danach habe ich die Tests in der Anleitung gettestet und alles hat funktioniert
 Ich habe Vargrant von der Seite installiert und getestet.
 ich konnte eine Linux-VM erstellen sowie den Apache server
+Nach der Vagrant installation habe ich mein Terminal so eingestellt das er mir alle Befehle Logged.
+und eine Script geschrieben welches mir meine Daten auf github hochladet.
 
 
