@@ -10,7 +10,7 @@ VM_USER = 'test'
 # Username on your Mac
 MAC_USER = 'jasonnguy'
 # Host folder to sync
-HOST_PATH = '/Users/' + MAC_USER + '/VirtualBox VMs' + VM_NAME
+HOST_PATH = '/Users/' + MAC_USER + `/VirtualBox VMs`
 # Where to sync to on Guest — 'vagrant' is the default user name
 GUEST_PATH = '/home/' + VM_USER + '/' + VM_NAME
 # # VM Port — uncomment this to use NAT instead of DHCP

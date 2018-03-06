@@ -9,7 +9,7 @@ Ich habe Vargrant von der Seite installiert und getestet.
 ich konnte eine Linux-VM erstellen sowie den Apache server, mittel Vagrant
 Nach der Vagrant installation habe ich mein Terminal so eingestellt das er mir alle Befehle Logged.
 und eine Script geschrieben welches mir meine Daten auf github hochladet.
-Siehe Log_27_02_18.txt
+für alle Commands Siehe Log_27_02_18.txt
 
 # 06.03.18
 Aktuell mache ich eine Liste mit Markdown shortcuts da dies von Vroteil ist und dabei lerne ich selber noch ein wenig die Markdown Shortcuts.
