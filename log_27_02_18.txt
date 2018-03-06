@@ -1,0 +1,144 @@
+Script started on Tue Feb 27 15:48:18 2018
+[?1034hbash-3.2$ cd
+bash-3.2$ pwd
+/Users/jasonnguy
+bash-3.2$ cd devops/
+bash-3.2$ cd
+bash-3.2$ cd Potatoe/
+bash-3.2$ sus[K[K[Knano upload.sh
+[?1049h[1;24r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.0.6              File: upload.sh                                   [22;35H[ New File ][23d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[24d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[1;71H(B[0;7mModified[3d(B[mgit status[17G[11G[4dgit add Doku[22d[K[4;13H    menttat   at  ation/[5dgit push[5;17H[5;9H[6dgit commit -m ""D"o"k"u"m"e"n"t"a"t"i"o"n""[7dgit push -u orgi  igin master[22d(B[0;7mFile Name to Write: upload.sh                                                   [23;14H(B[m       (B[0;7m^T(B[m To Files         (B[0;7mM-M(B[m Mac Format      (B[0;7mM-P(B[m Prepend[K[24;2H(B[0;7mC(B[m Cancel           (B[0;7mM-D(B[m DOS Format      (B[0;7mM-A(B[m Append          (B[0;7mM-B(B[m Backup File[K[22;30H[1;71H[39;49m(B[0;7m        [22;31H(B[m[1K (B[0;7m[ Wrote 5 lines ](B[m[K[23;14H(B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[24;2H(B[0;7mX(B[m Exit      (B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[7;26H[22;14H(B[0;7m[ line 5/6 (83%), col 26/26 (100%), char 98/99 (98%) ][7;26H(B[m[23d[J[24;80H[24;1H[?1049l[?1l>bash-3.2$ chmod 755 upload.sh 
+bash-3.2$ chmod 755 upload.sh [C[C[C[C[C[C[C[C[C[C[6Pnano upload.sh[C[C[C[C[C[C[C[C[C[Cchmod 755 upload.sh [C[C[C[C[C[C[C[C[C[C[K./upload.sh 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mDokumentation/[m
+	[31mupload.sh[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+Username for 'https://github.com': Potat     GoodPotatoe
+Password for 'https://GoodPotatoe@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/GoodPotatoe/Potatoe/'
+[master aeecfa2] Dokumentation
+ 1 file changed, 8 insertions(+)
+ create mode 100644 Dokumentation/Doku installation
+Username for 'https://github.com': GoodPotatoe
+Password for 'https://GoodPotatoe@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 552 bytes | 552.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/GoodPotatoe/Potatoe
+   38209f1..aeecfa2  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+bash-3.2$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mupload.sh[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$ git status./upload.sh [C[C[C[C[C[C[C[C[C[C[8@chmod 755 [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8P./[C[C[C[C[C[C[C[C[C[C
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Dokumentation/Doku installation[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mupload.sh[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Everything up-to-date
+[master 3c48d51] Dokumentation
+ 1 file changed, 2 insertions(+)
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 512 bytes | 512.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/GoodPotatoe/Potatoe
+   aeecfa2..3c48d51  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+bash-3.2$ cd[K[Kcd devops
+bash: cd: devops: No such file or directory
+bash-3.2$ pwd
+/Users/jasonnguy/Potatoe
+bash-3.2$ cd
+bash-3.2$ cd c[Kdevops/
+bash-3.2$ ls
+LICENSE		docker		openshift	vagrant
+README.md	kubernetes	services
+bash-3.2$ cd vagrant/
+bash-3.2$ ls
+README.md	fwrp		lam		rest		tests
+awi		iot		ldap		script		user
+db		iotsrv		mmdb		ssh		web
+bash-3.2$ ls -la
+total 8
+drwxr-xr-x  17 jasonnguy  staff  544 27 Feb 13:41 .
+drwxr-xr-x  13 jasonnguy  staff  416 27 Feb 14:06 ..
+-rw-r--r--   1 jasonnguy  staff  834 27 Feb 13:41 README.md
+drwxr-xr-x   6 jasonnguy  staff  192 27 Feb 13:41 awi
+drwxr-xr-x   5 jasonnguy  staff  160 27 Feb 13:41 db
+drwxr-xr-x  13 jasonnguy  staff  416 27 Feb 13:41 fwrp
+drwxr-xr-x   8 jasonnguy  staff  256 27 Feb 13:41 iot
+drwxr-xr-x  11 jasonnguy  staff  352 27 Feb 13:41 iotsrv
+drwxr-xr-x   8 jasonnguy  staff  256 27 Feb 13:41 lam
+drwxr-xr-x   7 jasonnguy  staff  224 27 Feb 13:41 ldap
+drwxr-xr-x   6 jasonnguy  staff  192 27 Feb 13:41 mmdb
+drwxr-xr-x   8 jasonnguy  staff  256 27 Feb 13:41 rest
+drwxr-xr-x   3 jasonnguy  staff   96 27 Feb 13:41 script
+drwxr-xr-x   6 jasonnguy  staff  192 27 Feb 13:41 ssh
+drwxr-xr-x   6 jasonnguy  staff  192 27 Feb 13:41 tests
+drwxr-xr-x   6 jasonnguy  staff  192 27 Feb 13:41 user
+drwxr-xr-x   8 jasonnguy  staff  256 27 Feb 14:02 web
+bash-3.2$ ls -la[Kcd vagrant/ls[Kcd devops/[Kpwdcd devops./upload.sh [C[C[C[C[C[C[C[C[C[C[2Pgit status./upload.sh [C[C[C[C[C[C[C[C[C[C[8@chmod 755 [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pnano upload.sh[C[C[C[C[C[C[C[C[C[Cchmod 755 upload.sh [C[C[C[C[C[C[C[C[C[C[8P./[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pgit status./upload.sh [C[C[C[C[C[C[C[C[C[C[3Pcd devops[6Ppwd[1Pcd devops/ls[Kcd vagrant/ls[K -la[Kpwd
+/Users/jasonnguy/devops/vagrant
+bash-3.2$ cd
+bash-3.2$ cd
+bash-3.2$ pwd
+/Users/jasonnguy
+bash-3.2$ cd Potatoe/
+bash-3.2$ ls
+Dokumentation	README.md	upload.sh
+bash-3.2$ ./i[Kupload.sh 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mDokumentation/Vagrant config/[m
+	[31mupload.sh[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+Everything up-to-date
+[master 803adb8] Dokumentation
+ 1 file changed, 44 insertions(+)
+ create mode 100644 Dokumentation/Vagrant config/Vagrantfile
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
+Writing objects:  20% (1/5)   Writing objects:  40% (2/5)   Writing objects:  60% (3/5)   Writing objects:  80% (4/5)   Writing objects: 100% (5/5)   Writing objects: 100% (5/5), 1.10 KiB | 1.10 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/GoodPotatoe/Potatoe
+   3c48d51..803adb8  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+bash-3.2$ c[Kexit
+exit
+
+Script done on Tue Feb 27 16:23:54 2018
