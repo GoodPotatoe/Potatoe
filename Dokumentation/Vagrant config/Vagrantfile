@@ -16,7 +16,7 @@ GUEST_PATH = '/home/' + VM_USER + '/' + VM_NAME
 # # VM Port — uncomment this to use NAT instead of DHCP
 # VM_PORT = 8080
 Vagrant.configure(2) do |config|
-  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 80, host: 8080, ip:127.0.0.1
 Vagrant.configure(2) do |config|
   # Vagrant box from Hashicorp
   config.vm.box = VAGRANT_BOX

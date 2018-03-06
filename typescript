@@ -1,0 +1,602 @@
+Script started on Tue Mar  6 15:41:59 2018
+[?1034hbash-3.2$ doker[K[K[K[K[Kge[K[Kdoker
+bash: doker: command not found
+bash-3.2$ docker
+
+Usage:	docker COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/Users/jasonnguy/.docker")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default
+                           "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/Users/jasonnguy/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/Users/jasonnguy/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/Users/jasonnguy/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  checkpoint  Manage checkpoints
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images (experimental)
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  deploy      Deploy a new stack or update an existing stack
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+bash-3.2$ docker bi[Kuild
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | - [flags]
+
+Build an image from a Dockerfile
+bash-3.2$ docker build --help
+
+Usage:	docker build [OPTIONS] PATH | URL | -
+
+Build an image from a Dockerfile
+
+Options:
+      --add-host list           Add a custom host-to-IP mapping (host:ip)
+      --build-arg list          Set build-time variables
+      --cache-from strings      Images to consider as cache sources
+      --cgroup-parent string    Optional parent cgroup for the container
+      --compress                Compress the build context using gzip
+      --cpu-period int          Limit the CPU CFS (Completely Fair Scheduler) period
+      --cpu-quota int           Limit the CPU CFS (Completely Fair Scheduler) quota
+  -c, --cpu-shares int          CPU shares (relative weight)
+      --cpuset-cpus string      CPUs in which to allow execution (0-3, 0,1)
+      --cpuset-mems string      MEMs in which to allow execution (0-3, 0,1)
+      --disable-content-trust   Skip image verification (default true)
+  -f, --file string             Name of the Dockerfile (Default is 'PATH/Dockerfile')
+      --force-rm                Always remove intermediate containers
+      --iidfile string          Write the image ID to the file
+      --isolation string        Container isolation technology
+      --label list              Set metadata for an image
+  -m, --memory bytes            Memory limit
+      --memory-swap bytes       Swap limit equal to memory plus swap: '-1' to enable unlimited swap
+      --network string          Set the networking mode for the RUN instructions during build
+                                (default "default")
+      --no-cache                Do not use cache when building the image
+      --platform string         Set platform if server is multi-platform capable
+      --pull                    Always attempt to pull a newer version of the image
+  -q, --quiet                   Suppress the build output and print image ID on success
+      --rm                      Remove intermediate containers after a successful build (default true)
+      --security-opt strings    Security options
+      --shm-size bytes          Size of /dev/shm
+      --squash                  Squash newly built layers into a single new layer
+      --stream                  Stream attaches to server to negotiate build context
+  -t, --tag list                Name and optionally a tag in the 'name:tag' format
+      --target string           Set the target build stage to build.
+      --ulimit ulimit           Ulimit options (default [])
+bash-3.2$ docker search ubuntu
+NAME                                                      DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
+ubuntu                                                    Ubuntu is a Debian-based Linux operating sys…   7339                [OK]                
+dorowu/ubuntu-desktop-lxde-vnc                            Ubuntu with openssh-server and NoVNC            165                                     [OK]
+rastasheep/ubuntu-sshd                                    Dockerized SSH service, built on top of offi…   132                                     [OK]
+ansible/ubuntu14.04-ansible                               Ubuntu 14.04 LTS with ansible                   90                                      [OK]
+ubuntu-upstart                                            Upstart is an event-based replacement for th…   81                  [OK]                
+neurodebian                                               NeuroDebian provides neuroscience research s…   45                  [OK]                
+ubuntu-debootstrap                                        debootstrap --variant=minbase --components=m…   35                  [OK]                
+1and1internet/ubuntu-16-nginx-php-phpmyadmin-mysql-5      ubuntu-16-nginx-php-phpmyadmin-mysql-5          26                                      [OK]
+nuagebec/ubuntu                                           Simple always updated Ubuntu docker images w…   22                                      [OK]
+tutum/ubuntu                                              Simple Ubuntu docker images with SSH access     18                                      
+ppc64le/ubuntu                                            Ubuntu is a Debian-based Linux operating sys…   11                                      
+i386/ubuntu                                               Ubuntu is a Debian-based Linux operating sys…   10                                      
+1and1internet/ubuntu-16-apache-php-7.0                    ubuntu-16-apache-php-7.0                        7                                       [OK]
+1and1internet/ubuntu-16-apache-php-5.6                    ubuntu-16-apache-php-5.6                        6                                       [OK]
+darksheer/ubuntu                                          Base Ubuntu Image -- Updated hourly             3                                       [OK]
+codenvy/ubuntu_jdk8                                       Ubuntu, JDK8, Maven 3, git, curl, nmap, mc, …   3                                       [OK]
+1and1internet/ubuntu-16-nginx-php-phpmyadmin-mariadb-10   ubuntu-16-nginx-php-phpmyadmin-mariadb-10       2                                       [OK]
+1and1internet/ubuntu-16-nginx-php-5.6-wordpress-4         ubuntu-16-nginx-php-5.6-wordpress-4             2                                       [OK]
+1and1internet/ubuntu-16-nginx                             ubuntu-16-nginx                                 2                                       [OK]
+pivotaldata/ubuntu                                        A quick freshening-up of the base Ubuntu doc…   1                                       
+1and1internet/ubuntu-16-healthcheck                       ubuntu-16-healthcheck                           0                                       [OK]
+smartentry/ubuntu                                         ubuntu with smartentry                          0                                       [OK]
+pivotaldata/ubuntu-gpdb-dev                               Ubuntu images for GPDB development              0                                       
+ossobv/ubuntu                                             Custom ubuntu image from scratch (based on o…   0                                       
+1and1internet/ubuntu-16-sshd                              ubuntu-16-sshd                                  0                                       [OK]
+bash-3.2$ docker ppu[K[Kull ubuntu
+Using default tag: latest
+latest: Pulling from library/ubuntu
+
+[1A[1K[K1be7f2b886e8: Pulling fs layer [1B
+[1A[1K[K6fbc4a21b806: Pulling fs layer [1B
+[1A[1K[Kc71a6f8e1378: Pulling fs layer [1B
+[1A[1K[K4be3072e5a37: Pulling fs layer [1B
+[1A[1K[K06c6d2f59700: Pulling fs layer [1B[2A[1K[K4be3072e5a37: Waiting [2B[1A[1K[K06c6d2f59700: Waiting [1B[4A[1K[K6fbc4a21b806: Downloading     846B/846B[4B[4A[1K[K6fbc4a21b806: Verifying Checksum [4B[4A[1K[K6fbc4a21b806: Download complete [4B[3A[1K[Kc71a6f8e1378: Downloading     620B/620B[3B[3A[1K[Kc71a6f8e1378: Verifying Checksum [3B[3A[1K[Kc71a6f8e1378: Download complete [3B[5A[1K[K1be7f2b886e8: Downloading    433kB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  3.037MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  6.991MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  10.07MB/42.86MB[5B[2A[1K[K4be3072e5a37: Downloading     854B/854B[2B[2A[1K[K4be3072e5a37: Verifying Checksum [2B[2A[1K[K4be3072e5a37: Download complete [2B[1A[1K[K06c6d2f59700: Downloading     171B/171B[1B[1A[1K[K06c6d2f59700: Verifying Checksum [1B[1A[1K[K06c6d2f59700: Download complete [1B[5A[1K[K1be7f2b886e8: Downloading  11.83MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  12.71MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  13.59MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  14.03MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  14.47MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading   14.9MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  15.34MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  15.77MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  16.21MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  16.66MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  17.08MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  17.52MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  17.95MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  18.38MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  18.82MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  19.25MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  19.68MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  20.13MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  20.56MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  20.99MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  21.43MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  21.88MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  22.32MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  22.76MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  23.19MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  23.64MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  24.07MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  24.51MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  25.38MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  26.25MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  27.12MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  27.56MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading     28MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  28.44MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  28.88MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  29.32MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  30.21MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  31.08MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  31.96MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  32.83MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  33.71MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  34.57MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  35.45MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  35.89MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  36.33MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  36.76MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  37.19MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  37.63MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  38.07MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  38.51MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  38.94MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  39.38MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  39.82MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  40.24MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  40.68MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  41.11MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  41.54MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  41.97MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  42.41MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Downloading  42.86MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Verifying Checksum [5B[5A[1K[K1be7f2b886e8: Download complete [5B[5A[1K[K1be7f2b886e8: Extracting  458.8kB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  2.753MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  4.129MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  6.881MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  9.175MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  12.39MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  14.22MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  16.52MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  18.81MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting   21.1MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  22.94MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  24.77MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  27.07MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting   28.9MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  30.74MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  33.49MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  35.78MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  37.62MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  39.45MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  41.75MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Extracting  42.86MB/42.86MB[5B[5A[1K[K1be7f2b886e8: Pull complete [5B[4A[1K[K6fbc4a21b806: Extracting     846B/846B[4B[4A[1K[K6fbc4a21b806: Extracting     846B/846B[4B[4A[1K[K6fbc4a21b806: Pull complete [4B[3A[1K[Kc71a6f8e1378: Extracting     620B/620B[3B[3A[1K[Kc71a6f8e1378: Extracting     620B/620B[3B[3A[1K[Kc71a6f8e1378: Pull complete [3B[2A[1K[K4be3072e5a37: Extracting     854B/854B[2B[2A[1K[K4be3072e5a37: Extracting     854B/854B[2B[2A[1K[K4be3072e5a37: Pull complete [2B[1A[1K[K06c6d2f59700: Extracting     171B/171B[1B[1A[1K[K06c6d2f59700: Extracting     171B/171B[1B[1A[1K[K06c6d2f59700: Pull complete [1BDigest: sha256:e27e9d7f7f28d67aa9e2d7540bdc2b33254b452ee8e60f388875e5b7d9b2b696
+Status: Downloaded newer image for ubuntu:latest
+bash-3.2$ pwd
+/Users/jasonnguy/Potatoe
+bash-3.2$ ls
+Dokumentation		README.md		typescript
+Logs			log_27_02_18.txt	upload.sh
+bash-3.2$ D[Kdocker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              0458a4468cbc        5 weeks ago         112MB
+bash-3.2$ rm docker images
+rm: docker: No such file or directory
+rm: images: No such file or directory
+bash-3.2$ rem[K[Km uu[Kbunut[K[Ktu
+rm: ubuntu: No such file or directory
+bash-3.2$ r[Kls
+Dokumentation		README.md		typescript
+Logs			log_27_02_18.txt	upload.sh
+bash-3.2$ cd
+bash-3.2$ cd
+bash-3.2$ pwd
+/Users/jasonnguy
+bash-3.2$ rm ubuntu[K[K[K[K[K[Kdir ubuntu/
+rm: dir: No such file or directory
+rm: ubuntu/: is a directory
+bash-3.2$ rm dir ubuntu/[K[K[K[K[K[K[K[K[K[K[Kubuntu/
+rm: ubuntu/: is a directory
+bash-3.2$ rm ubuntu/ --fpp[K[Korce
+rm: ubuntu/: is a directory
+rm: --force: No such file or directory
+bash-3.2$ ls
+Collect						Music
+Collect 2					Pictures
+Creative Cloud Files				Potatoe
+Desktop						Public
+Documents					VirtualBox VMs
+Downloads					bin
+Dropbox						devops
+Library						ja.nguy@hotmail.com Creative Cloud Files
+Movies						ubuntu
+bash-3.2$ cd ubuntu/
+bash-3.2$ ös
+bash: ös: command not found
+bash-3.2$ ls
+Vagrantfile					ubuntu-xenial-16.04-cloudimg-console.log
+bash-3.2$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              0458a4468cbc        5 weeks ago         112MB
+bash-3.2$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              0458a4468cbc        5 weeks ago         112MB
+bash-3.2$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              0458a4468cbc        5 weeks ago         112MB
+bash-3.2$ doc[K[K[Kcd[K[Kpwd
+/Users/jasonnguy/ubuntu
+bash-3.2$ cd
+bash-3.2$ cd li[K[KLibrary/
+bash-3.2$ cd containers
+bash-3.2$ ls
+com.adobe.accmac.ACCFinderSync
+com.apple..NowPlayingWidgetContainer
+com.apple.AddressBook
+com.apple.AddressBook.ABPersonViewService
+com.apple.AddressBook.ContactsAccountsService
+com.apple.AddressBook.FaceTimeService
+com.apple.AddressBook.MapLauncher
+com.apple.AddressBook.UrlForwarder
+com.apple.AirPlayUIAgent
+com.apple.AmbientDisplayAgent
+com.apple.AuthKitUI.AKFollowUpServerUIExtension
+com.apple.BKAgentService
+com.apple.CalendarAgent
+com.apple.CalendarFileHandler
+com.apple.CalendarNotification.CalNCService
+com.apple.CaptiveNetworkAssistant
+com.apple.Chess
+com.apple.CloudDocs.MobileDocumentsFileProvider
+com.apple.CloudDocsDaemon.StorageManagement
+com.apple.CloudPhotosConfiguration
+com.apple.ContactsAgent
+com.apple.ContactsUI.ContactPickerService
+com.apple.CryptoTokenKit.pivtoken
+com.apple.CryptoTokenKit.setoken
+com.apple.DataDetectors.DataDetectorsActionService
+com.apple.DataDetectorsActionService
+com.apple.DataDetectorsLocalSources
+com.apple.DataDetectorsViewService
+com.apple.Dictionary
+com.apple.FaceTime
+com.apple.FaceTime.FaceTimeNotificationCenterService
+com.apple.Grab
+com.apple.ImageKit.RecentPictureService
+com.apple.IntlTexts.KeyboardServicesHelper
+com.apple.Localization.SetDefaultsService
+com.apple.LookupViewService
+com.apple.MailCacheDelete
+com.apple.MailServiceAgent
+com.apple.Maps
+com.apple.MarkupUI.Markup
+com.apple.MarkupUI.MarkupPhotoExtension
+com.apple.MediaLibraryService
+com.apple.NetworkExtension.IKEv2Provider
+com.apple.Notes
+com.apple.Notes.HTMLConverter
+com.apple.Notes.NotesImporter
+com.apple.Notes.QuickLookExtension
+com.apple.Notes.datastore
+com.apple.OSDUIHelper
+com.apple.Pass-Viewer
+com.apple.PassKit.PaymentAuthorizationUIExtension
+com.apple.PassXPCService
+com.apple.PhotoBooth
+com.apple.PhotoIngestService
+com.apple.PhotoLibraryMigrationUtility
+com.apple.PhotoThemeService
+com.apple.Photos
+com.apple.Photos.StorageManagementExtension
+com.apple.PressAndHold
+com.apple.Preview
+com.apple.QuickTimePlayerX
+com.apple.STMExtension.Applications
+com.apple.STMExtension.GarageBand
+com.apple.STMExtension.Mail
+com.apple.STMExtension.OtherUsers
+com.apple.STMExtension.Trash
+com.apple.STMExtension.iOSFiles
+com.apple.STMFramework.UIHelper
+com.apple.Safari.CacheDeleteExtension
+com.apple.Safari.SafariQuickLookPreview
+com.apple.ScreenSharing
+com.apple.Siri
+com.apple.Siri.SiriTodayExtension
+com.apple.SiriNCService
+com.apple.SocialPushAgent
+com.apple.TelephonyUtilities.IntentHandler
+com.apple.TextEdit
+com.apple.WeatherKitService
+com.apple.accessibility.heard
+com.apple.accessibility.mediaaccessibilityd
+com.apple.appkit.xpc.LegacyExternalColorPickerService
+com.apple.appstore
+com.apple.appstore.PluginXPCService
+com.apple.calculator
+com.apple.cloudphotosd
+com.apple.contacts.donation-agent
+com.apple.coremedia.pluginformatreader
+com.apple.corerecents.recentsd
+com.apple.ctkahp
+com.apple.diagnosticextensions.osx.bluetooth
+com.apple.diagnosticextensions.osx.filevault
+com.apple.diagnosticextensions.osx.getmobilityinfo
+com.apple.diagnosticextensions.osx.installlog
+com.apple.diagnosticextensions.osx.maillogs
+com.apple.diagnosticextensions.osx.safari
+com.apple.diagnosticextensions.osx.spotlight
+com.apple.diagnosticextensions.osx.syslog
+com.apple.diagnosticextensions.osx.systemprofile
+com.apple.diagnosticextensions.osx.timemachine
+com.apple.diagnosticextensions.osx.wifi
+com.apple.geod
+com.apple.grapher
+com.apple.iBooksX
+com.apple.iBooksX-SecureUserDefaults
+com.apple.iBooksX.CacheDelete
+com.apple.iBooksX.DiskSpaceEfficiency
+com.apple.iCal
+com.apple.iCal.CalendarNC
+com.apple.iChat
+com.apple.iTunesCacheExtension
+com.apple.iTunesStorageExtension
+com.apple.languageassetd
+com.apple.lateragent
+com.apple.mail
+com.apple.mediaanalysisd
+com.apple.messages.MapRenderingService
+com.apple.messages.StorageManagementExtension
+com.apple.ncplugin.FindMyFriends
+com.apple.ncplugin.WorldClock
+com.apple.ncplugin.calculator
+com.apple.ncplugin.stocks
+com.apple.ncplugin.weather
+com.apple.osx-tailspin
+com.apple.photoanalysisd
+com.apple.photolibraryd
+com.apple.photomodel
+com.apple.photomoments
+com.apple.photos.ImageConversionService
+com.apple.photos.VideoConversionService
+com.apple.print.PKBrowserService
+com.apple.print.normalizerd
+com.apple.quicklook.QuickLookUIService
+com.apple.quicklook.ui.helper
+com.apple.reminders
+com.apple.reminders.RemindersNC
+com.apple.share.AirDrop.send
+com.apple.share.CloudSharing.invite
+com.apple.share.Facebook.post
+com.apple.share.Facebook.set-profile-image
+com.apple.share.LinkedIn.post
+com.apple.share.LinkedIn.set-profile-image
+com.apple.share.Mail.compose
+com.apple.share.Mail.compose-back-to-sender
+com.apple.share.SinaWeibo.post
+com.apple.share.SocialWidget
+com.apple.share.System.add-to-aperture
+com.apple.share.System.add-to-iphoto
+com.apple.share.System.add-to-safari-reading-list
+com.apple.share.System.set-account-picture
+com.apple.share.System.set-buddy-picture
+com.apple.share.System.set-desktop-image
+com.apple.share.TencentWeibo.post
+com.apple.share.Twitter.post
+com.apple.share.Twitter.set-profile-image
+com.apple.share.Video.upload-Facebook
+com.apple.share.Video.upload-Tudou
+com.apple.share.Video.upload-Vimeo
+com.apple.share.Video.upload-Youku
+com.apple.share.Video.upload-image-Flickr
+com.apple.share.Video.upload-video-Flickr
+com.apple.sharekit.EntitlementsHelper
+com.apple.siri.DeepSyncVerificationService
+com.apple.siri.media-indexer
+com.apple.soagent
+com.apple.stocks
+com.apple.systempreferences.cacheAssistant
+com.apple.tonelibraryd
+com.apple.weather
+com.docker.docker
+com.docker.helper
+com.getdropbox.dropbox.garcon
+com.microsoft.Excel
+com.microsoft.Office365ServiceV2
+com.microsoft.Outlook
+com.microsoft.Powerpoint
+com.microsoft.Word
+com.microsoft.errorreporting
+com.microsoft.onenote.mac
+com.paragon-software.facebook.agent
+com.skype.skype.shareagent
+cx.c3.theunarchiver
+bash-3.2$ cd doc[K[K[K[K[K[Kcd .com[K[K[K[Kcom.docker..[Kdocker/k[K
+bash-3.2$ ls
+Data
+bash-3.2$ cd doa[K[Kta[K[K[KData/
+bash-3.2$ C[KLS
+00000002.00000202		database			s50
+00000002.000005f4		g20				s51
+00000002.00001000		guest.000005f5			s52
+00000003.000005f5		guest.00000948			s53
+00000003.00000948		s20				s60
+com.docker.driver.amd64-linux	s31				task.lock
+connect				s40				tasks
+bash-3.2$ rm com-[K.c[Kdocker.driver.amd64-linux/
+rm: com.docker.driver.amd64-linux/: is a directory
+bash-3.2$ rm com.docker.driver.amd64-linux/ --force
+rm: com.docker.driver.amd64-linux/: is a directory
+rm: --force: No such file or directory
+bash-3.2$ ls
+00000002.00000202		database			s50
+00000002.000005f4		g20				s51
+00000002.00001000		guest.000005f5			s52
+00000003.000005f5		guest.00000948			s53
+00000003.00000948		s20				s60
+com.docker.driver.amd64-linux	s31				task.lock
+connect				s40				tasks
+bash-3.2$ rmdir [4Plsrmdir com.dokc[K[Kcker.driver.amd64-linux/
+rmdir: com.docker.driver.amd64-linux/: Directory not empty
+bash-3.2$ rmdir com.docker.driver.amd64-linux/ --fporce
+rmdir: com.docker.driver.amd64-linux/: Directory not empty
+rmdir: --fporce: No such file or directory
+bash-3.2$ rmdir com.docker.driver.amd64-linux/ --fporce[K[K[K[K[Korce
+rmdir: com.docker.driver.amd64-linux/: Directory not empty
+rmdir: --force: No such file or directory
+bash-3.2$ rmdir com.docker.driver.amd64-linux/ --force[K[K[K[K[K[Kf[Kf
+rmdir: com.docker.driver.amd64-linux/: Directory not empty
+rmdir: -f: No such file or directory
+bash-3.2$ rmdir com.docker.driver.amd64-linux/ -f[K[K[K
+rmdir: com.docker.driver.amd64-linux/: Directory not empty
+bash-3.2$ sudo rmdir .[Kcon[Km.docker.driver.amd64-linux/
+Password:
+rmdir: com.docker.driver.amd64-linux/: Directory not empty
+bash-3.2$ sudo rmdir com.docker.driver.amd64-linux/[C[1P com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ck com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+sudo: rmkdir: command not found
+bash-3.2$ sudo rmkdir com.docker.driver.amd64-linux/[1P[C[C[C[C com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cf com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+rmdir: illegal option -- f
+usage: rmdir [-p] directory ...
+bash-3.2$ sudo rmdir -f com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pkdir[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@dir -f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+rmdir: com.docker.driver.amd64-linux/: Directory not empty
+bash-3.2$ sudo rmdir -p com.docker.driver.amd64-linux/[C[1P com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cf com.docker.driver.amd64-linux/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+rmdir: illegal option -- r
+usage: rmdir [-p] directory ...
+bash-3.2$ sudo rmdir -rf com.docker.driver.amd64-linux/[1P[1P[1P
+bash-3.2$ ls
+00000002.00000202	connect			s20			s52
+00000002.000005f4	database		s31			s53
+00000002.00001000	g20			s40			s60
+00000003.000005f5	guest.000005f5		s50			task.lock
+00000003.00000948	guest.00000948		s51			tasks
+bash-3.2$ cd
+bash-3.2$ cd
+bash-3.2$ cd
+bash-3.2$ dc
+cd
+dc: stack empty
+ls
+dc: register 's' (0163) is empty
+pwd
+dc: stack empty
+dc: 'w' (0167) unimplemented
+dc: stack empty
+exit
+dc: 'e' (0145) unimplemented
+dc: stack empty
+dc: stack empty
+dc: 't' (0164) unimplemented
+dc  exit cd
+dc: 'e' (0145) unimplemented
+dc: stack empty
+dc: stack empty
+dc: 't' (0164) unimplemented
+dc: stack empty
+exit
+dc: 'e' (0145) unimplemented
+dc: stack empty
+dc: stack empty
+dc: 't' (0164) unimplemented
+reset
+dc: stack empty
+dc: 'e' (0145) unimplemented
+dc: stack empty
+dc: 't' (0164) unimplemented
+^C
+bash-3.2$ ls
+Collect						Music
+Collect 2					Pictures
+Creative Cloud Files				Potatoe
+Desktop						Public
+Documents					VirtualBox VMs
+Downloads					bin
+Dropbox						devops
+Library						ja.nguy@hotmail.com Creative Cloud Files
+Movies
+bash-3.2$ pwd
+/Users/jasonnguy
+bash-3.2$ $ docker build -t my-apache2 .
+bash: $: command not found
+bash-3.2$ FROM httpd:2.4
+FROM: can't read /var/mail/httpd:2.4
+bash-3.2$ COPY ./public-html/ /usr/local/apache2/htdocs/
+bash: COPY: command not found
+bash-3.2$ docker FROM httpd:2.4
+docker: 'FROM' is not a docker command.
+See 'docker --help'
+bash-3.2$ dokc[K[Kcker
+
+Usage:	docker COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/Users/jasonnguy/.docker")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default
+                           "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/Users/jasonnguy/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/Users/jasonnguy/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/Users/jasonnguy/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  checkpoint  Manage checkpoints
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images (experimental)
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  deploy      Deploy a new stack or update an existing stack
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+bash-3.2$ dokcer [K[K[K[K[Kcker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              0458a4468cbc        5 weeks ago         112MB
+bash-3.2$ 

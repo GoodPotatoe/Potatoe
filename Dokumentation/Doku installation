@@ -1,4 +1,4 @@
-# installationslog
+# Installationslog
 
 _27_02_18_
 Git habe ich auch mittels der Seite installiert
@@ -15,4 +15,13 @@ für alle Commands Siehe Log_27_02_18.txt
 Aktuell mache ich eine Liste mit Markdown shortcuts da dies von Vroteil ist und dabei lerne ich selber noch ein wenig die Markdown Shortcuts.
 Zusätzlich habe ich noch eine Liste mit Linuxbefehlen erstellt und deis bereits in Markdown dokumentiert
 mit einem Vagrantfile einen Apache Server einrichten
-Siehe vagrantfile für configs
+Siehe vagrantfile für configs  
+Pfade angeben im Vagrantfile nicht nötig, dann wird VM einfach dort kreiert wo sich das Vagrantfile befindet
+
+### Docker
+da ich Vagrant angeshaut habe und mittels vagrant auch eine VM erstellen konnte.
+Möchte mich noch mit Docker ausseinandersetzten
+Docker installieren
+Docker image holen
+File anpassen
+Container erstellen
