@@ -2,7 +2,7 @@
 
 _27_02_18_
 Git habe ich auch mittels der Seite installiert
-inline `codedanach have ich das Repository devops `hinzugefügt.`
+danach have ich das Repository devops hinzugefügt.
 Virtualbox habe ich vorinstalliert.
 danach habe ich die Tests in der Anleitung gettestet und alles hat funktioniert
 Ich habe Vargrant von der Seite installiert und getestet.
@@ -14,5 +14,4 @@ Siehe Log_27_02_18.txt
 # 06.03.18
 Aktuell mache ich eine Liste mit Markdown shortcuts da dies von Vroteil ist und dabei lerne ich selber noch ein wenig die Markdown Shortcuts.
 Zusätzlich habe ich noch eine Liste mit Linuxbefehlen erstellt und deis bereits in Markdown dokumentiert
-Visual studicode it Git synchronisieren
-
+mit einem Vagrantfile einen Apache Server einrichten.
