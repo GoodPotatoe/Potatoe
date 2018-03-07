@@ -25,7 +25,4 @@ Define the default command that will be executed when the container is running.
 This is directive for CMD command to be executed.  
 
 **USER**
-Set the user or UID for the container created with the image.  
-
-**VOLUME**
-Enable access/linked directory between the container and the host machine.
+Set the user or UID for the container created with the image. Enable access/linked directory between the container and the host machine.
