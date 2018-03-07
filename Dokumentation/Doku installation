@@ -22,6 +22,5 @@ Pfade angeben im Vagrantfile nicht nötig, dann wird VM einfach dort kreiert wo 
 da ich Vagrant angeshaut habe und mittels vagrant auch eine VM erstellen konnte.
 Möchte mich noch mit Docker ausseinandersetzten
 Docker installieren
-Docker image holen
-File anpassen
-Container erstellen
+Dockerfile erstellen
+siehe Dockerfile
