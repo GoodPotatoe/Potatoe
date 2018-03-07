@@ -1,6 +1,6 @@
 # Installationslog
 
-_27_02_18_
+## _27_02_18_  
 Git habe ich auch mittels der Seite installiert
 danach have ich das Repository devops hinzugefügt.
 Virtualbox habe ich vorinstalliert.
@@ -11,7 +11,7 @@ Nach der Vagrant installation habe ich mein Terminal so eingestellt das er mir a
 und eine Script geschrieben welches mir meine Daten auf github hochladet.
 für alle Commands Siehe Log_27_02_18.txt
 
-# 06.03.18
+## _06.03.18_  
 Aktuell mache ich eine Liste mit Markdown shortcuts da dies von Vroteil ist und dabei lerne ich selber noch ein wenig die Markdown Shortcuts.
 Zusätzlich habe ich noch eine Liste mit Linuxbefehlen erstellt und deis bereits in Markdown dokumentiert
 mit einem Vagrantfile einen Apache Server einrichten

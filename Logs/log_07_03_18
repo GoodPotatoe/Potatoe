@@ -1,0 +1,94 @@
+Script started on Wed Mar  7 13:35:12 2018
+[?1034hbash-3.2$ dokc[K[Kcker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+bash-3.2$ pwd
+/Users/jasonnguy/Potatoe/Logs
+bash-3.2$ cd
+bash-3.2$ mkdir doc[K[K[K/docker
+mkdir: /docker: Permission denied
+bash-3.2$ sudo bash
+Password:
+[?1034hbash-3.2# exitcitxit./upload.sh [C[C[C[C[C[C[C[C[C[C[8Pexitcitxit[Kmkdir /docker
+bash-3.2# pwd
+/Users/jasonnguy
+bash-3.2# ls
+.CFUserTextEncoding
+.DS_Store
+.Trash
+.bash_history
+.bash_sessions
+.config
+.docker
+.dropbox
+.gitconfig
+.mono
+.oracle_jre_usage
+.ssh
+.vagrant.d
+.vscode
+Collect
+Collect 2
+Creative Cloud Files
+Desktop
+Documents
+Downloads
+Dropbox
+Library
+Movies
+Music
+Pictures
+Potatoe
+Public
+VirtualBox VMs
+bin
+devops
+ja.nguy@hotmail.com Creative Cloud Files
+bash-3.2# cd dock[K[K[K[K/docker/
+bash-3.2# pwd
+/docker
+bash-3.2# cd
+bash-3.2# pwd
+/Users/jasonnguy
+bash-3.2# ls -a
+.
+..
+.CFUserTextEncoding
+.DS_Store
+.Trash
+.bash_history
+.bash_sessions
+.config
+.docker
+.dropbox
+.gitconfig
+.mono
+.oracle_jre_usage
+.ssh
+.vagrant.d
+.vscode
+Collect
+Collect 2
+Creative Cloud Files
+Desktop
+Documents
+Downloads
+Dropbox
+Library
+Movies
+Music
+Pictures
+Potatoe
+Public
+VirtualBox VMs
+bin
+devops
+ja.nguy@hotmail.com Creative Cloud Files
+bash-3.2# rmdir /d[K[K[K[K[K[K docker [K[K[K[K[K[K[K/docker
+rm: /docker: is a directory
+bash-3.2# rm /dockerd /dockeri /dockerr /docker
+bash-3.2# ls[K[Kcd /dev/[K[K[K[K[K[K[K[Kcd Potatoe/
+bash-3.2# mkdir docker
+bash-3.2# cdd[K docker/
+bash-3.2# touch dock[K[K[K[KDockerfile
+bash-3.2# vim dockeri[K[K[K[K[K[K[KDockerfile 
+[?2004h[?1049h[?1h=[?2004h[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"Dockerfile" 0L, 0C[2;1H▽[6n[2;1H  [1;1H[>c]11;?[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[?25l[m[24;1H[1m-- INSERT --[m[24;14H[K[2;1H[K[2;1H[?12l[?25h[?25l[94m~                                                                               [1;1H[?12l[?25h[?25l[mF[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lm[?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25l[1;4H[K[1;4H[?12l[?25h[?25l[1;3H[K[1;3H[?12l[?25h[?25l[1;2H[K[1;2H[?12l[?25h[?25l[7C[?12l[?25h[?25l[8C[?12l[?25h[?25l[1;9H[?12l[?25h[?25lF[?12l[?25h[?25l[1;1H[K[1;1H[?12l[?25h[?25l[24;1H[K[1;1H[?12l[?25h[?25l[24;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[1;1H[?12l[?25h[?25l[24;1H[K[24;1H:[?2004h[?12l[?25h [1;1H[?25l[24;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[1;1H[?12l[?25h[?25l[24;1H[1mrecording @a[m[24;13H[K[1;1H[?12l[?25h
