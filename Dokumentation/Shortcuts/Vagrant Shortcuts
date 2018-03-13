@@ -1,0 +1,6 @@
+# Vagrant   
+vagrant status - Zeigt den aktuellen Status der VM an
+vagrant port - Zeigt die Weitergeleiteten Ports der VM an
+vagrant halt - Stoppt die laufende Virtuelle Maschine
+vagrant destroy - Stoppt die Virtuelle Maschine und zerstört sie.
+Weitere Befehle, vagrant reload, vagrant global-status ...

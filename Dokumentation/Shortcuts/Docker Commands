@@ -7,6 +7,7 @@ The base image for building a new image. This command must be on top of the dock
 Optional, it contains the name of the maintainer of the image.  
 
 **RUN**
+installation
 Used to execute a command during the build process of the docker image.  
 
 **ADD**
@@ -16,6 +17,7 @@ Copy a file from the host machine to the new docker image. There is an option to
 Define an environment variable.  
   
 **CMD**
+befehl ausführen
 Used for executing commands when we build a new container from the docker image.  
 
 **ENTRYPOINT**

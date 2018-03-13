@@ -25,6 +25,10 @@ Docker installieren
 Dockerfile erstellen
 siehe Dockerfile `Docker\Dockerfile`
 aber jedoch funktioniert es noch nicht siehe `log_07_03_18`, `07_03_18_v2`, `07_03_18_v3`, `07_03_18_v4`
+
+## _13.03.18_
 Jetzt funktioniert das Dockerfile das Problem war, ich dachte es funktioniere nicht.
 Ich habe jetzt mittels docker ein Apache2 eingerichtet.
 Siehe Docker Build wie ich das Docker Image erstelle und den Container starte.
+
+aktuell versuche ich ein Dockerimage zu kreeieren mit einem Apache2 webserver welches mit einer Mysql Datenbank verbunden ist.
