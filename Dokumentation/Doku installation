@@ -32,3 +32,4 @@ Ich habe jetzt mittels docker ein Apache2 eingerichtet.
 Siehe Docker Build wie ich das Docker Image erstelle und den Container starte.
 
 aktuell versuche ich ein Dockerimage zu kreeieren mit einem Apache2 webserver welches mit einer Mysql Datenbank verbunden ist.
+Das Dockerfile funktioniert der Apache Server läuft , jedoch funktioniert Mysql noch nicht. für Dockerfile siehe Apache_mysql/Dockerfile
