@@ -1,312 +1,0 @@
-Script started on Tue Mar 13 13:24:41 2018
-[?1034hbash-3.2$ docker images ls
-Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
-bash-3.2$ docker images ls[C[C[C[C[C[C[C[C[C[C[4P./upload.sh [C[C[C[C[C[C[C[C[C[Cdocker images ls
-Error response from daemon: Bad response from Docker engine
-bash-3.2$ docker images ls
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-bash-3.2$ docker --version
-Docker version 17.12.0-ce, build c97c6d6
-bash-3.2$ docker --versionimages ls --all
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-bash-3.2$ pwd
-/Users/jasonnguy/Potatoe/logs
-bash-3.2$ cd
-bash-3.2$ pwd
-/Users/jasonnguy
-bash-3.2$ cd PO[Kotatoe/
-bash-3.2$ c[Kls[Ks
-Dokumentation	Logs		README.md	docker		upload.sh
-bash-3.2$ o[Kdo[K[Kcd docker
-bash-3.2$ ls
-Dockerfile
-bash-3.2$ dokcer[K[K[K[Kcker build ^[K [Ktest .
-"docker build" requires exactly 1 argument.
-See 'docker build --help'.
-
-Usage:  docker build [OPTIONS] PATH | URL | - [flags]
-
-Build an image from a Dockerfile
-bash-3.2$ docker build test .[K[K.[K.
-unable to prepare context: path "test." not found
-bash-3.2$ docker build test.-test.[Ctest. test.
-invalid argument "test." for "-t, --tag" flag: invalid reference format
-See 'docker build --help'.
-bash-3.2$ docker build -t test. .
-Sending build context to Docker daemon  14.85kB
-Step 1/10 : FROM ubuntu:14.04
-14.04: Pulling from library/ubuntu
-
-[1A[1K[K99ad4e3ced4d: Pulling fs layer [1B
-[1A[1K[Kec5a723f4e2a: Pulling fs layer [1B
-[1A[1K[K2a175e11567c: Pulling fs layer [1B
-[1A[1K[K8d26426e95e0: Pulling fs layer [1B
-[1A[1K[K46e451596b7c: Pulling fs layer [1B[2A[1K[K8d26426e95e0: Waiting [2B[1A[1K[K46e451596b7c: Waiting [1B[3A[1K[K2a175e11567c: Downloading     630B/630B[3B[3A[1K[K2a175e11567c: Verifying Checksum [3B[3A[1K[K2a175e11567c: Download complete [3B[4A[1K[Kec5a723f4e2a: Downloading  16.38kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Download complete [4B[5A[1K[K99ad4e3ced4d: Downloading  539.6kB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  2.142MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  4.275MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  5.338MB/73MB[5B[2A[1K[K8d26426e95e0: Download complete [2B[1A[1K[K46e451596b7c: Downloading     163B/163B[1B[1A[1K[K46e451596b7c: Verifying Checksum [1B[1A[1K[K46e451596b7c: Download complete [1B[5A[1K[K99ad4e3ced4d: Downloading  6.938MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  8.547MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading   9.61MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  10.67MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  11.73MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading   12.8MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  13.32MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  13.85MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  14.39MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  14.93MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  15.47MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  16.01MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  16.55MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  17.09MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  17.62MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  18.15MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  18.68MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  19.75MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  20.29MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  20.83MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  21.36MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading   21.9MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  22.44MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  22.97MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  23.51MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  24.05MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  24.57MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  25.11MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  25.63MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  26.17MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  26.71MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  27.25MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  27.78MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  28.32MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  28.86MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  29.39MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  29.93MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  30.47MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading     31MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  31.53MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  32.07MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  32.61MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  33.14MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  33.68MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  34.21MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  34.74MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  35.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading   35.8MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  36.34MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  36.88MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  37.41MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  37.94MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  38.47MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  39.01MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  39.55MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  40.09MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  40.62MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  41.14MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  41.68MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  42.21MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  42.75MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  43.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  43.82MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  44.36MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  44.89MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  45.94MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  47.02MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  47.56MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  48.08MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  48.61MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  49.69MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  50.76MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  51.29MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  51.82MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  52.35MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  52.88MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  53.42MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  53.94MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  54.47MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading     55MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  55.54MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  56.07MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  56.61MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  57.13MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  57.67MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading   58.2MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  58.73MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  59.26MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  59.78MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  60.32MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  60.85MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  61.39MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  61.93MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  62.47MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading     63MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  63.52MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  64.06MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading   64.6MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  65.67MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading   66.2MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  66.74MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  67.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  67.81MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  68.35MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  68.89MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  69.42MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  69.95MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  70.48MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  71.01MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  71.54MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading  72.07MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading   72.6MB/73MB[5B[5A[1K[K99ad4e3ced4d: Verifying Checksum [5B[5A[1K[K99ad4e3ced4d: Download complete [5B[5A[1K[K99ad4e3ced4d: Extracting  557.1kB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  3.342MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  5.571MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  8.356MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  11.14MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  13.93MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  16.71MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting   19.5MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  22.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  24.51MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting   27.3MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  28.97MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting   31.2MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  33.98MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  36.77MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  38.99MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  40.67MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  42.89MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  45.68MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  47.91MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  50.14MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  52.36MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  54.59MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  56.26MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  57.93MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  58.49MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  61.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  64.06MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  66.29MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  67.96MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  70.19MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  71.86MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting  72.97MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting     73MB/73MB[5B[5A[1K[K99ad4e3ced4d: Pull complete [5B[4A[1K[Kec5a723f4e2a: Extracting  32.77kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Extracting  72.66kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Extracting  72.66kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Pull complete [4B[3A[1K[K2a175e11567c: Extracting     630B/630B[3B[3A[1K[K2a175e11567c: Extracting     630B/630B[3B[3A[1K[K2a175e11567c: Pull complete [3B[2A[1K[K8d26426e95e0: Extracting     851B/851B[2B[2A[1K[K8d26426e95e0: Extracting     851B/851B[2B[2A[1K[K8d26426e95e0: Pull complete [2B[1A[1K[K46e451596b7c: Extracting     163B/163B[1B[1A[1K[K46e451596b7c: Extracting     163B/163B[1B[1A[1K[K46e451596b7c: Pull complete [1BDigest: sha256:ed49036f63459d6e5ed6c0f238f5e94c3a0c70d24727c793c48fded60f70aa96
-Status: Downloaded newer image for ubuntu:14.04
- ---> a35e70164dfb
-Step 2/10 : RUN apt-get update
- ---> Running in d33fd730e1b7
-Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
-Ign http://archive.ubuntu.com trusty InRelease
-Get:2 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
-Get:3 http://archive.ubuntu.com trusty-backports InRelease [65.9 kB]
-Get:4 http://archive.ubuntu.com trusty Release.gpg [933 B]
-Get:5 http://archive.ubuntu.com trusty Release [58.5 kB]
-Get:6 http://security.ubuntu.com trusty-security/universe Sources [83.2 kB]
-Get:7 http://archive.ubuntu.com trusty-updates/universe Sources [248 kB]
-Get:8 http://security.ubuntu.com trusty-security/main amd64 Packages [899 kB]
-Get:9 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1323 kB]
-Get:10 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [21.4 kB]
-Get:11 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [576 kB]
-Get:12 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [16.0 kB]
-Get:13 http://archive.ubuntu.com trusty-backports/main amd64 Packages [14.7 kB]
-Get:14 http://archive.ubuntu.com trusty-backports/restricted amd64 Packages [40 B]
-Get:15 http://archive.ubuntu.com trusty-backports/universe amd64 Packages [52.5 kB]
-Get:16 http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages [1392 B]
-Get:17 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
-Get:18 http://security.ubuntu.com trusty-security/restricted amd64 Packages [18.1 kB]
-Get:19 http://security.ubuntu.com trusty-security/universe amd64 Packages [267 kB]
-Get:20 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [4723 B]
-Get:21 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
-Get:22 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
-Get:23 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
-Get:24 http://archive.ubuntu.com trusty/multiverse amd64 Packages [169 kB]
-Fetched 21.2 MB in 5s (4177 kB/s)
-Reading package lists...
-Removing intermediate container d33fd730e1b7
- ---> 02c376ad54cc
-Step 3/10 : RUN apt-get -q -y install apache2
- ---> Running in ae28a5269909
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following extra packages will be installed:
-  apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
-  libaprutil1-ldap libasn1-8-heimdal libgssapi3-heimdal libhcrypto4-heimdal
-  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal
-  libkrb5-26-heimdal libldap-2.4-2 libroken18-heimdal libsasl2-2
-  libsasl2-modules libsasl2-modules-db libwind0-heimdal libxml2 openssl
-  sgml-base ssl-cert xml-core
-Suggested packages:
-  www-browser apache2-doc apache2-suexec-pristine apache2-suexec-custom ufw
-  apache2-utils libsasl2-modules-otp libsasl2-modules-ldap
-  libsasl2-modules-sql libsasl2-modules-gssapi-mit
-  libsasl2-modules-gssapi-heimdal ca-certificates sgml-base-doc
-  openssl-blacklist debhelper
-The following NEW packages will be installed:
-  apache2 apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
-  libaprutil1-ldap libasn1-8-heimdal libgssapi3-heimdal libhcrypto4-heimdal
-  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal
-  libkrb5-26-heimdal libldap-2.4-2 libroken18-heimdal libsasl2-2
-  libsasl2-modules libsasl2-modules-db libwind0-heimdal libxml2 openssl
-  sgml-base ssl-cert xml-core
-0 upgraded, 25 newly installed, 0 to remove and 0 not upgraded.
-Need to get 3442 kB of archives.
-After this operation, 12.6 MB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libroken18-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [39.9 kB]
-Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libasn1-8-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [160 kB]
-Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libhcrypto4-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [84.1 kB]
-Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libheimbase1-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [29.0 kB]
-Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libwind0-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [47.9 kB]
-Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libhx509-5-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [104 kB]
-Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libkrb5-26-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [196 kB]
-Get:8 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libheimntlm0-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [15.2 kB]
-Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libgssapi3-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [89.7 kB]
-Get:10 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-modules-db amd64 2.1.25.dfsg1-17build1 [14.9 kB]
-Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-2 amd64 2.1.25.dfsg1-17build1 [56.5 kB]
-Get:12 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libldap-2.4-2 amd64 2.4.31-1+nmu2ubuntu8.4 [153 kB]
-Get:13 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libxml2 amd64 2.9.1+dfsg1-3ubuntu4.12 [573 kB]
-Get:14 http://archive.ubuntu.com/ubuntu/ trusty/main sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
-Get:15 http://archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1 [85.1 kB]
-Get:16 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1 [76.4 kB]
-Get:17 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-modules amd64 2.1.25.dfsg1-17build1 [64.3 kB]
-Get:18 http://archive.ubuntu.com/ubuntu/ trusty-updates/main openssl amd64 1.0.1f-1ubuntu2.23 [490 kB]
-Get:19 http://archive.ubuntu.com/ubuntu/ trusty/main xml-core all 0.13+nmu2 [23.3 kB]
-Get:20 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1 [10.5 kB]
-Get:21 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1 [8634 B]
-Get:22 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-bin amd64 2.4.7-1ubuntu4.18 [844 kB]
-Get:23 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-data all 2.4.7-1ubuntu4.18 [160 kB]
-Get:24 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2 amd64 2.4.7-1ubuntu4.18 [87.5 kB]
-Get:25 http://archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33 [16.6 kB]
-[91mdebconf: unable to initialize frontend: Dialog
-[0m[91mdebconf: (TERM is not set, so the dialog frontend is not usable.)
-[0m[91mdebconf: falling back to frontend: Readline
-[0m[91mdebconf: unable to initialize frontend: Readline
-[0m[91mdebconf: (This frontend requires a controlling tty.)
-[0m[91mdebconf: falling back to frontend: Teletype
-[0m[91mdpkg-preconfigure: unable to re-open stdin: 
-[0mFetched 3442 kB in 1s (2307 kB/s)
-Selecting previously unselected package libroken18-heimdal:amd64.
-(Reading database ... 11571 files and directories currently installed.)
-Preparing to unpack .../libroken18-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
-Unpacking libroken18-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Selecting previously unselected package libasn1-8-heimdal:amd64.
-Preparing to unpack .../libasn1-8-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
-Unpacking libasn1-8-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Selecting previously unselected package libhcrypto4-heimdal:amd64.
-Preparing to unpack .../libhcrypto4-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
-Unpacking libhcrypto4-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Selecting previously unselected package libheimbase1-heimdal:amd64.
-Preparing to unpack .../libheimbase1-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
-Unpacking libheimbase1-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Selecting previously unselected package libwind0-heimdal:amd64.
-Preparing to unpack .../libwind0-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
-Unpacking libwind0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Selecting previously unselected package libhx509-5-heimdal:amd64.
-Preparing to unpack .../libhx509-5-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
-Unpacking libhx509-5-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Selecting previously unselected package libkrb5-26-heimdal:amd64.
-Preparing to unpack .../libkrb5-26-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
-Unpacking libkrb5-26-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Selecting previously unselected package libheimntlm0-heimdal:amd64.
-Preparing to unpack .../libheimntlm0-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
-Unpacking libheimntlm0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Selecting previously unselected package libgssapi3-heimdal:amd64.
-Preparing to unpack .../libgssapi3-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
-Unpacking libgssapi3-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Selecting previously unselected package libsasl2-modules-db:amd64.
-Preparing to unpack .../libsasl2-modules-db_2.1.25.dfsg1-17build1_amd64.deb ...
-Unpacking libsasl2-modules-db:amd64 (2.1.25.dfsg1-17build1) ...
-Selecting previously unselected package libsasl2-2:amd64.
-Preparing to unpack .../libsasl2-2_2.1.25.dfsg1-17build1_amd64.deb ...
-Unpacking libsasl2-2:amd64 (2.1.25.dfsg1-17build1) ...
-Selecting previously unselected package libldap-2.4-2:amd64.
-Preparing to unpack .../libldap-2.4-2_2.4.31-1+nmu2ubuntu8.4_amd64.deb ...
-Unpacking libldap-2.4-2:amd64 (2.4.31-1+nmu2ubuntu8.4) ...
-Selecting previously unselected package libxml2:amd64.
-Preparing to unpack .../libxml2_2.9.1+dfsg1-3ubuntu4.12_amd64.deb ...
-Unpacking libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.12) ...
-Selecting previously unselected package sgml-base.
-Preparing to unpack .../sgml-base_1.26+nmu4ubuntu1_all.deb ...
-Unpacking sgml-base (1.26+nmu4ubuntu1) ...
-Selecting previously unselected package libapr1:amd64.
-Preparing to unpack .../libapr1_1.5.0-1_amd64.deb ...
-Unpacking libapr1:amd64 (1.5.0-1) ...
-Selecting previously unselected package libaprutil1:amd64.
-Preparing to unpack .../libaprutil1_1.5.3-1_amd64.deb ...
-Unpacking libaprutil1:amd64 (1.5.3-1) ...
-Selecting previously unselected package libsasl2-modules:amd64.
-Preparing to unpack .../libsasl2-modules_2.1.25.dfsg1-17build1_amd64.deb ...
-Unpacking libsasl2-modules:amd64 (2.1.25.dfsg1-17build1) ...
-Selecting previously unselected package openssl.
-Preparing to unpack .../openssl_1.0.1f-1ubuntu2.23_amd64.deb ...
-Unpacking openssl (1.0.1f-1ubuntu2.23) ...
-Selecting previously unselected package xml-core.
-Preparing to unpack .../xml-core_0.13+nmu2_all.deb ...
-Unpacking xml-core (0.13+nmu2) ...
-Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
-Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb ...
-Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
-Selecting previously unselected package libaprutil1-ldap:amd64.
-Preparing to unpack .../libaprutil1-ldap_1.5.3-1_amd64.deb ...
-Unpacking libaprutil1-ldap:amd64 (1.5.3-1) ...
-Selecting previously unselected package apache2-bin.
-Preparing to unpack .../apache2-bin_2.4.7-1ubuntu4.18_amd64.deb ...
-Unpacking apache2-bin (2.4.7-1ubuntu4.18) ...
-Selecting previously unselected package apache2-data.
-Preparing to unpack .../apache2-data_2.4.7-1ubuntu4.18_all.deb ...
-Unpacking apache2-data (2.4.7-1ubuntu4.18) ...
-Selecting previously unselected package apache2.
-Preparing to unpack .../apache2_2.4.7-1ubuntu4.18_amd64.deb ...
-Unpacking apache2 (2.4.7-1ubuntu4.18) ...
-Selecting previously unselected package ssl-cert.
-Preparing to unpack .../ssl-cert_1.0.33_all.deb ...
-Unpacking ssl-cert (1.0.33) ...
-Processing triggers for ureadahead (0.100.0-16) ...
-Setting up libroken18-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Setting up libasn1-8-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Setting up libhcrypto4-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Setting up libheimbase1-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Setting up libwind0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Setting up libhx509-5-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Setting up libkrb5-26-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Setting up libheimntlm0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Setting up libgssapi3-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
-Setting up libsasl2-modules-db:amd64 (2.1.25.dfsg1-17build1) ...
-Setting up libsasl2-2:amd64 (2.1.25.dfsg1-17build1) ...
-Setting up libldap-2.4-2:amd64 (2.4.31-1+nmu2ubuntu8.4) ...
-Setting up libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.12) ...
-Setting up sgml-base (1.26+nmu4ubuntu1) ...
-Setting up libapr1:amd64 (1.5.0-1) ...
-Setting up libaprutil1:amd64 (1.5.3-1) ...
-Setting up libsasl2-modules:amd64 (2.1.25.dfsg1-17build1) ...
-Setting up openssl (1.0.1f-1ubuntu2.23) ...
-Setting up xml-core (0.13+nmu2) ...
-Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
-Setting up libaprutil1-ldap:amd64 (1.5.3-1) ...
-Setting up apache2-bin (2.4.7-1ubuntu4.18) ...
-Setting up apache2-data (2.4.7-1ubuntu4.18) ...
-Setting up apache2 (2.4.7-1ubuntu4.18) ...
-Enabling module mpm_event.
-Enabling module authz_core.
-Enabling module authz_host.
-Enabling module authn_core.
-Enabling module auth_basic.
-Enabling module access_compat.
-Enabling module authn_file.
-Enabling module authz_user.
-Enabling module alias.
-Enabling module dir.
-Enabling module autoindex.
-Enabling module env.
-Enabling module mime.
-Enabling module negotiation.
-Enabling module setenvif.
-Enabling module filter.
-Enabling module deflate.
-Enabling module status.
-Enabling conf charset.
-Enabling conf localized-error-pages.
-Enabling conf other-vhosts-access-log.
-Enabling conf security.
-Enabling conf serve-cgi-bin.
-Enabling site 000-default.
-[91minvoke-rc.d: policy-rc.d denied execution of start.
-[0mSetting up ssl-cert (1.0.33) ...
-[91mdebconf: unable to initialize frontend: Dialog
-debconf: (TERM is not set, so the dialog frontend is not usable.)
-debconf: falling back to frontend: Readline
-[0m[91mdebconf: unable to initialize frontend: Readline
-debconf: (This frontend requires a controlling tty.)
-debconf: falling back to frontend: Teletype
-[0mProcessing triggers for libc-bin (2.19-0ubuntu6.14) ...
-Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
-Processing triggers for ureadahead (0.100.0-16) ...
-Removing intermediate container ae28a5269909
- ---> 0d0503889489
-Step 4/10 : ENV APACHE_RUN_USER www-data
- ---> Running in fe58a1e264ec
-Removing intermediate container fe58a1e264ec
- ---> 25d2e2fd1512
-Step 5/10 : ENV APACHE_RUN_GROUP www-data
- ---> Running in 1a49eee9c659
-Removing intermediate container 1a49eee9c659
- ---> 495a2424ba25
-Step 6/10 : ENV APACHE_LOG_DIR /var/log/apache2
- ---> Running in 3ba8e3f08746
-Removing intermediate container 3ba8e3f08746
- ---> 71babb7f658c
-Step 7/10 : RUN mkdir -p /var/lock/apache2 /var/run/apache2
- ---> Running in 9aa4bb8716eb
-Removing intermediate container 9aa4bb8716eb
- ---> 920f8fd9d2ba
-Step 8/10 : EXPOSE 80
- ---> Running in e058cf957265
-Removing intermediate container e058cf957265
- ---> 8f8d2b6e33c4
-Step 9/10 : VOLUME /var/www/html
- ---> Running in dff2d3c83ac3
-Removing intermediate container dff2d3c83ac3
- ---> d19a365396ff
-Step 10/10 : CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
- ---> Running in e048e697472b
-Removing intermediate container e048e697472b
- ---> 0da017b7693f
-Successfully built 0da017b7693f
-Successfully tagged test:latest
-bash-3.2$ docker image ls
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-test                latest              0da017b7693f        6 seconds ago       258MB
-ubuntu              14.04               a35e70164dfb        6 days ago          222MB
-bash-3.2$ r[Kdock[K[K[K[Kdocker run -p[K[K-p 4000:80 test
-AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message

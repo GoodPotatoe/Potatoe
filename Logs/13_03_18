@@ -389,4 +389,25 @@ bash-3.2$ curl http://localhost:80[K[K4000
   </body>
 </html>
 
-bash-3.2$ 
+bash-3.2$ docker conti[Kainer ls
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+c65364855c5c        test                "/bin/sh -c '/bin/ba…"   5 minutes ago       Up 5 minutes        0.0.0.0:4000->80/tcp   clever_saha
+bash-3.2$ dock[K[K[K[Kdocker container ls[K[Kstop c[Kc65364855c5c
+      c65364855c5c
+bash-3.2$       [K[K[K[K[K[Kdocker coinntainer stop c65364855c5c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cin[Kntainer stop c65364855c5cls[K
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker container lsstop c65364855c5c[1P c65364855c5c[1P c65364855c5ca c65364855c5cr c65364855c5ct c65364855c5c
+c65364855c5c
+bash-3.2$ docker container start c65364855c5c
+c65364855c5c
+bash-3.2$ docker container start c65364855c5cls[K
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker container lsstart c65364855c5c[K[K[K[K[Kd[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Krun -d -p 4000:80 fri[K[K[Ktest
+9c2c954ab4e050b2fbc3b2ee7533c27781d1424d043836df960e20c571e2efd8
+bash-3.2$ d[Kdocker run -d -p 4000:80 test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcontainer ls
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+9c2c954ab4e0        test                "/bin/sh -c '/bin/ba…"   4 seconds ago       Up 4 seconds        0.0.0.0:4000->80/tcp   heuristic_allen
+bash-3.2$ docker container lsa[Krun -d -p 4000:80 test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcontainer lsstart c65364855c5cls[Kstop c65364855c5cls[K[C[C[C[C[C[C[C[C[C[Ccurl http://localhost:4000[C[C[C[C[C[C[C[C[C[C[7Pdocker container ls[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd docker/Potatoe/[Kscript log[5Pclearhistory[2Pclearscript logcd[K Potatoe/[1Pdocker/ls[Kdocker conainer ls[1@t[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd docker/Potatoe/[Kscript log[5Pclearhistory Log_13.03_18[1P13_03_18_v1[K[C[C[C[C[C[C[C[C[C[Cls[Kcd logsls[Kcd Potatoe/pwd[Kdocker run -p 4000:80 test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pimage lsbuild -t test .[1P.[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexit
+exit
+
+Script done on Tue Mar 13 13:44:37 2018

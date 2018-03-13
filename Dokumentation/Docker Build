@@ -1,0 +1,8 @@
+`docker build -t test . `--> Docker image erstellen
+`docker run -p 4000:80 test `--> service starten
+`docker container ls` --> container file überprüfen
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+c65364855c5c        test                "/bin/sh -c '/bin/ba…"   2 minutes ago       Up 2 minutes        0.0.0.0:4000->80/tcp   clever_saha
+`curl http://localhost:4000` --> html sheet abfrage
+bash-3.2$ `docker container stop` c65364855c5c --> container stoppen
+      c65364855c5c
