@@ -1,0 +1,337 @@
+Script started on Tue Mar 13 16:07:09 2018
+[?1034hbash-3.2$ script 13_03_18_v2[C[C[C[C[C[C[C[C[C[C[2Pcd Potatoe/Logs/[C[C[C[C[C[C[C[C[C[Cdocker run -p 4001:80 apsql0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages[Kbuild -t apsql .[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[C[C[K Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[C[C[K Potatoe/Apache_mysql/
+bash: cd: Potatoe/Apache_mysql/: No such file or directory
+bash-3.2$ cd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[Kcd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[6Pscript 13_03_18_v2[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[Kcd
+bash-3.2$ cd Potatoe/Apache_mysql/
+bash-3.2$ cd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[Kcd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[C[C[K Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[6Pscript 13_03_18_v2[C[C[C[C[C[C[C[C[C[C[2Pcd Potatoe/Logs/[C[C[C[C[C[C[C[C[C[Cdocker run -p 4001:80 apsql0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages[Kbuild -t apsql .
+Sending build context to Docker daemon  3.584kB
+Step 1/27 : FROM ubuntu:14.04
+ ---> a35e70164dfb
+Step 2/27 : RUN apt-get update
+ ---> Using cache
+ ---> 02c376ad54cc
+Step 3/27 : RUN apt-get -q -y install apache2
+ ---> Using cache
+ ---> 0d0503889489
+Step 4/27 : RUN {         echo mysql-community-server mysql-community-server/data-dir select '';         echo mysql-community-server mysql-community-server/root-pass password '';         echo mysql-community-server mysql-community-server/re-root-pass password '';         echo mysql-community-server mysql-community-server/remove-test-db select false;     } | debconf-set-selections     && apt-get install mysql-server mysql-client -y
+ ---> Using cache
+ ---> f11961ba745c
+Step 5/27 : CMD mysql -u root -p
+ ---> Using cache
+ ---> a4aab189b787
+Step 6/27 : CMD create user 'www-data'@'localhost' identified by 'mbed';
+ ---> Using cache
+ ---> 146df2d69c77
+Step 7/27 : CMD grant usage on *.* to 'www-data'@'localhost' identified by 'mbed';
+ ---> Using cache
+ ---> 181e159277d6
+Step 8/27 : CMD grant all privileges on sensoren.* to 'www-data'@'localhost';
+ ---> Using cache
+ ---> 6cd08d122e49
+Step 9/27 : CMD flush privileges;
+ ---> Using cache
+ ---> cd2acf91dd92
+Step 10/27 : CMD create table data ( seq INT PRIMARY KEY AUTO_INCREMENT, poti FLOAT, light FLOAT, hall FLOAT, temp FLOAT, created TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
+ ---> Using cache
+ ---> b75c5144bd13
+Step 11/27 : CMD insert into data(poti, light, hall, temp) values ( 0.9, 0.8, 0.49, 25.2 );
+ ---> Using cache
+ ---> c36686730833
+Step 12/27 : CMD insert into data(poti, light, hall, temp) values ( 0.8, 0.7, 0.48, 25.1 );
+ ---> Using cache
+ ---> 6f6985957b6e
+Step 13/27 : CMD select * from data;
+ ---> Using cache
+ ---> 5964c5523905
+Step 14/27 : CMD select avg(temp) from data;
+ ---> Using cache
+ ---> c4b1f32a9156
+Step 15/27 : CMD select min(temp) from data;
+ ---> Using cache
+ ---> 00427467b352
+Step 16/27 : CMD select max(temp) from data;
+ ---> Using cache
+ ---> 771e6fe27f9a
+Step 17/27 : CMD exit
+ ---> Running in e18781f87c05
+Removing intermediate container e18781f87c05
+ ---> b4236b02f512
+Step 18/27 : CMD cp restsql.txt /usr/lib/cgi-bin/restsql
+ ---> Running in e8b999a2d6fc
+Removing intermediate container e8b999a2d6fc
+ ---> f3f7e010d9eb
+Step 19/27 : CMD sudo chmod +x /usr/lib/cgi-bin/restsql
+ ---> Running in 5d4fcecb4108
+Removing intermediate container 5d4fcecb4108
+ ---> 376bd3916e24
+Step 20/27 : CMD sudo dos2unix /usr/lib/cgi-bin/restsql
+ ---> Running in 910149c506e1
+Removing intermediate container 910149c506e1
+ ---> 939ba9e20951
+Step 21/27 : ENV APACHE_RUN_USER www-data
+ ---> Running in eb67cc2bc870
+Removing intermediate container eb67cc2bc870
+ ---> d15bbfbbc6e0
+Step 22/27 : ENV APACHE_RUN_GROUP www-data
+ ---> Running in 07d25d94108c
+Removing intermediate container 07d25d94108c
+ ---> 45e3306f4f38
+Step 23/27 : ENV APACHE_LOG_DIR /var/log/apache2
+ ---> Running in c43d1eabadbe
+Removing intermediate container c43d1eabadbe
+ ---> c2c8117dbc28
+Step 24/27 : RUN mkdir -p /var/lock/apache2 /var/run/apache2
+ ---> Running in 429bc71bd2f1
+Removing intermediate container 429bc71bd2f1
+ ---> 887167e67f60
+Step 25/27 : EXPOSE 80
+ ---> Running in ed974fac6bd6
+Removing intermediate container ed974fac6bd6
+ ---> 0f7c245c7bb3
+Step 26/27 : VOLUME /var/www/html
+ ---> Running in 32de42658bdd
+Removing intermediate container 32de42658bdd
+ ---> f1fd8b12d0ab
+Step 27/27 : CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
+ ---> Running in 4eaf95b48a6b
+Removing intermediate container 4eaf95b48a6b
+ ---> 1cfcc953e50c
+Successfully built 1cfcc953e50c
+Successfully tagged apsql:latest
+bash-3.2$ docker build -t apsql .[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[C[C[K Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[6Pscript 13_03_18_v2[C[C[C[C[C[C[C[C[C[C[2Pcd Potatoe/Logs/[C[C[C[C[C[C[C[C[C[Cdocker run -p 4001:80 apsql[C[1@-[1@d[1@ 
+0f275bcd7f12396da55bded6671b9de47b1fae7ec09fd8a1bfcf83e47fa41fff
+bash-3.2$ docker run -d -p 4001:80 apsql[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pbuild -t apsql .[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[C[C[K Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[6Pscript 13_03_18_v2[C[C[C[C[C[C[C[C[C[C[2Pcd Potatoe/Logs/[C[C[C[C[C[C[C[C[C[Cdocker run -p 4001:80 apsql0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages[Kbuild -t apsql .[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[C[C[K Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[6Pscript 13_03_18_v2[C[C[C[C[C[C[C[C[C[C[2Pcd Potatoe/Logs/[C[C[C[C[C[C[C[C[C[Cdocker run apsql[Kbuild -t apsql .[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[1Pdocker build -t apsql .run[K apsql[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Logs/[C[C[C[C[C[C[C[C[C[Cscript 13_03_18_v2[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[C[C[K Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[1Pdocker build -t apsql .[10Pimagesrun -p 4000:80 apsql1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pcd Potatoe/Logs/[C[C[C[C[C[C[C[C[C[Cscript 13_03_18_v2[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[C[C[K Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[1Pdocker build -t apsql .run -d -p 4001:80 apsql[C[C[C[C[C[C[C[C[C[C[Kdocker run -d -p 4001:80 apsql[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pbuild -t apsql .[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[1Pdocker build -t apsql .run -d -p 4001:80 apsql[C[C[C[C[C[C[C[C[C[C[Kdocker containers[K ls
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+0f275bcd7f12        apsql               "/bin/sh -c '/bin/ba…"   16 seconds ago      Up 16 seconds       0.0.0.0:4001->80/tcp   sleepy_kowalevski
+bash-3.2$ curl -v -X POST http://localhost/cgi-bin/restsql -d "poti=0.5&hall=0.1 &light=0.8&temp=26"
+Note: Unnecessary use of -X or --request, POST is already inferred.
+*   Trying ::1...
+* TCP_NODELAY set
+* Connection failed
+* connect to ::1 port 80 failed: Connection refused
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connection failed
+* connect to 127.0.0.1 port 80 failed: Connection refused
+* Failed to connect to localhost port 80: Connection refused
+* Closing connection 0
+curl: (7) Failed to connect to localhost port 80: Connection refused
+bash-3.2$ curl -v -X POST http://localhost/cgi-bin/restsql -d "poti=0.5&hall=0.1&&light=0.8&temp=26"[A[C[C[C[C[C[C[C[C[Cdocker container ls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccurl -v -X POST http://localhost/cgi-bin/restsql -d "poti=0.5&hall=0.1&&light=0.8&temp=26"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:/cgi-bin/restsql -d "poti=0.5&hall=0.1&light=0.8&temp=26"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4/cgi-bin/restsql -d "poti=0.5&hall=0.1&light=0.8&temp=26"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0/cgi-bin/restsql -d "poti=0.5&hall=0.1&light=0.8&temp=26"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0/cgi-bin/restsql -d "poti=0.5&hall=0.1&light=0.8&temp=26"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1/cgi-bin/restsql -d "poti=0.5&hall=0.1&light=0.8&temp=26"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+Note: Unnecessary use of -X or --request, POST is already inferred.
+*   Trying ::1...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 4001 (#0)
+> POST /cgi-bin/restsql HTTP/1.1
+> Host: localhost:4001
+> User-Agent: curl/7.54.0
+> Accept: */*
+> Content-Length: 35
+> Content-Type: application/x-www-form-urlencoded
+> 
+* upload completely sent off: 35 out of 35 bytes
+< HTTP/1.1 404 Not Found
+< Date: Tue, 13 Mar 2018 15:09:13 GMT
+< Server: Apache/2.4.7 (Ubuntu)
+< Content-Length: 289
+< Content-Type: text/html; charset=iso-8859-1
+< 
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /cgi-bin/restsql was not found on this server.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 4001</address>
+</body></html>
+* Connection #0 to host localhost left intact
+bash-3.2$ localhost
+bash: localhost: command not found
+bash-3.2$ ps -a
+  PID TTY           TIME CMD
+ 5637 ttys000    0:00.02 login -pf jasonnguy
+ 5638 ttys000    0:00.03 -bash
+ 5801 ttys000    0:00.02 script 13_03_18_v2
+  640 ttys001    0:00.01 /bin/bash -l
+ 5802 ttys002    0:00.03 /bin/bash -i
+ 5978 ttys002    0:00.00 ps -a
+ 1324 ttys004    0:00.01 /bin/bash -l
+bash-3.2$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                         PORTS                  NAMES
+0f275bcd7f12        apsql               "/bin/sh -c '/bin/ba…"   5 minutes ago       Up 5 minutes                   0.0.0.0:4001->80/tcp   sleepy_kowalevski
+ade1fec9dac6        22a90aaec06f        "/bin/sh -c '/bin/ba…"   13 minutes ago      Exited (137) 7 minutes ago                            silly_galileo
+e1cdd38d8176        22a90aaec06f        "/bin/sh -c '/bin/ba…"   13 minutes ago      Created                                               nostalgic_swanson
+a3cd10796966        22a90aaec06f        "/bin/sh -c '/bin/ba…"   15 minutes ago      Exited (137) 7 minutes ago                            priceless_mayer
+7ea5f80944f3        22a90aaec06f        "/bin/sh -c '/bin/ba…"   18 minutes ago      Exited (137) 7 minutes ago                            modest_jennings
+fa3b8c3e0c47        22a90aaec06f        "/bin/sh -c '/bin/ba…"   20 minutes ago      Exited (137) 7 minutes ago                            hopeful_beaver
+77589afa6cc8        f11961ba745c        "/bin/sh -c 'mysql -…"   About an hour ago   Exited (1) About an hour ago                          brave_meitner
+b6b13792a3ef        5d816775ce91        "/bin/sh -c 'mysql -…"   About an hour ago   Exited (1) About an hour ago                          boring_hawking
+732e28b0a94c        2987f7a83e93        "/bin/sh -c 'mysql -…"   About an hour ago   Exited (1) About an hour ago                          zen_murdock
+e9fdea47103a        0d215da65600        "/bin/sh -c 'mysql -…"   About an hour ago   Exited (1) About an hour ago                          suspicious_franklin
+2e3bdf5863af        0d0503889489        "/bin/sh -c 'apt-get…"   About an hour ago   Exited (1) About an hour ago                          loving_booth
+9c46148b2d51        test                "/bin/sh -c '/bin/ba…"   2 hours ago         Exited (137) 2 hours ago                              eager_northcutt
+d0b848098a34        e6b6d0cc8318        "/bin/sh -c 'Service…"   2 hours ago         Exited (127) 2 hours ago                              hopeful_bohr
+d9deb33a0b4e        e6b6d0cc8318        "/bin/sh -c 'Service…"   2 hours ago         Exited (127) 2 hours ago                              sharp_euler
+9c2c954ab4e0        test                "/bin/sh -c '/bin/ba…"   2 hours ago         Exited (137) 2 hours ago                              heuristic_allen
+c65364855c5c        test                "/bin/sh -c '/bin/ba…"   3 hours ago         Exited (0) 3 hours ago                                clever_saha
+bash-3.2$ docker run apsql[K[K[K[K[K-tiapsql apsql[C[C[C[C[C /bin/bash
+]0;root@136c0ba90032: /root@136c0ba90032:/# [K]0;root@136c0ba90032: /root@136c0ba90032:/# ls
+[0m[01;34mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlib64[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;34mlib[0m   [01;34mmedia[0m  [01;34mopt[0m  [01;34mroot[0m  [01;34msbin[0m  [01;34msys[0m  [01;34musr[0m
+]0;root@136c0ba90032: /root@136c0ba90032:/# cd var/
+]0;root@136c0ba90032: /varroot@136c0ba90032:/var# 
+Display all 805 possibilities? (y or n)
+]0;root@136c0ba90032: /varroot@136c0ba90032:/var# 
+]0;root@136c0ba90032: /varroot@136c0ba90032:/var# cdc www/
+bash: cdc: command not found
+]0;root@136c0ba90032: /varroot@136c0ba90032:/var# cd  cd www/
+]0;root@136c0ba90032: /var/wwwroot@136c0ba90032:/var/www# cdh   html/      d html/
+]0;root@136c0ba90032: /var/www/htmlroot@136c0ba90032:/var/www/html# ls
+index.html
+]0;root@136c0ba90032: /var/www/htmlroot@136c0ba90032:/var/www/html# mysql -  u root[1Pr[1@ 
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+]0;root@136c0ba90032: /var/www/htmlroot@136c0ba90032:/var/www/html# mysql -u root root . -p
+Enter password: 
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+]0;root@136c0ba90032: /var/www/htmlroot@136c0ba90032:/var/www/html# mysql -u root -p
+Enter password: 
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+]0;root@136c0ba90032: /var/www/htmlroot@136c0ba90032:/var/www/html# exit
+exit
+bash-3.2$ docker run -ti apsql /bin/bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps -a[K[C[C[C[C[C[C[C[C[C[C[7P[C[C[C[C[Clocalhostcurl -v -X POST http://localhost:4001/cgi-bin/restsql -d "poti=0.5&halll=0.1&light=0.8&temp=26"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/cgi-bin/restsql -d "poti=0.5&hall=0.1&[5Plight=0.8&temp=26"[Adocker container ls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crun -d -p 4001:80 apsql[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pbuild -t apsql .[C[C[C[C[C[C[C[C[C[Ccd Potatoe/Apache_mysql/[C[C[C[C[C[C[C[C[C[C[1Pdocker build -t apsql .run -d -p 4001:80 apsql[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pcontainer ls[C[C[C[C[C[C[C[C[C[Ccurl -v -X POST http://localhost/cgi-bin/restsql -d "poti=0.5&hall=0.1&&light=0.8&temp=26"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:4001/cgi-bin/restsql -d "poti=0.5&hall=0.1&light=0.8&temp=26"[A[C[C[C[C[C[C[C[C[C[Clocalhost[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pps -a[7@docker [C[C[C[C[Crun -ti apsql /bin/bash[C[C[C[C[C[C[C[C[C[C[Kdocker run -ti apsql /bin/bash[C[C[C[C[C[C[C[C[C[C[Kcl[K[Kclear
+[H[2Jbash-3.2$ docker container -ls
+unknown shorthand flag: 'l' in -ls
+See 'docker container --help'.
+
+Usage:	docker container COMMAND
+
+Manage containers
+
+Options:
+
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Run a command in a new container
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+
+bash-3.2$ docker container -ls[K[K[K[K 
+
+Usage:	docker container COMMAND
+
+Manage containers
+
+Options:
+
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Run a command in a new container
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+bash-3.2$ docker container -[K[Ks 
+docker: 'containers' is not a docker command.
+See 'docker --help'
+bash-3.2$ docker containers [K[K -ls
+unknown shorthand flag: 'l' in -ls
+See 'docker container --help'.
+
+Usage:	docker container COMMAND
+
+Manage containers
+
+Options:
+
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Run a command in a new container
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+
+bash-3.2$ dokcer [K[K[K[K[Kcker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+0f275bcd7f12        apsql               "/bin/sh -c '/bin/ba…"   8 minutes ago       Up 8 minutes        0.0.0.0:4001->80/tcp   sleepy_kowalevski
+bash-3.2$ docker container stop 0f275bcd7f12
+0f275bcd7f12
+bash-3.2$ docker container stop 0f275bcd7f12[C[C[C[C[C[C[C[C[C[C[Kdocker container stop 0f275bcd7f12[C[C[C[C[C[C[C[C[C[C[Kdocker container stop 0f275bcd7f12[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps[Kcontainer -lsps[K
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker pscontainer stop 0f275bcd7f12[K[K[K[K[K[K[K[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps[K[Kc[Kclear
+[H[2Jbash-3.2$ exit
+exit
+
+Script done on Tue Mar 13 16:18:45 2018

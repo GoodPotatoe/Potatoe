@@ -11,22 +11,27 @@ RUN { \
         echo mysql-community-server mysql-community-server/remove-test-db select false; \
     } | debconf-set-selections \
     && apt-get install mysql-server mysql-client -y
-RUN mysql -u root -p 
-RUN create user 'www-data'@'localhost' identified by 'mbed'; 
-RUN grant usage on *.* to 'www-data'@'localhost' identified by 'mbed'; 
-RUN grant all privileges on sensoren.* to 'www-data'@'localhost';
-RUN flush privileges;
-RUN create table data ( seq INT PRIMARY KEY AUTO_INCREMENT, poti FLOAT, light FLOAT, hall FLOAT, temp FLOAT, created TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
-RUN insert into data(poti, light, hall, temp) values ( 0.9, 0.8, 0.49, 25.2 );
-RUN insert into data(poti, light, hall, temp) values ( 0.8, 0.7, 0.48, 25.1 );
+
+CMD mysql -u root -p
+CMD create user 'www-data'@'localhost' identified by 'mbed'; 
+CMD grant usage on *.* to 'www-data'@'localhost' identified by 'mbed'; 
+CMD grant all privileges on sensoren.* to 'www-data'@'localhost';
+CMD flush privileges;
+CMD create table data ( seq INT PRIMARY KEY AUTO_INCREMENT, poti FLOAT, light FLOAT, hall FLOAT, temp FLOAT, created TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
+CMD insert into data(poti, light, hall, temp) values ( 0.9, 0.8, 0.49, 25.2 );
+CMD insert into data(poti, light, hall, temp) values ( 0.8, 0.7, 0.48, 25.1 );
 # lesen (alle Daten)
-RUN select * from data;
+CMD select * from data;
 # Mittelwert vom Temperaturwert ausgeben
-RUN select avg(temp) from data;
+CMD select avg(temp) from data;
 # Kleinster Wert vom Temperaturwert ausgeben
-RUN select min(temp) from data;
+CMD select min(temp) from data;
 # Grösster Wert vom  Temperaturwert ausgeben
-RUN select max(temp) from data;
+CMD select max(temp) from data;
+CMD exit
+CMD cp restsql.txt /usr/lib/cgi-bin/restsql
+CMD sudo chmod +x /usr/lib/cgi-bin/restsql
+CMD sudo dos2unix /usr/lib/cgi-bin/restsql 
 
 # Konfiguration Apache
 ENV APACHE_RUN_USER www-data

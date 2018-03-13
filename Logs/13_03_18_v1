@@ -1250,4 +1250,98 @@ Step 5/23 : RUN mysql -u root -p
 [0mThe command '/bin/sh -c mysql -u root -p' returned a non-zero code: 1
 bash-3.2$ docker container ls
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-bash-3.2$ docker container lsbuild -t apsql .[4Pcontainer ls[C[C[C[C[C[C[C[C[C[C[K
+bash-3.2$ docker container lsbuild -t apsql .[4Pcontainer ls[C[C[C[C[C[C[C[C[C[C[Kdocker container lsbuild -t apsql .
+Sending build context to Docker daemon  3.584kB
+Step 1/23 : FROM ubuntu:14.04
+ ---> a35e70164dfb
+Step 2/23 : RUN apt-get update
+ ---> Using cache
+ ---> 02c376ad54cc
+Step 3/23 : RUN apt-get -q -y install apache2
+ ---> Using cache
+ ---> 0d0503889489
+Step 4/23 : RUN {         echo mysql-community-server mysql-community-server/data-dir select '';         echo mysql-community-server mysql-community-server/root-pass password '';         echo mysql-community-server mysql-community-server/re-root-pass password '';         echo mysql-community-server mysql-community-server/remove-test-db select false;     } | debconf-set-selections     && apt-get install mysql-server mysql-client -y
+ ---> Using cache
+ ---> f11961ba745c
+Step 5/23 : CMD mysql -u root -p
+ ---> Running in d1bdbae721d2
+Removing intermediate container d1bdbae721d2
+ ---> a4aab189b787
+Step 6/23 : CMD create user 'www-data'@'localhost' identified by 'mbed';
+ ---> Running in 5cb098574707
+Removing intermediate container 5cb098574707
+ ---> 146df2d69c77
+Step 7/23 : CMD grant usage on *.* to 'www-data'@'localhost' identified by 'mbed';
+ ---> Running in 3538488b6c3f
+Removing intermediate container 3538488b6c3f
+ ---> 181e159277d6
+Step 8/23 : CMD grant all privileges on sensoren.* to 'www-data'@'localhost';
+ ---> Running in 660a552538ba
+Removing intermediate container 660a552538ba
+ ---> 6cd08d122e49
+Step 9/23 : CMD flush privileges;
+ ---> Running in c0e16ca0c572
+Removing intermediate container c0e16ca0c572
+ ---> cd2acf91dd92
+Step 10/23 : CMD create table data ( seq INT PRIMARY KEY AUTO_INCREMENT, poti FLOAT, light FLOAT, hall FLOAT, temp FLOAT, created TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
+ ---> Running in 8750bf4478e2
+Removing intermediate container 8750bf4478e2
+ ---> b75c5144bd13
+Step 11/23 : CMD insert into data(poti, light, hall, temp) values ( 0.9, 0.8, 0.49, 25.2 );
+ ---> Running in 5f4e02975f21
+Removing intermediate container 5f4e02975f21
+ ---> c36686730833
+Step 12/23 : CMD insert into data(poti, light, hall, temp) values ( 0.8, 0.7, 0.48, 25.1 );
+ ---> Running in e48d6e90c860
+Removing intermediate container e48d6e90c860
+ ---> 6f6985957b6e
+Step 13/23 : CMD select * from data;
+ ---> Running in 2dfde1224992
+Removing intermediate container 2dfde1224992
+ ---> 5964c5523905
+Step 14/23 : CMD select avg(temp) from data;
+ ---> Running in b0fb5ddc4579
+Removing intermediate container b0fb5ddc4579
+ ---> c4b1f32a9156
+Step 15/23 : CMD select min(temp) from data;
+ ---> Running in 1f4a55ef5b53
+Removing intermediate container 1f4a55ef5b53
+ ---> 00427467b352
+Step 16/23 : CMD select max(temp) from data;
+ ---> Running in 63c856c2046e
+Removing intermediate container 63c856c2046e
+ ---> 771e6fe27f9a
+Step 17/23 : ENV APACHE_RUN_USER www-data
+ ---> Running in 49a25fe8fc3d
+Removing intermediate container 49a25fe8fc3d
+ ---> cf5381640849
+Step 18/23 : ENV APACHE_RUN_GROUP www-data
+ ---> Running in 5eb0fa10b84e
+Removing intermediate container 5eb0fa10b84e
+ ---> 921fe017ef01
+Step 19/23 : ENV APACHE_LOG_DIR /var/log/apache2
+ ---> Running in b41348f80d26
+Removing intermediate container b41348f80d26
+ ---> cdb7ff10548f
+Step 20/23 : RUN mkdir -p /var/lock/apache2 /var/run/apache2
+ ---> Running in 4b3031d9ba84
+Removing intermediate container 4b3031d9ba84
+ ---> f6291e05e196
+Step 21/23 : EXPOSE 80
+ ---> Running in 44ded4502f84
+Removing intermediate container 44ded4502f84
+ ---> 0c02c065d648
+Step 22/23 : VOLUME /var/www/html
+ ---> Running in 38982371a512
+Removing intermediate container 38982371a512
+ ---> 9ae621d35154
+Step 23/23 : CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
+ ---> Running in 9feda36d8dd7
+Removing intermediate container 9feda36d8dd7
+ ---> 22a90aaec06f
+Successfully built 22a90aaec06f
+Successfully tagged apsql:latest
+bash-3.2$ docker build -t apsql .[4Pcontainer ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker container lsbuild -t apsql .[4Pcontainer ls[C[C[C[C[C[C[C[C[C[C[Kdocker run apsqö[Kl
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
