@@ -1,0 +1,1387 @@
+Script started on Wed Mar  7 15:50:40 2018
+[?1034hbash-3.2$ cd
+bash-3.2$ cd L[KP[Kp[K[K[K[Kcd[K[Kpwd
+/Users/jasonnguy
+bash-3.2$ cd Potatoe/
+bash-3.2$ cd docker
+bash-3.2$ pwd
+/Users/jasonnguy/Potatoe/docker
+bash-3.2$ docker build test .[K[K.
+unable to prepare context: path "test." not found
+bash-3.2$ docker build test. .$.[1P.
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | - [flags]
+
+Build an image from a Dockerfile
+bash-3.2$ docker build test .[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdocker run test-[K.
+docker: invalid reference format.
+See 'docker run --help'.
+bash-3.2$ ls
+Dockerfile
+bash-3.2$ lsdocker run test.[C test.[1Ptest.[1P test.[1P test.[1P test.b test.u test.i test.d test.. test.[1P test.[1P test.l test.d test.[C test.- test.t test.t test.[1P test.
+invalid argument "test." for "-t, --tag" flag: invalid reference format
+See 'docker build --help'.
+bash-3.2$ docker build -t test.[K .
+Sending build context to Docker daemon  14.85kB
+Step 1/10 : FROM ubuntu:14.04
+14.04: Pulling from library/ubuntu
+
+[1A[1K[K99ad4e3ced4d: Pulling fs layer [1B
+[1A[1K[Kec5a723f4e2a: Pulling fs layer [1B
+[1A[1K[K2a175e11567c: Pulling fs layer [1B
+[1A[1K[K8d26426e95e0: Pulling fs layer [1B
+[1A[1K[K46e451596b7c: Pulling fs layer [1B[2A[1K[K8d26426e95e0: Waiting [2B[1A[1K[K46e451596b7c: Waiting [1B[4A[1K[Kec5a723f4e2a: Downloading [===========>                                       ]  16.38kB/72.66kB[4B[3A[1K[K2a175e11567c: Downloading [==================================================>]     630B/630B[3B[4A[1K[Kec5a723f4e2a: Downloading [==================================================>]  72.66kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Download complete [4B[3A[1K[K2a175e11567c: Verifying Checksum [3B[3A[1K[K2a175e11567c: Download complete [3B[5A[1K[K99ad4e3ced4d: Downloading [>                                                  ]  531.4kB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=>                                                 ]  1.588MB/73MB[5B[1A[1K[K46e451596b7c: Downloading [==================================================>]     163B/163B[1B[1A[1K[K46e451596b7c: Verifying Checksum [1B[1A[1K[K46e451596b7c: Download complete [1B[2A[1K[K8d26426e95e0: Downloading [==================================================>]     851B/851B[2B[2A[1K[K8d26426e95e0: Download complete [2B[5A[1K[K99ad4e3ced4d: Downloading [==>                                                ]  3.184MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [====>                                              ]  5.853MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=====>                                             ]  7.985MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [======>                                            ]  10.12MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [========>                                          ]  12.26MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=========>                                         ]  14.41MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===========>                                       ]  16.54MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [============>                                      ]  18.69MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==============>                                    ]  20.84MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===============>                                   ]  22.97MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=================>                                 ]   25.1MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==================>                                ]  27.25MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [====================>                              ]  29.39MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=====================>                             ]  31.54MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=======================>                           ]  33.68MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [========================>                          ]  36.35MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==========================>                        ]  38.48MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===========================>                       ]  40.63MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=============================>                     ]  43.29MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===============================>                   ]  45.44MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [================================>                  ]  47.05MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=================================>                 ]  48.65MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==================================>                ]  50.26MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===================================>               ]  51.88MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=====================================>             ]  54.02MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [======================================>            ]  55.63MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=======================================>           ]  57.24MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [========================================>          ]  58.85MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=========================================>         ]  60.47MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==========================================>        ]  62.07MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===========================================>       ]  63.66MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [============================================>      ]  65.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=============================================>     ]  66.87MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==============================================>    ]  68.47MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [================================================>  ]  70.61MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=================================================> ]  72.76MB/73MB[5B[5A[1K[K99ad4e3ced4d: Verifying Checksum [5B[5A[1K[K99ad4e3ced4d: Download complete [5B[5A[1K[K99ad4e3ced4d: Extracting [>                                                  ]  557.1kB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==>                                                ]  3.342MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===>                                               ]  5.571MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=====>                                             ]  8.356MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=======>                                           ]  11.14MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=========>                                         ]  13.93MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===========>                                       ]  16.71MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=============>                                     ]   19.5MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===============>                                   ]  22.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [================>                                  ]  24.51MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==================>                                ]  26.74MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===================>                               ]  28.97MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=====================>                             ]   31.2MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [======================>                            ]  33.42MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [========================>                          ]  36.21MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==========================>                        ]  38.44MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===========================>                       ]  40.11MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [============================>                      ]  42.34MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==============================>                    ]  45.12MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [================================>                  ]  47.35MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=================================>                 ]  49.58MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===================================>               ]  51.81MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=====================================>             ]  54.03MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [======================================>            ]  55.71MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=======================================>           ]  57.38MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [========================================>          ]  58.49MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=========================================>         ]  61.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===========================================>       ]  64.06MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=============================================>     ]  66.29MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==============================================>    ]  67.96MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [================================================>  ]  70.19MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=================================================> ]  71.86MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=================================================> ]  72.97MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==================================================>]     73MB/73MB[5B[5A[1K[K99ad4e3ced4d: Pull complete [5B[4A[1K[Kec5a723f4e2a: Extracting [======================>                            ]  32.77kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Extracting [==================================================>]  72.66kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Extracting [==================================================>]  72.66kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Pull complete [4B[3A[1K[K2a175e11567c: Extracting [==================================================>]     630B/630B[3B[3A[1K[K2a175e11567c: Extracting [==================================================>]     630B/630B[3B[3A[1K[K2a175e11567c: Pull complete [3B[2A[1K[K8d26426e95e0: Extracting [==================================================>]     851B/851B[2B[2A[1K[K8d26426e95e0: Extracting [==================================================>]     851B/851B[2B[2A[1K[K8d26426e95e0: Pull complete [2B[1A[1K[K46e451596b7c: Extracting [==================================================>]     163B/163B[1B[1A[1K[K46e451596b7c: Extracting [==================================================>]     163B/163B[1B[1A[1K[K46e451596b7c: Pull complete [1BDigest: sha256:159462193f5381fceffa28aa89df9740a790d5654b29fb0fb6098ce396c605a1
+Status: Downloaded newer image for ubuntu:14.04
+ ---> a35e70164dfb
+Step 2/10 : RUN apt-get update
+ ---> Running in 81675777d1ed
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Ign http://archive.ubuntu.com trusty InRelease
+Get:2 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Get:3 http://archive.ubuntu.com trusty-backports InRelease [65.9 kB]
+Get:4 http://archive.ubuntu.com trusty Release.gpg [933 B]
+Get:5 http://archive.ubuntu.com trusty Release [58.5 kB]
+Get:6 http://security.ubuntu.com trusty-security/universe Sources [83.2 kB]
+Get:7 http://security.ubuntu.com trusty-security/main amd64 Packages [896 kB]
+Get:8 http://archive.ubuntu.com trusty-updates/universe Sources [248 kB]
+Get:9 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1320 kB]
+Get:10 http://security.ubuntu.com trusty-security/restricted amd64 Packages [18.1 kB]
+Get:11 http://security.ubuntu.com trusty-security/universe amd64 Packages [267 kB]
+Get:12 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [4723 B]
+Get:13 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [21.4 kB]
+Get:14 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [576 kB]
+Get:15 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [16.0 kB]
+Get:16 http://archive.ubuntu.com trusty-backports/main amd64 Packages [14.7 kB]
+Get:17 http://archive.ubuntu.com trusty-backports/restricted amd64 Packages [40 B]
+Get:18 http://archive.ubuntu.com trusty-backports/universe amd64 Packages [52.5 kB]
+Get:19 http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages [1392 B]
+Get:20 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+Get:21 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Get:22 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+Get:23 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Get:24 http://archive.ubuntu.com trusty/multiverse amd64 Packages [169 kB]
+Fetched 21.2 MB in 14s (1447 kB/s)
+Reading package lists...
+Removing intermediate container 81675777d1ed
+ ---> ce2e3c458ee6
+Step 3/10 : RUN apt-get -q -y install apache2
+ ---> Running in 8b4024c11b82
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libasn1-8-heimdal libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal
+  libkrb5-26-heimdal libldap-2.4-2 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libwind0-heimdal libxml2 openssl
+  sgml-base ssl-cert xml-core
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine apache2-suexec-custom ufw
+  apache2-utils libsasl2-modules-otp libsasl2-modules-ldap
+  libsasl2-modules-sql libsasl2-modules-gssapi-mit
+  libsasl2-modules-gssapi-heimdal ca-certificates sgml-base-doc
+  openssl-blacklist debhelper
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libasn1-8-heimdal libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal
+  libkrb5-26-heimdal libldap-2.4-2 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libwind0-heimdal libxml2 openssl
+  sgml-base ssl-cert xml-core
+0 upgraded, 25 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3442 kB of archives.
+After this operation, 12.6 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libroken18-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [39.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libasn1-8-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [160 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libhcrypto4-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [84.1 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libheimbase1-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [29.0 kB]
+Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libwind0-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [47.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libhx509-5-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [104 kB]
+Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libkrb5-26-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [196 kB]
+Get:8 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libheimntlm0-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [15.2 kB]
+Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libgssapi3-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [89.7 kB]
+Get:10 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-modules-db amd64 2.1.25.dfsg1-17build1 [14.9 kB]
+Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-2 amd64 2.1.25.dfsg1-17build1 [56.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libldap-2.4-2 amd64 2.4.31-1+nmu2ubuntu8.4 [153 kB]
+Get:13 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libxml2 amd64 2.9.1+dfsg1-3ubuntu4.12 [573 kB]
+Get:14 http://archive.ubuntu.com/ubuntu/ trusty/main sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1 [85.1 kB]
+Get:16 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1 [76.4 kB]
+Get:17 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-modules amd64 2.1.25.dfsg1-17build1 [64.3 kB]
+Get:18 http://archive.ubuntu.com/ubuntu/ trusty-updates/main openssl amd64 1.0.1f-1ubuntu2.23 [490 kB]
+Get:19 http://archive.ubuntu.com/ubuntu/ trusty/main xml-core all 0.13+nmu2 [23.3 kB]
+Get:20 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1 [10.5 kB]
+Get:21 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1 [8634 B]
+Get:22 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-bin amd64 2.4.7-1ubuntu4.18 [844 kB]
+Get:23 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-data all 2.4.7-1ubuntu4.18 [160 kB]
+Get:24 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2 amd64 2.4.7-1ubuntu4.18 [87.5 kB]
+Get:25 http://archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33 [16.6 kB]
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0m[91mdpkg-preconfigure: unable to re-open stdin: 
+[0mFetched 3442 kB in 3s (1128 kB/s)
+Selecting previously unselected package libroken18-heimdal:amd64.
+(Reading database ... 11571 files and directories currently installed.)
+Preparing to unpack .../libroken18-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../libasn1-8-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../libhcrypto4-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../libheimbase1-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../libwind0-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../libhx509-5-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../libkrb5-26-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../libheimntlm0-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../libgssapi3-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../libsasl2-modules-db_2.1.25.dfsg1-17build1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.25.dfsg1-17build1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../libsasl2-2_2.1.25.dfsg1-17build1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.25.dfsg1-17build1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../libldap-2.4-2_2.4.31-1+nmu2ubuntu8.4_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.31-1+nmu2ubuntu8.4) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../libxml2_2.9.1+dfsg1-3ubuntu4.12_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.12) ...
+Selecting previously unselected package sgml-base.
+Preparing to unpack .../sgml-base_1.26+nmu4ubuntu1_all.deb ...
+Unpacking sgml-base (1.26+nmu4ubuntu1) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../libapr1_1.5.0-1_amd64.deb ...
+Unpacking libapr1:amd64 (1.5.0-1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../libaprutil1_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.5.3-1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../libsasl2-modules_2.1.25.dfsg1-17build1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.25.dfsg1-17build1) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../openssl_1.0.1f-1ubuntu2.23_amd64.deb ...
+Unpacking openssl (1.0.1f-1ubuntu2.23) ...
+Selecting previously unselected package xml-core.
+Preparing to unpack .../xml-core_0.13+nmu2_all.deb ...
+Unpacking xml-core (0.13+nmu2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../libaprutil1-ldap_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.5.3-1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../apache2-bin_2.4.7-1ubuntu4.18_amd64.deb ...
+Unpacking apache2-bin (2.4.7-1ubuntu4.18) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../apache2-data_2.4.7-1ubuntu4.18_all.deb ...
+Unpacking apache2-data (2.4.7-1ubuntu4.18) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../apache2_2.4.7-1ubuntu4.18_amd64.deb ...
+Unpacking apache2 (2.4.7-1ubuntu4.18) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../ssl-cert_1.0.33_all.deb ...
+Unpacking ssl-cert (1.0.33) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up libroken18-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libasn1-8-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libhcrypto4-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libheimbase1-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libwind0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libhx509-5-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libkrb5-26-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libheimntlm0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libgssapi3-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libsasl2-modules-db:amd64 (2.1.25.dfsg1-17build1) ...
+Setting up libsasl2-2:amd64 (2.1.25.dfsg1-17build1) ...
+Setting up libldap-2.4-2:amd64 (2.4.31-1+nmu2ubuntu8.4) ...
+Setting up libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.12) ...
+Setting up sgml-base (1.26+nmu4ubuntu1) ...
+Setting up libapr1:amd64 (1.5.0-1) ...
+Setting up libaprutil1:amd64 (1.5.3-1) ...
+Setting up libsasl2-modules:amd64 (2.1.25.dfsg1-17build1) ...
+Setting up openssl (1.0.1f-1ubuntu2.23) ...
+Setting up xml-core (0.13+nmu2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+Setting up libaprutil1-ldap:amd64 (1.5.3-1) ...
+Setting up apache2-bin (2.4.7-1ubuntu4.18) ...
+Setting up apache2-data (2.4.7-1ubuntu4.18) ...
+Setting up apache2 (2.4.7-1ubuntu4.18) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+[91minvoke-rc.d: policy-rc.d denied execution of start.
+[0mSetting up ssl-cert (1.0.33) ...
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0mProcessing triggers for libc-bin (2.19-0ubuntu6.14) ...
+Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Removing intermediate container 8b4024c11b82
+ ---> a5947ea883a8
+Step 4/10 : ENV APACHE_RUN_USER www-data
+ ---> Running in d6d312a45afc
+Removing intermediate container d6d312a45afc
+ ---> 3b6809251942
+Step 5/10 : ENV APACHE_RUN_GROUP www-data
+ ---> Running in d2d93e8becbb
+Removing intermediate container d2d93e8becbb
+ ---> a0f6ce4877e6
+Step 6/10 : ENV APACHE_LOG_DIR /var/log/apache2
+ ---> Running in 0336b8012021
+Removing intermediate container 0336b8012021
+ ---> e0953241b137
+Step 7/10 : RUN mkdir -p /var/lock/apache2 /var/run/apache2
+ ---> Running in 2207bb541ced
+Removing intermediate container 2207bb541ced
+ ---> 6a676f986c46
+Step 8/10 : EXPOSE 80
+ ---> Running in c4fa5f431160
+Removing intermediate container c4fa5f431160
+ ---> 090ae8311967
+Step 9/10 : VOLUME /var/www/html
+ ---> Running in d182d51ce269
+Removing intermediate container d182d51ce269
+ ---> 1dadcef02e50
+Step 10/10 : CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
+ ---> Running in dfac0f777276
+Removing intermediate container dfac0f777276
+ ---> 197ab00a7131
+Successfully built 197ab00a7131
+Successfully tagged test:latest
+bash-3.2$ docker[K[K[K[Kcker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker ps -a[K[Ka
+"docker ps" accepts no arguments.
+See 'docker ps --help'.
+
+Usage:  docker ps [OPTIONS] [flags]
+
+List containers
+bash-3.2$ docker ps a[K[K
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker ps a[K-a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker run -d test
+3f0ca0e4e1216d8b4dcdadba03acd815cc337b74f79098f383c24467c0e43f50
+bash-3.2$ docker run -d test[6Pps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+3f0ca0e4e121        test                "/bin/sh -c '/bin/ba…"   1 second ago        Up 2 seconds        80/tcp              focused_einstein
+bash-3.2$  [Kdockerp[K poe[Krt wen[Kb
+Error: No such container: web
+bash-3.2$ docker port web
+Error: No such container: web
+bash-3.2$ docker port web[K[K[Ktest
+Error: No such container: test
+bash-3.2$ docker port test[K[K[K[Klatest
+Error: No such container: latest
+bash-3.2$ docker port latest[K[K[K[K[K[K3f0ca0e4e121
+bash-3.2$ docker-machine ip default
+Docker machine "default" does not exist. Use "docker-machine ls" to list machines. Use "docker-machine create" to add a new one.
+bash-3.2$ dokcer docker rmi $(docker images -q)
+bash: dokcer: command not found
+bash-3.2$ docker rmi $(docker images -q)
+Error response from daemon: conflict: unable to delete 197ab00a7131 (cannot be forced) - image is being used by running container 3f0ca0e4e121
+Error response from daemon: conflict: unable to delete a35e70164dfb (cannot be forced) - image has dependent child images
+bash-3.2$ docker stop $(docker ps -a -q)
+3f0ca0e4e121
+bash-3.2$ docker stop $(docker ps -a -q)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crmi $(docker images[C[C[C[C
+Error response from daemon: conflict: unable to delete 197ab00a7131 (must be forced) - image is being used by stopped container 3f0ca0e4e121
+Error response from daemon: conflict: unable to delete a35e70164dfb (cannot be forced) - image has dependent child images
+bash-3.2$ docker rmi $(docker images -q)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstop $(docker ps -a[C[C[C[C[1P[1P[1P[1P[1@r[1@m
+3f0ca0e4e121
+bash-3.2$ docker rm $(docker ps -a -q)[2@i $(docker images[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P $(docker ps -a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kdocker container
+
+Usage:	docker container COMMAND
+
+Manage containers
+
+Options:
+
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Run a command in a new container
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+bash-3.2$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker container ls[K ls[Krm $(docker ps -a -q)[2@i $(docker images[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstop $(docker ps -a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crmi $(docker images[C[C[C[C
+Untagged: test:latest
+Deleted: sha256:197ab00a7131eab880a80f362d23f6fa5eb6c5da6d5b9f50ea78e2202b724340
+Deleted: sha256:1dadcef02e501feec64909dcdb974b449ed00d7b2a53918bd97d8f1fc9a5e3c8
+Deleted: sha256:090ae8311967aa0cdf898bd4b09d8e6539fde34f4cff28fc5cf2ce7b8c0e3c38
+Deleted: sha256:6a676f986c46d5b4f023cefd0449f690624eccebb399490f1ee547af73fccf83
+Deleted: sha256:80ecbadd71590f194c8adf9f59807a430942cc831665bca955f4db7af75b2a18
+Deleted: sha256:e0953241b137e4ecaed5918efd7a747346905e2fed3ac66b632fa06715c8b0ea
+Deleted: sha256:a0f6ce4877e6206e94b9dc9986cea93516e6d1e836e3ac2dc8ffceb56fb1dda8
+Deleted: sha256:3b6809251942bdf65c4f06a043539def96aadad7dbdd03b3c55ff728f796bed4
+Deleted: sha256:a5947ea883a875ec477aae76488e189399292d918a4519012d45d8294cf869a7
+Deleted: sha256:604e6755132af986dbb47f011925530fe0ea08b7767092816aa5e6b1fe01ff54
+Deleted: sha256:ce2e3c458ee68c36fef8c3f70337d75b4d93557aee42c1a92cb15ae1e521a2e7
+Deleted: sha256:6ec3d968606092767098b33f3bb49f227cd9b4454ff75e8b7bce104ed501119f
+Untagged: ubuntu:14.04
+Untagged: ubuntu@sha256:159462193f5381fceffa28aa89df9740a790d5654b29fb0fb6098ce396c605a1
+Deleted: sha256:a35e70164dfb0dd7a9fec8be0b00017a2277c5a221dcab8ffa75f876ed0aae3d
+Deleted: sha256:1018c12947560fb13fe662f31507747509a50f9f85d3ef1ff4f07d350a71d925
+Deleted: sha256:4e83c47ca309e77d42f06e02eab28c827ac7d1f6eeb0709c88f954567ae63c64
+Deleted: sha256:fd354ce27c940129b1d6e00615b3eb014a252cdc332e0d74a39f4f04837b1625
+Deleted: sha256:43e66901c81641b7bf9cbfcb4e0e4aeaf79765747713fc1fdbca266d3cefd4a6
+Deleted: sha256:92fb50b4d953c72eb1d5c045bab47a78f5c02348d8f004f7229a7b8fef16608d
+bash-3.2$ pwd
+/Users/jasonnguy/Potatoe/docker
+bash-3.2$ docker build -t apache
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | - [flags]
+
+Build an image from a Dockerfile
+bash-3.2$ docker build -t apache[K[K[K[K[K[Ktest
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | - [flags]
+
+Build an image from a Dockerfile
+bash-3.2$ docker build -t test .
+Sending build context to Docker daemon  14.85kB
+Step 1/10 : FROM ubuntu:14.04
+14.04: Pulling from library/ubuntu
+
+[1A[1K[K99ad4e3ced4d: Pulling fs layer [1B
+[1A[1K[Kec5a723f4e2a: Pulling fs layer [1B
+[1A[1K[K2a175e11567c: Pulling fs layer [1B
+[1A[1K[K8d26426e95e0: Pulling fs layer [1B
+[1A[1K[K46e451596b7c: Pulling fs layer [1B[2A[1K[K8d26426e95e0: Waiting [2B[1A[1K[K46e451596b7c: Waiting [1B[4A[1K[Kec5a723f4e2a: Downloading [===========>                                       ]  16.38kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Downloading [==================================================>]  72.66kB/72.66kB[4B[3A[1K[K2a175e11567c: Downloading [==================================================>]     630B/630B[3B[3A[1K[K2a175e11567c: Verifying Checksum [3B[3A[1K[K2a175e11567c: Download complete [3B[5A[1K[K99ad4e3ced4d: Downloading [>                                                  ]  527.3kB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==>                                                ]  3.183MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===>                                               ]  5.311MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=====>                                             ]  7.444MB/73MB[5B[1A[1K[K46e451596b7c: Download complete [1B[5A[1K[K99ad4e3ced4d: Downloading [======>                                            ]  9.596MB/73MB[5B[2A[1K[K8d26426e95e0: Download complete [2B[5A[1K[K99ad4e3ced4d: Downloading [========>                                          ]  11.74MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=========>                                         ]  13.87MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==========>                                        ]  16.02MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [============>                                      ]  18.68MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==============>                                    ]  20.81MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===============>                                   ]  22.43MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [================>                                  ]  24.03MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=================>                                 ]  26.17MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===================>                               ]  28.82MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=====================>                             ]  31.47MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=======================>                           ]  34.14MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=========================>                         ]   36.8MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===========================>                       ]  39.46MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [============================>                      ]  42.11MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==============================>                    ]  44.77MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [================================>                  ]  46.89MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=================================>                 ]  49.03MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===================================>               ]  51.17MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [====================================>              ]  53.82MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [======================================>            ]  56.48MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [========================================>          ]  59.15MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==========================================>        ]  61.82MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===========================================>       ]  63.42MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [============================================>      ]  65.01MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=============================================>     ]  67.14MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===============================================>   ]  69.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=================================================> ]  71.93MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==================================================>]     73MB/73MB[5B[5A[1K[K99ad4e3ced4d: Verifying Checksum [5B[5A[1K[K99ad4e3ced4d: Download complete [5B[5A[1K[K99ad4e3ced4d: Extracting [>                                                  ]  557.1kB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==>                                                ]  3.342MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===>                                               ]  5.571MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=====>                                             ]  8.356MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=======>                                           ]  11.14MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=========>                                         ]  13.93MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===========>                                       ]  16.71MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=============>                                     ]   19.5MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===============>                                   ]  22.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [================>                                  ]  24.51MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==================>                                ]   27.3MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===================>                               ]  28.97MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=====================>                             ]   31.2MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=======================>                           ]  33.98MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=========================>                         ]  36.77MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==========================>                        ]  38.44MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===========================>                       ]  40.11MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [============================>                      ]  42.34MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==============================>                    ]  45.12MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [================================>                  ]  47.35MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=================================>                 ]  49.58MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===================================>               ]  51.81MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=====================================>             ]  54.03MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [======================================>            ]  55.71MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=======================================>           ]  57.38MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [========================================>          ]  58.49MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=========================================>         ]  61.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===========================================>       ]  64.06MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=============================================>     ]  66.29MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==============================================>    ]  67.96MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [================================================>  ]  70.19MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=================================================> ]  71.86MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=================================================> ]  72.97MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==================================================>]     73MB/73MB[5B[5A[1K[K99ad4e3ced4d: Pull complete [5B[4A[1K[Kec5a723f4e2a: Extracting [======================>                            ]  32.77kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Extracting [==================================================>]  72.66kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Extracting [==================================================>]  72.66kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Pull complete [4B[3A[1K[K2a175e11567c: Extracting [==================================================>]     630B/630B[3B[3A[1K[K2a175e11567c: Extracting [==================================================>]     630B/630B[3B[3A[1K[K2a175e11567c: Pull complete [3B[2A[1K[K8d26426e95e0: Extracting [==================================================>]     851B/851B[2B[2A[1K[K8d26426e95e0: Extracting [==================================================>]     851B/851B[2B[2A[1K[K8d26426e95e0: Pull complete [2B[1A[1K[K46e451596b7c: Extracting [==================================================>]     163B/163B[1B[1A[1K[K46e451596b7c: Extracting [==================================================>]     163B/163B[1B[1A[1K[K46e451596b7c: Pull complete [1BDigest: sha256:159462193f5381fceffa28aa89df9740a790d5654b29fb0fb6098ce396c605a1
+Status: Downloaded newer image for ubuntu:14.04
+ ---> a35e70164dfb
+Step 2/10 : RUN apt-get update
+ ---> Running in 1ee918539e50
+Ign http://archive.ubuntu.com trusty InRelease
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:2 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Get:3 http://archive.ubuntu.com trusty-backports InRelease [65.9 kB]
+Get:4 http://archive.ubuntu.com trusty Release.gpg [933 B]
+Get:5 http://archive.ubuntu.com trusty Release [58.5 kB]
+Get:6 http://security.ubuntu.com trusty-security/universe Sources [83.2 kB]
+Get:7 http://archive.ubuntu.com trusty-updates/universe Sources [248 kB]
+Get:8 http://security.ubuntu.com trusty-security/main amd64 Packages [896 kB]
+Get:9 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1320 kB]
+Get:10 http://security.ubuntu.com trusty-security/restricted amd64 Packages [18.1 kB]
+Get:11 http://security.ubuntu.com trusty-security/universe amd64 Packages [267 kB]
+Get:12 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [21.4 kB]
+Get:13 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [4723 B]
+Get:14 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [576 kB]
+Get:15 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [16.0 kB]
+Get:16 http://archive.ubuntu.com trusty-backports/main amd64 Packages [14.7 kB]
+Get:17 http://archive.ubuntu.com trusty-backports/restricted amd64 Packages [40 B]
+Get:18 http://archive.ubuntu.com trusty-backports/universe amd64 Packages [52.5 kB]
+Get:19 http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages [1392 B]
+Get:20 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+Get:21 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Get:22 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+Get:23 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Get:24 http://archive.ubuntu.com trusty/multiverse amd64 Packages [169 kB]
+Fetched 21.2 MB in 17s (1224 kB/s)
+Reading package lists...
+Removing intermediate container 1ee918539e50
+ ---> 9689bf496705
+Step 3/10 : RUN apt-get -q -y install apache2
+ ---> Running in a7dd992c8f03
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libasn1-8-heimdal libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal
+  libkrb5-26-heimdal libldap-2.4-2 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libwind0-heimdal libxml2 openssl
+  sgml-base ssl-cert xml-core
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine apache2-suexec-custom ufw
+  apache2-utils libsasl2-modules-otp libsasl2-modules-ldap
+  libsasl2-modules-sql libsasl2-modules-gssapi-mit
+  libsasl2-modules-gssapi-heimdal ca-certificates sgml-base-doc
+  openssl-blacklist debhelper
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libasn1-8-heimdal libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal
+  libkrb5-26-heimdal libldap-2.4-2 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libwind0-heimdal libxml2 openssl
+  sgml-base ssl-cert xml-core
+0 upgraded, 25 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3442 kB of archives.
+After this operation, 12.6 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libroken18-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [39.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libasn1-8-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [160 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libhcrypto4-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [84.1 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libheimbase1-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [29.0 kB]
+Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libwind0-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [47.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libhx509-5-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [104 kB]
+Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libkrb5-26-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [196 kB]
+Get:8 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libheimntlm0-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [15.2 kB]
+Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libgssapi3-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [89.7 kB]
+Get:10 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-modules-db amd64 2.1.25.dfsg1-17build1 [14.9 kB]
+Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-2 amd64 2.1.25.dfsg1-17build1 [56.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libldap-2.4-2 amd64 2.4.31-1+nmu2ubuntu8.4 [153 kB]
+Get:13 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libxml2 amd64 2.9.1+dfsg1-3ubuntu4.12 [573 kB]
+Get:14 http://archive.ubuntu.com/ubuntu/ trusty/main sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1 [85.1 kB]
+Get:16 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1 [76.4 kB]
+Get:17 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-modules amd64 2.1.25.dfsg1-17build1 [64.3 kB]
+Get:18 http://archive.ubuntu.com/ubuntu/ trusty-updates/main openssl amd64 1.0.1f-1ubuntu2.23 [490 kB]
+Get:19 http://archive.ubuntu.com/ubuntu/ trusty/main xml-core all 0.13+nmu2 [23.3 kB]
+Get:20 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1 [10.5 kB]
+Get:21 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1 [8634 B]
+Get:22 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-bin amd64 2.4.7-1ubuntu4.18 [844 kB]
+Get:23 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-data all 2.4.7-1ubuntu4.18 [160 kB]
+Get:24 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2 amd64 2.4.7-1ubuntu4.18 [87.5 kB]
+Get:25 http://archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33 [16.6 kB]
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0m[91mdpkg-preconfigure: unable to re-open stdin: 
+[0mFetched 3442 kB in 4s (762 kB/s)
+Selecting previously unselected package libroken18-heimdal:amd64.
+(Reading database ... 11571 files and directories currently installed.)
+Preparing to unpack .../libroken18-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../libasn1-8-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../libhcrypto4-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../libheimbase1-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../libwind0-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../libhx509-5-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../libkrb5-26-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../libheimntlm0-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../libgssapi3-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../libsasl2-modules-db_2.1.25.dfsg1-17build1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.25.dfsg1-17build1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../libsasl2-2_2.1.25.dfsg1-17build1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.25.dfsg1-17build1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../libldap-2.4-2_2.4.31-1+nmu2ubuntu8.4_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.31-1+nmu2ubuntu8.4) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../libxml2_2.9.1+dfsg1-3ubuntu4.12_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.12) ...
+Selecting previously unselected package sgml-base.
+Preparing to unpack .../sgml-base_1.26+nmu4ubuntu1_all.deb ...
+Unpacking sgml-base (1.26+nmu4ubuntu1) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../libapr1_1.5.0-1_amd64.deb ...
+Unpacking libapr1:amd64 (1.5.0-1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../libaprutil1_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.5.3-1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../libsasl2-modules_2.1.25.dfsg1-17build1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.25.dfsg1-17build1) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../openssl_1.0.1f-1ubuntu2.23_amd64.deb ...
+Unpacking openssl (1.0.1f-1ubuntu2.23) ...
+Selecting previously unselected package xml-core.
+Preparing to unpack .../xml-core_0.13+nmu2_all.deb ...
+Unpacking xml-core (0.13+nmu2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../libaprutil1-ldap_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.5.3-1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../apache2-bin_2.4.7-1ubuntu4.18_amd64.deb ...
+Unpacking apache2-bin (2.4.7-1ubuntu4.18) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../apache2-data_2.4.7-1ubuntu4.18_all.deb ...
+Unpacking apache2-data (2.4.7-1ubuntu4.18) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../apache2_2.4.7-1ubuntu4.18_amd64.deb ...
+Unpacking apache2 (2.4.7-1ubuntu4.18) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../ssl-cert_1.0.33_all.deb ...
+Unpacking ssl-cert (1.0.33) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up libroken18-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libasn1-8-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libhcrypto4-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libheimbase1-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libwind0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libhx509-5-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libkrb5-26-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libheimntlm0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libgssapi3-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libsasl2-modules-db:amd64 (2.1.25.dfsg1-17build1) ...
+Setting up libsasl2-2:amd64 (2.1.25.dfsg1-17build1) ...
+Setting up libldap-2.4-2:amd64 (2.4.31-1+nmu2ubuntu8.4) ...
+Setting up libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.12) ...
+Setting up sgml-base (1.26+nmu4ubuntu1) ...
+Setting up libapr1:amd64 (1.5.0-1) ...
+Setting up libaprutil1:amd64 (1.5.3-1) ...
+Setting up libsasl2-modules:amd64 (2.1.25.dfsg1-17build1) ...
+Setting up openssl (1.0.1f-1ubuntu2.23) ...
+Setting up xml-core (0.13+nmu2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+Setting up libaprutil1-ldap:amd64 (1.5.3-1) ...
+Setting up apache2-bin (2.4.7-1ubuntu4.18) ...
+Setting up apache2-data (2.4.7-1ubuntu4.18) ...
+Setting up apache2 (2.4.7-1ubuntu4.18) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+[91minvoke-rc.d: policy-rc.d denied execution of start.
+[0mSetting up ssl-cert (1.0.33) ...
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0mProcessing triggers for libc-bin (2.19-0ubuntu6.14) ...
+Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Removing intermediate container a7dd992c8f03
+ ---> e2bc53bea976
+Step 4/10 : ENV APACHE_RUN_USER www-data
+ ---> Running in fdfb11194560
+Removing intermediate container fdfb11194560
+ ---> d60fc86d7204
+Step 5/10 : ENV APACHE_RUN_GROUP www-data
+ ---> Running in b88cbe4022f1
+Removing intermediate container b88cbe4022f1
+ ---> 6332a6d7a283
+Step 6/10 : ENV APACHE_LOG_DIR /var/log/apache2
+ ---> Running in e5ff9fc14b2d
+Removing intermediate container e5ff9fc14b2d
+ ---> f7381cb85400
+Step 7/10 : RUN mkdir -p /var/lock/apache2 /var/run/apache2
+ ---> Running in 6504ab94cc65
+Removing intermediate container 6504ab94cc65
+ ---> ef037a39b56a
+Step 8/10 : EXPOSE 80
+ ---> Running in d22a501f6ff7
+Removing intermediate container d22a501f6ff7
+ ---> 7b0e4eaa9c05
+Step 9/10 : VOLUME /var/www/html
+ ---> Running in 7b075b1b0337
+Removing intermediate container 7b075b1b0337
+ ---> f428737ca4b1
+Step 10/10 : CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
+ ---> Running in 3be63aeb69ba
+Removing intermediate container 3be63aeb69ba
+ ---> 30a0458f80e1
+Successfully built 30a0458f80e1
+Successfully tagged test:latest
+bash-3.2$ docker build -t test .[Kapache
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | - [flags]
+
+Build an image from a Dockerfile
+bash-3.2$ 
+bash-3.2$ docker build -t apachetest .apachetest .apache[C[C[C[C[C[C[C[C[C[C[Kdocker build -t apache[C[C[C[C[C[C[C[C[C[C[Kdocker run --rm -d -p 8080:80 -v p[K```[K[C`p`w`d`[C/web:/var/www/html --na,e[K[Kme test apac[Kche
+> docker run --rm -d -p 8080:80 -v ``pwd`/web:/var/www/html --name test apache[C[C[Kdocker run --rm -d -p 8080:80 -v ``pwd`/web:/var/www/html --name test apache[K[K[K[K[K[Ktest
+bash: /web:/var/www/html: No such file or directory
+flag needs an argument: 'v' in -v
+See 'docker run --help'.
+docker: Error response from daemon: create pwd/Users/jasonnguy/Potatoe/docker/web: "pwd/Users/jasonnguy/Potatoe/docker/web" includes invalid characters for a local volume name, only "[a-zA-Z0-9][a-zA-Z0-9_.-]" are allowed. If you intended to pass a host directory, use absolute path.
+See 'docker run --help'.
+bash-3.2$ docker run --rm -d -p 8080:80 -v ``pwd`/web:/var/www/html --name test apache
+docker run --rm -d -p 8080:80 -v ``pwd`/web:/var/www/html --name test test[1P
+> docker run --rm -d -p 8080:80 -v ``pwd`/web:/var/www/html --name test apache
+docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test
+bash: /web:/var/www/html: No such file or directory
+flag needs an argument: 'v' in -v
+See 'docker run --help'.
+bash: /web:/var/www/html: No such file or directory
+flag needs an argument: 'v' in -v
+See 'docker run --help'.
+Unable to find image 'apache:latest' locally
+docker: Error response from daemon: pull access denied for apache, repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+a120fed7cac5ec7d7acbfb2017ebefa8d51f0cc673747f77c72f1bde8aa27c4e
+docker: Error response from daemon: error while creating mount source path '/Users/jasonnguy/Potatoe/docker/web': mkdir /Users/jasonnguy/Potatoe/docker/web: permission denied.
+bash-3.2$ docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test[C[C[C`pwd`/web:/var/www/html --name test apache
+docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test
+docker run --rm -d -p 8080:80 -v ``pwd`/web:/var/www/html --name test apache[A[A[3Ppwd`/web:/var/www/html --name test test
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[1@u[C[1@d[1@u[1P[1@o[1@ 
+Password:
+b591397dc4e235335615e9c6ab6b852158cede78b1e84eed5acba9f6acad84a4
+docker: Error response from daemon: error while creating mount source path '/Users/jasonnguy/Potatoe/docker/web': mkdir /Users/jasonnguy/Potatoe/docker/web: permission denied.
+bash-3.2$ sudo docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[C
+d331647dfbbc7c24794b7a8e5d765f924523a8d1b7af5fbcca480cda5e79e9c0
+bash-3.2$ curl http://localhost:8080
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /</title>
+ </head>
+ <body>
+<h1>Index of /</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="Dockerfile">Dockerfile</a></td><td align="right">2018-03-07 13:12  </td><td align="right">367 </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 8080</address>
+</body></html>
+bash-3.2$ curl http://localhost:8080
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /</title>
+ </head>
+ <body>
+<h1>Index of /</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="Dockerfile">Dockerfile</a></td><td align="right">2018-03-07 13:12  </td><td align="right">367 </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 8080</address>
+</body></html>
+bash-3.2$ curl http://localhost:8080
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /</title>
+ </head>
+ <body>
+<h1>Index of /</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="Dockerfile">Dockerfile</a></td><td align="right">2018-03-07 13:12  </td><td align="right">367 </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 8080</address>
+</body></html>
+bash-3.2$ curl http://localhost:8080
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /</title>
+ </head>
+ <body>
+<h1>Index of /</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="Dockerfile">Dockerfile</a></td><td align="right">2018-03-07 13:12  </td><td align="right">367 </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 8080</address>
+</body></html>
+bash-3.2$ git clone                                        [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K                                        [K[K[K                                        [B[C[C[C[C[C[C[C[C[C[Ccurl http://localhost:8080[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit clone https://github.com/GoodPotatoe/Examples
+fatal: could not create work tree dir 'Examples': Permission denied
+bash-3.2$ sudo su [K[K[K[K git vlonce https://github.com/GoodPotatoe/Examples[1P[1@c
+Password:
+git: 'clonce' is not a git command. See 'git --help'.
+
+The most similar command is
+	clone
+bash-3.2$ sudo git clonce https://github.com/GoodPotatoe/Examples[1P
+Cloning into 'Examples'...
+remote: Counting objects: 275, done.[K
+remote: Compressing objects:   0% (1/154)   [Kremote: Compressing objects:   1% (2/154)   [Kremote: Compressing objects:   2% (4/154)   [Kremote: Compressing objects:   3% (5/154)   [Kremote: Compressing objects:   4% (7/154)   [Kremote: Compressing objects:   5% (8/154)   [Kremote: Compressing objects:   6% (10/154)   [Kremote: Compressing objects:   7% (11/154)   [Kremote: Compressing objects:   8% (13/154)   [Kremote: Compressing objects:   9% (14/154)   [Kremote: Compressing objects:  10% (16/154)   [Kremote: Compressing objects:  11% (17/154)   [Kremote: Compressing objects:  12% (19/154)   [Kremote: Compressing objects:  13% (21/154)   [Kremote: Compressing objects:  14% (22/154)   [Kremote: Compressing objects:  15% (24/154)   [Kremote: Compressing objects:  16% (25/154)   [Kremote: Compressing objects:  17% (27/154)   [Kremote: Compressing objects:  18% (28/154)   [Kremote: Compressing objects:  19% (30/154)   [Kremote: Compressing objects:  20% (31/154)   [Kremote: Compressing objects:  21% (33/154)   [Kremote: Compressing objects:  22% (34/154)   [Kremote: Compressing objects:  23% (36/154)   [Kremote: Compressing objects:  24% (37/154)   [Kremote: Compressing objects:  25% (39/154)   [Kremote: Compressing objects:  26% (41/154)   [Kremote: Compressing objects:  27% (42/154)   [Kremote: Compressing objects:  28% (44/154)   [Kremote: Compressing objects:  29% (45/154)   [Kremote: Compressing objects:  30% (47/154)   [Kremote: Compressing objects:  31% (48/154)   [Kremote: Compressing objects:  32% (50/154)   [Kremote: Compressing objects:  33% (51/154)   [Kremote: Compressing objects:  34% (53/154)   [Kremote: Compressing objects:  35% (54/154)   [Kremote: Compressing objects:  36% (56/154)   [Kremote: Compressing objects:  37% (57/154)   [Kremote: Compressing objects:  38% (59/154)   [Kremote: Compressing objects:  39% (61/154)   [Kremote: Compressing objects:  40% (62/154)   [Kremote: Compressing objects:  41% (64/154)   [Kremote: Compressing objects:  42% (65/154)   [Kremote: Compressing objects:  43% (67/154)   [Kremote: Compressing objects:  44% (68/154)   [Kremote: Compressing objects:  45% (70/154)   [Kremote: Compressing objects:  46% (71/154)   [Kremote: Compressing objects:  47% (73/154)   [Kremote: Compressing objects:  48% (74/154)   [Kremote: Compressing objects:  49% (76/154)   [Kremote: Compressing objects:  50% (77/154)   [Kremote: Compressing objects:  51% (79/154)   [Kremote: Compressing objects:  52% (81/154)   [Kremote: Compressing objects:  53% (82/154)   [Kremote: Compressing objects:  54% (84/154)   [Kremote: Compressing objects:  55% (85/154)   [Kremote: Compressing objects:  56% (87/154)   [Kremote: Compressing objects:  57% (88/154)   [Kremote: Compressing objects:  58% (90/154)   [Kremote: Compressing objects:  59% (91/154)   [Kremote: Compressing objects:  60% (93/154)   [Kremote: Compressing objects:  61% (94/154)   [Kremote: Compressing objects:  62% (96/154)   [Kremote: Compressing objects:  63% (98/154)   [Kremote: Compressing objects:  64% (99/154)   [Kremote: Compressing objects:  65% (101/154)   [Kremote: Compressing objects:  66% (102/154)   [Kremote: Compressing objects:  67% (104/154)   [Kremote: Compressing objects:  68% (105/154)   [Kremote: Compressing objects:  69% (107/154)   [Kremote: Compressing objects:  70% (108/154)   [Kremote: Compressing objects:  71% (110/154)   [Kremote: Compressing objects:  72% (111/154)   [Kremote: Compressing objects:  73% (113/154)   [Kremote: Compressing objects:  74% (114/154)   [Kremote: Compressing objects:  75% (116/154)   [Kremote: Compressing objects:  76% (118/154)   [Kremote: Compressing objects:  77% (119/154)   [Kremote: Compressing objects:  78% (121/154)   [Kremote: Compressing objects:  79% (122/154)   [Kremote: Compressing objects:  80% (124/154)   [Kremote: Compressing objects:  81% (125/154)   [Kremote: Compressing objects:  82% (127/154)   [Kremote: Compressing objects:  83% (128/154)   [Kremote: Compressing objects:  84% (130/154)   [Kremote: Compressing objects:  85% (131/154)   [Kremote: Compressing objects:  86% (133/154)   [Kremote: Compressing objects:  87% (134/154)   [Kremote: Compressing objects:  88% (136/154)   [Kremote: Compressing objects:  89% (138/154)   [Kremote: Compressing objects:  90% (139/154)   [Kremote: Compressing objects:  91% (141/154)   [Kremote: Compressing objects:  92% (142/154)   [Kremote: Compressing objects:  93% (144/154)   [Kremote: Compressing objects:  94% (145/154)   [Kremote: Compressing objects:  95% (147/154)   [Kremote: Compressing objects:  96% (148/154)   [Kremote: Compressing objects:  97% (150/154)   [Kremote: Compressing objects:  98% (151/154)   [Kremote: Compressing objects:  99% (153/154)   [Kremote: Compressing objects: 100% (154/154)   [Kremote: Compressing objects: 100% (154/154), done.[K
+Receiving objects:   0% (1/275)   Receiving objects:   1% (3/275)   Receiving objects:   2% (6/275)   Receiving objects:   3% (9/275)   Receiving objects:   4% (11/275)   Receiving objects:   5% (14/275)   Receiving objects:   6% (17/275)   Receiving objects:   7% (20/275)   Receiving objects:   8% (22/275)   Receiving objects:   9% (25/275)   Receiving objects:  10% (28/275)   Receiving objects:  11% (31/275)   Receiving objects:  12% (33/275)   Receiving objects:  13% (36/275)   Receiving objects:  14% (39/275)   Receiving objects:  15% (42/275)   Receiving objects:  16% (44/275)   Receiving objects:  17% (47/275)   Receiving objects:  18% (50/275)   Receiving objects:  19% (53/275)   Receiving objects:  20% (55/275)   Receiving objects:  21% (58/275)   Receiving objects:  22% (61/275)   Receiving objects:  23% (64/275)   Receiving objects:  24% (66/275)   Receiving objects:  25% (69/275)   Receiving objects:  26% (72/275)   Receiving objects:  27% (75/275)   Receiving objects:  28% (77/275)   Receiving objects:  29% (80/275)   Receiving objects:  30% (83/275)   Receiving objects:  31% (86/275)   Receiving objects:  32% (88/275)   Receiving objects:  33% (91/275)   Receiving objects:  34% (94/275)   Receiving objects:  35% (97/275)   Receiving objects:  36% (99/275)   Receiving objects:  37% (102/275)   Receiving objects:  38% (105/275)   Receiving objects:  39% (108/275)   Receiving objects:  40% (110/275)   Receiving objects:  41% (113/275)   Receiving objects:  42% (116/275)   Receiving objects:  43% (119/275)   Receiving objects:  44% (121/275)   Receiving objects:  45% (124/275)   remote: Total 275 (delta 99), reused 275 (delta 99), pack-reused 0[K
+Receiving objects:  46% (127/275)   Receiving objects:  47% (130/275)   Receiving objects:  48% (132/275)   Receiving objects:  49% (135/275)   Receiving objects:  50% (138/275)   Receiving objects:  51% (141/275)   Receiving objects:  52% (143/275)   Receiving objects:  53% (146/275)   Receiving objects:  54% (149/275)   Receiving objects:  55% (152/275)   Receiving objects:  56% (154/275)   Receiving objects:  57% (157/275)   Receiving objects:  58% (160/275)   Receiving objects:  59% (163/275)   Receiving objects:  60% (165/275)   Receiving objects:  61% (168/275)   Receiving objects:  62% (171/275)   Receiving objects:  63% (174/275)   Receiving objects:  64% (176/275)   Receiving objects:  65% (179/275)   Receiving objects:  66% (182/275)   Receiving objects:  67% (185/275)   Receiving objects:  68% (187/275)   Receiving objects:  69% (190/275)   Receiving objects:  70% (193/275)   Receiving objects:  71% (196/275)   Receiving objects:  72% (198/275)   Receiving objects:  73% (201/275)   Receiving objects:  74% (204/275)   Receiving objects:  75% (207/275)   Receiving objects:  76% (209/275)   Receiving objects:  77% (212/275)   Receiving objects:  78% (215/275)   Receiving objects:  79% (218/275)   Receiving objects:  80% (220/275)   Receiving objects:  81% (223/275)   Receiving objects:  82% (226/275)   Receiving objects:  83% (229/275)   Receiving objects:  84% (231/275)   Receiving objects:  85% (234/275)   Receiving objects:  86% (237/275)   Receiving objects:  87% (240/275)   Receiving objects:  88% (242/275)   Receiving objects:  89% (245/275)   Receiving objects:  90% (248/275)   Receiving objects:  91% (251/275)   Receiving objects:  92% (253/275)   Receiving objects:  93% (256/275)   Receiving objects:  94% (259/275)   Receiving objects:  95% (262/275)   Receiving objects:  96% (264/275)   Receiving objects:  97% (267/275)   Receiving objects:  98% (270/275)   Receiving objects:  99% (273/275)   Receiving objects: 100% (275/275)   Receiving objects: 100% (275/275), 64.57 KiB | 520.00 KiB/s, done.
+Resolving deltas:   0% (0/99)   Resolving deltas:   6% (6/99)   Resolving deltas:   9% (9/99)   Resolving deltas:  11% (11/99)   Resolving deltas:  12% (12/99)   Resolving deltas:  15% (15/99)   Resolving deltas:  17% (17/99)   Resolving deltas:  20% (20/99)   Resolving deltas:  22% (22/99)   Resolving deltas:  26% (26/99)   Resolving deltas:  29% (29/99)   Resolving deltas:  30% (30/99)   Resolving deltas:  33% (33/99)   Resolving deltas:  37% (37/99)   Resolving deltas:  39% (39/99)   Resolving deltas:  41% (41/99)   Resolving deltas:  42% (42/99)   Resolving deltas:  45% (45/99)   Resolving deltas:  47% (47/99)   Resolving deltas:  48% (48/99)   Resolving deltas:  50% (50/99)   Resolving deltas:  51% (51/99)   Resolving deltas:  52% (52/99)   Resolving deltas:  55% (55/99)   Resolving deltas:  58% (58/99)   Resolving deltas:  60% (60/99)   Resolving deltas:  63% (63/99)   Resolving deltas:  64% (64/99)   Resolving deltas:  65% (65/99)   Resolving deltas:  66% (66/99)   Resolving deltas:  68% (68/99)   Resolving deltas:  70% (70/99)   Resolving deltas:  72% (72/99)   Resolving deltas:  81% (81/99)   Resolving deltas:  82% (82/99)   Resolving deltas:  83% (83/99)   Resolving deltas:  84% (84/99)   Resolving deltas:  85% (85/99)   Resolving deltas:  86% (86/99)   Resolving deltas:  87% (87/99)   Resolving deltas:  91% (91/99)   Resolving deltas:  92% (92/99)   Resolving deltas:  94% (94/99)   Resolving deltas:  97% (97/99)   Resolving deltas: 100% (99/99)   Resolving deltas: 100% (99/99), done.
+bash-3.2$ cd exam[K[K[K[K[KE[K Examples/
+bash-3.2$ pwd
+/Users/jasonnguy/Potatoe/docker/Examples
+bash-3.2$ pwdcd Examples/[C[C[C[C[C[C[C[C[C[Csudo git clone https://github.com/GoodPotatoe/Examples[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Khttps://github.com/GoodPotatoe/Examples[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmc-b/devops
+Cloning into 'devops'...
+remote: Counting objects: 373, done.[K
+remote: Compressing objects:   1% (1/97)   [Kremote: Compressing objects:   2% (2/97)   [Kremote: Compressing objects:   3% (3/97)   [Kremote: Compressing objects:   4% (4/97)   [Kremote: Compressing objects:   5% (5/97)   [Kremote: Compressing objects:   6% (6/97)   [Kremote: Compressing objects:   7% (7/97)   [Kremote: Compressing objects:   8% (8/97)   [Kremote: Compressing objects:   9% (9/97)   [Kremote: Compressing objects:  10% (10/97)   [Kremote: Compressing objects:  11% (11/97)   [Kremote: Compressing objects:  12% (12/97)   [Kremote: Compressing objects:  13% (13/97)   [Kremote: Compressing objects:  14% (14/97)   [Kremote: Compressing objects:  15% (15/97)   [Kremote: Compressing objects:  16% (16/97)   [Kremote: Compressing objects:  17% (17/97)   [Kremote: Compressing objects:  18% (18/97)   [Kremote: Compressing objects:  19% (19/97)   [Kremote: Compressing objects:  20% (20/97)   [Kremote: Compressing objects:  21% (21/97)   [Kremote: Compressing objects:  22% (22/97)   [Kremote: Compressing objects:  23% (23/97)   [Kremote: Compressing objects:  24% (24/97)   [Kremote: Compressing objects:  25% (25/97)   [Kremote: Compressing objects:  26% (26/97)   [Kremote: Compressing objects:  27% (27/97)   [Kremote: Compressing objects:  28% (28/97)   [Kremote: Compressing objects:  29% (29/97)   [Kremote: Compressing objects:  30% (30/97)   [Kremote: Compressing objects:  31% (31/97)   [Kremote: Compressing objects:  32% (32/97)   [Kremote: Compressing objects:  34% (33/97)   [Kremote: Compressing objects:  35% (34/97)   [Kremote: Compressing objects:  36% (35/97)   [Kremote: Compressing objects:  37% (36/97)   [Kremote: Compressing objects:  38% (37/97)   [Kremote: Compressing objects:  39% (38/97)   [Kremote: Compressing objects:  40% (39/97)   [Kremote: Compressing objects:  41% (40/97)   [Kremote: Compressing objects:  42% (41/97)   [Kremote: Compressing objects:  43% (42/97)   [Kremote: Compressing objects:  44% (43/97)   [Kremote: Compressing objects:  45% (44/97)   [Kremote: Compressing objects:  46% (45/97)   [Kremote: Compressing objects:  47% (46/97)   [Kremote: Compressing objects:  48% (47/97)   [Kremote: Compressing objects:  49% (48/97)   [Kremote: Compressing objects:  50% (49/97)   [Kremote: Compressing objects:  51% (50/97)   [Kremote: Compressing objects:  52% (51/97)   [Kremote: Compressing objects:  53% (52/97)   [Kremote: Compressing objects:  54% (53/97)   [Kremote: Compressing objects:  55% (54/97)   [Kremote: Compressing objects:  56% (55/97)   [Kremote: Compressing objects:  57% (56/97)   [Kremote: Compressing objects:  58% (57/97)   [Kremote: Compressing objects:  59% (58/97)   [Kremote: Compressing objects:  60% (59/97)   [Kremote: Compressing objects:  61% (60/97)   [Kremote: Compressing objects:  62% (61/97)   [Kremote: Compressing objects:  63% (62/97)   [Kremote: Compressing objects:  64% (63/97)   [Kremote: Compressing objects:  65% (64/97)   [Kremote: Compressing objects:  67% (65/97)   [Kremote: Compressing objects:  68% (66/97)   [Kremote: Compressing objects:  69% (67/97)   [Kremote: Compressing objects:  70% (68/97)   [Kremote: Compressing objects:  71% (69/97)   [Kremote: Compressing objects:  72% (70/97)   [Kremote: Compressing objects:  73% (71/97)   [Kremote: Compressing objects:  74% (72/97)   [Kremote: Compressing objects:  75% (73/97)   [Kremote: Compressing objects:  76% (74/97)   [Kremote: Compressing objects:  77% (75/97)   [Kremote: Compressing objects:  78% (76/97)   [Kremote: Compressing objects:  79% (77/97)   [Kremote: Compressing objects:  80% (78/97)   [Kremote: Compressing objects:  81% (79/97)   [Kremote: Compressing objects:  82% (80/97)   [Kremote: Compressing objects:  83% (81/97)   [Kremote: Compressing objects:  84% (82/97)   [Kremote: Compressing objects:  85% (83/97)   [Kremote: Compressing objects:  86% (84/97)   [Kremote: Compressing objects:  87% (85/97)   [Kremote: Compressing objects:  88% (86/97)   [Kremote: Compressing objects:  89% (87/97)   [Kremote: Compressing objects:  90% (88/97)   [Kremote: Compressing objects:  91% (89/97)   [Kremote: Compressing objects:  92% (90/97)   [Kremote: Compressing objects:  93% (91/97)   [Kremote: Compressing objects:  94% (92/97)   [Kremote: Compressing objects:  95% (93/97)   [Kremote: Compressing objects:  96% (94/97)   [Kremote: Compressing objects:  97% (95/97)   [Kremote: Compressing objects:  98% (96/97)   [Kremote: Compressing objects: 100% (97/97)   [Kremote: Compressing objects: 100% (97/97), done.[K
+Receiving objects:   0% (1/373)   Receiving objects:   1% (4/373)   Receiving objects:   2% (8/373)   Receiving objects:   3% (12/373)   Receiving objects:   4% (15/373)   Receiving objects:   5% (19/373)   Receiving objects:   6% (23/373)   Receiving objects:   7% (27/373)   Receiving objects:   8% (30/373)   Receiving objects:   9% (34/373)   Receiving objects:  10% (38/373)   Receiving objects:  11% (42/373)   Receiving objects:  12% (45/373)   Receiving objects:  13% (49/373)   Receiving objects:  14% (53/373)   Receiving objects:  15% (56/373)   Receiving objects:  16% (60/373)   Receiving objects:  17% (64/373)   Receiving objects:  18% (68/373)   Receiving objects:  19% (71/373)   Receiving objects:  20% (75/373)   Receiving objects:  21% (79/373)   Receiving objects:  22% (83/373)   Receiving objects:  23% (86/373)   Receiving objects:  24% (90/373)   Receiving objects:  25% (94/373)   Receiving objects:  26% (97/373)   Receiving objects:  27% (101/373)   Receiving objects:  28% (105/373)   Receiving objects:  29% (109/373)   Receiving objects:  30% (112/373)   Receiving objects:  31% (116/373)   Receiving objects:  32% (120/373)   Receiving objects:  33% (124/373)   Receiving objects:  34% (127/373)   Receiving objects:  35% (131/373)   Receiving objects:  36% (135/373)   Receiving objects:  37% (139/373)   Receiving objects:  38% (142/373)   Receiving objects:  39% (146/373)   Receiving objects:  40% (150/373)   Receiving objects:  41% (153/373)   Receiving objects:  42% (157/373)   Receiving objects:  43% (161/373)   Receiving objects:  44% (165/373)   Receiving objects:  45% (168/373)   Receiving objects:  46% (172/373)   Receiving objects:  47% (176/373)   Receiving objects:  48% (180/373)   Receiving objects:  49% (183/373)   Receiving objects:  50% (187/373)   Receiving objects:  51% (191/373)   Receiving objects:  52% (194/373)   Receiving objects:  53% (198/373)   Receiving objects:  54% (202/373)   remote: Total 373 (delta 57), reused 41 (delta 0), pack-reused 275[K
+Receiving objects:  55% (206/373)   Receiving objects:  56% (209/373)   Receiving objects:  57% (213/373)   Receiving objects:  58% (217/373)   Receiving objects:  59% (221/373)   Receiving objects:  60% (224/373)   Receiving objects:  61% (228/373)   Receiving objects:  62% (232/373)   Receiving objects:  63% (235/373)   Receiving objects:  64% (239/373)   Receiving objects:  65% (243/373)   Receiving objects:  66% (247/373)   Receiving objects:  67% (250/373)   Receiving objects:  68% (254/373)   Receiving objects:  69% (258/373)   Receiving objects:  70% (262/373)   Receiving objects:  71% (265/373)   Receiving objects:  72% (269/373)   Receiving objects:  73% (273/373)   Receiving objects:  74% (277/373)   Receiving objects:  75% (280/373)   Receiving objects:  76% (284/373)   Receiving objects:  77% (288/373)   Receiving objects:  78% (291/373)   Receiving objects:  79% (295/373)   Receiving objects:  80% (299/373)   Receiving objects:  81% (303/373)   Receiving objects:  82% (306/373)   Receiving objects:  83% (310/373)   Receiving objects:  84% (314/373)   Receiving objects:  85% (318/373)   Receiving objects:  86% (321/373)   Receiving objects:  87% (325/373)   Receiving objects:  88% (329/373)   Receiving objects:  89% (332/373)   Receiving objects:  90% (336/373)   Receiving objects:  91% (340/373)   Receiving objects:  92% (344/373)   Receiving objects:  93% (347/373)   Receiving objects:  94% (351/373)   Receiving objects:  95% (355/373)   Receiving objects:  96% (359/373)   Receiving objects:  97% (362/373)   Receiving objects:  98% (366/373)   Receiving objects:  99% (370/373)   Receiving objects: 100% (373/373)   Receiving objects: 100% (373/373), 87.81 KiB | 731.00 KiB/s, done.
+Resolving deltas:   0% (0/154)   Resolving deltas:   3% (6/154)   Resolving deltas:   7% (11/154)   Resolving deltas:   8% (13/154)   Resolving deltas:  11% (17/154)   Resolving deltas:  12% (19/154)   Resolving deltas:  13% (21/154)   Resolving deltas:  14% (23/154)   Resolving deltas:  15% (24/154)   Resolving deltas:  16% (26/154)   Resolving deltas:  19% (30/154)   Resolving deltas:  20% (32/154)   Resolving deltas:  22% (34/154)   Resolving deltas:  24% (37/154)   Resolving deltas:  25% (40/154)   Resolving deltas:  27% (42/154)   Resolving deltas:  28% (44/154)   Resolving deltas:  29% (45/154)   Resolving deltas:  30% (47/154)   Resolving deltas:  31% (48/154)   Resolving deltas:  32% (50/154)   Resolving deltas:  35% (55/154)   Resolving deltas:  36% (56/154)   Resolving deltas:  37% (57/154)   Resolving deltas:  38% (59/154)   Resolving deltas:  39% (61/154)   Resolving deltas:  40% (62/154)   Resolving deltas:  42% (65/154)   Resolving deltas:  44% (69/154)   Resolving deltas:  53% (83/154)   Resolving deltas:  55% (85/154)   Resolving deltas:  56% (87/154)   Resolving deltas:  57% (88/154)   Resolving deltas:  58% (90/154)   Resolving deltas:  59% (91/154)   Resolving deltas:  60% (93/154)   Resolving deltas:  61% (94/154)   Resolving deltas:  62% (96/154)   Resolving deltas:  72% (111/154)   Resolving deltas:  77% (119/154)   Resolving deltas:  78% (121/154)   Resolving deltas:  79% (123/154)   Resolving deltas:  81% (126/154)   Resolving deltas:  83% (128/154)   Resolving deltas:  87% (135/154)   Resolving deltas:  88% (137/154)   Resolving deltas:  90% (139/154)   Resolving deltas:  93% (144/154)   Resolving deltas:  94% (145/154)   Resolving deltas:  96% (148/154)   Resolving deltas:  97% (150/154)   Resolving deltas:  98% (152/154)   Resolving deltas: 100% (154/154)   Resolving deltas: 100% (154/154), done.
+bash-3.2$ git pull
+error: cannot open .git/FETCH_HEAD: Permission denied
+bash-3.2$ cd devops/
+bash-3.2$ git pull
+error: cannot open .git/FETCH_HEAD: Permission denied
+bash-3.2$ sudo git pull
+Already up to date.
+bash-3.2$ sudo dst[K[K[Kstatus
+sudo: status: command not found
+bash-3.2$ sudo statusgit pull[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[Ccd devops/[2Pgit pullsudo git clone https://github.com/mc-b/devops[C[C[C[C[C[C[C[C[C[Cpwd[Ksudo git clone https://github.com/mc-b/devops[C[C[C[C[C[C[C[C[C[Cpwd[Kcd Examples/[C[C[C[C[C[C[C[C[C[Csudo git clone https://github.com/GoodPotatoe/Examples[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pgit clon[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Pcurl http://localhost:8080[C[C[C[C[C[C[C[C[C[Csudo docker run --rm -d -p 8080:80 -v `pwd`:/var/www/html --name test test[4@/web[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C`pwd`/web:/var/www/html --name test apache
+docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test
+docker run --rm -d -p 8080:80 -v ``pwd`/web:/var/www/html --name test apache[A[A[3Ppwd`/web:/var/www/html --name test test
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C`pwd`/web:/var/www/html --name test apache
+docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test
+docker run --rm -d -p 8080:80 -v ``pwd`/web:/var/www/html --name test apache[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@`
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbuild -t apache[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctest .apachetest .
+unable to prepare context: unable to evaluate symlinks in Dockerfile path: lstat /Users/jasonnguy/.Trash/Examples/devops/Dockerfile: no such file or directory
+bash-3.2$ o[Kcd[K[Kpwd
+/Users/jasonnguy/.Trash/Examples/devops
+bash-3.2$ cd
+bash-3.2$ ddc[K[K[Kcd Potatoe/
+bash-3.2$ cd docker/
+bash-3.2$ cd[K[Kcd docker/Potatoe/[1Pdocker/Potatoe/[Kpwddocker build -t test .[C[C[C[C[C[C[C[C[C[C[11Psudo statusdocker build -t test .
+Sending build context to Docker daemon  14.85kB
+Step 1/10 : FROM ubuntu:14.04
+ ---> a35e70164dfb
+Step 2/10 : RUN apt-get update
+ ---> Using cache
+ ---> 9689bf496705
+Step 3/10 : RUN apt-get -q -y install apache2
+ ---> Using cache
+ ---> e2bc53bea976
+Step 4/10 : ENV APACHE_RUN_USER www-data
+ ---> Using cache
+ ---> d60fc86d7204
+Step 5/10 : ENV APACHE_RUN_GROUP www-data
+ ---> Using cache
+ ---> 6332a6d7a283
+Step 6/10 : ENV APACHE_LOG_DIR /var/log/apache2
+ ---> Using cache
+ ---> f7381cb85400
+Step 7/10 : RUN mkdir -p /var/lock/apache2 /var/run/apache2
+ ---> Using cache
+ ---> ef037a39b56a
+Step 8/10 : EXPOSE 80
+ ---> Using cache
+ ---> 7b0e4eaa9c05
+Step 9/10 : VOLUME /var/www/html
+ ---> Using cache
+ ---> f428737ca4b1
+Step 10/10 : CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
+ ---> Using cache
+ ---> 30a0458f80e1
+Successfully built 30a0458f80e1
+Successfully tagged test:latest
+bash-3.2$ docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name apache apache
+Unable to find image 'apache:latest' locally
+^[[Adocker: Error response from daemon: pull access denied for apache, repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+bash-3.2$ docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name apache apache[K[K[K[K[K[K[K[K[K[K[K[K[K[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C t e s t [C e t [1P [1P t e s t 
+docker: Error response from daemon: Conflict. The container name "/test" is already in use by container "d331647dfbbc7c24794b7a8e5d765f924523a8d1b7af5fbcca480cda5e79e9c0". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+bash-3.2$ docker cointainer ls
+docker: 'cointainer' is not a docker command.
+See 'docker --help'
+bash-3.2$ docker cointainer ls
+docker: 'cointainer' is not a docker command.
+See 'docker --help'
+bash-3.2$ 
+bash-3.2$ docker cointainer ls[1P
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+d331647dfbbc        test                "/bin/sh -c '/bin/ba…"   13 minutes ago      Up 13 minutes       0.0.0.0:8080->80/tcp   test
+bash-3.2$ curl http://localhost:8080
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /</title>
+ </head>
+ <body>
+<h1>Index of /</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="Dockerfile">Dockerfile</a></td><td align="right">2018-03-07 13:12  </td><td align="right">367 </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 8080</address>
+</body></html>
+bash-3.2$ curl http://localhost:8080
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /</title>
+ </head>
+ <body>
+<h1>Index of /</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="Dockerfile">Dockerfile</a></td><td align="right">2018-03-07 13:12  </td><td align="right">367 </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 8080</address>
+</body></html>
+bash-3.2$ curl http://localhost:8080[C[C[C[C[C[C[C[C[C[C[7Pdocker container ls[1@i[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+d331647dfbbc        test                "/bin/sh -c '/bin/ba…"   14 minutes ago      Up 14 minutes       0.0.0.0:8080->80/tcp   test
+bash-3.2$ docker container ls[C[C[C[C[C[C[C[C[C[Ccurl http://localhost:8080[K[K[K[K[C[C[C[C[C[C[C[C[C[C[1Pdocker container ls[C[C[C[C[C[C[C[C[C[Ccurl http://localhost:8080[C[C[C[C[C[C[C[C[C[C[7Pdocker container ls[C[C[C[C[C[C[C[C[C[C[Kcd [K /vaw[Kr
+bash-3.2$ ls
+agentx		db		jabberd		mail		root		spool
+at		empty		lib		msgs		rpc		tmp
+audit		folders		log		netboot		run		vm
+backups		install		ma		networkd	rwho		yp
+bash-3.2$ cd[K[Klscd /vardocker container ls
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+d331647dfbbc        test                "/bin/sh -c '/bin/ba…"   14 minutes ago      Up 15 minutes       0.0.0.0:8080->80/tcp   test
+bash-3.2$ cd (weblatency.d [K[K[K[K[K[K[K[K[K[K[K[K[K[K/web:var[K[K[K/w[Kvar/
+bash: cd: /web:/var/: No such file or directory
+bash-3.2$ cd /web:/var/[1P/var/[1P/var/[1P/var/[1P/var/[1Pvar/
+bash-3.2$ lls
+bash: lls: command not found
+bash-3.2$ ls
+agentx		db		jabberd		mail		root		spool
+at		empty		lib		msgs		rpc		tmp
+audit		folders		log		netboot		run		vm
+backups		install		ma		networkd	rwho		yp
+bash-3.2$ docker stop $(docker ps -a -q)
+d331647dfbbc
+bash-3.2$ docker rm $(docker ps -a -q)
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...] [flags]
+
+Remove one or more containers
+bash-3.2$ docker rm $(docker ps -a -q)[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kd331647dfbbc
+Error: No such container: d331647dfbbc
+bash-3.2$ docker rm d331647dfbbc$(docker ps -a -q)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@stop[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Klscd /var/web:/var/[C[C[C[C[C[C[C[C[C[Cdocker container ls[C[C[C[C[C[C[C[C[C[C[6Pcd /web:/var/[5Pvar/web:/var/[C[C[C[C[C[C[C[C[C[Cdocker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker rmi $(docker images -q)
+Untagged: test:latest
+Deleted: sha256:30a0458f80e154d24d6b19d14ef1424e669105f3cdd57f8124a039d8f66b14e8
+Deleted: sha256:f428737ca4b190283f72945bb42516ca45f8b9e5dda55d2e222f61dde6a8e604
+Deleted: sha256:7b0e4eaa9c05b6646a43fceac81d329bb73675040badda08e57104f0093597de
+Deleted: sha256:ef037a39b56ae3ba3e0667768967f36bceaaf6f55165b6a809e489767e5b8318
+Deleted: sha256:a72de1bcac7189ddef6189c7bc31088c7d760348dd7b6a664f00c2b820e7ee75
+Deleted: sha256:f7381cb85400d019847c939e7f7cecd0313beaea404b0347459a9e489b5cbdd4
+Deleted: sha256:6332a6d7a283944dc58d76ad99a7d0dbb5e08a2f93ab736fa948986af9ea9be7
+Deleted: sha256:d60fc86d720486bc58cbf99c4ef22dc5778f6129ddd88b50dfe9bda163322813
+Deleted: sha256:e2bc53bea976be000de40496358dc3dc4c218c7a5046f390e15f9e7c9a833c5b
+Deleted: sha256:57fbd85ee5799732b4bb249d820656672fbab73645934e1aa8c10764ad939675
+Deleted: sha256:9689bf496705c83cbe77d700d1846bc99f285514c35612cdcc24a47ee7b50a5f
+Deleted: sha256:5b7e50398a701dd618471be687232c3c54d27cc3b15898c116f01b2f0f9f842c
+Untagged: ubuntu:14.04
+Untagged: ubuntu@sha256:159462193f5381fceffa28aa89df9740a790d5654b29fb0fb6098ce396c605a1
+Deleted: sha256:a35e70164dfb0dd7a9fec8be0b00017a2277c5a221dcab8ffa75f876ed0aae3d
+Deleted: sha256:1018c12947560fb13fe662f31507747509a50f9f85d3ef1ff4f07d350a71d925
+Deleted: sha256:4e83c47ca309e77d42f06e02eab28c827ac7d1f6eeb0709c88f954567ae63c64
+Deleted: sha256:fd354ce27c940129b1d6e00615b3eb014a252cdc332e0d74a39f4f04837b1625
+Deleted: sha256:43e66901c81641b7bf9cbfcb4e0e4aeaf79765747713fc1fdbca266d3cefd4a6
+Deleted: sha256:92fb50b4d953c72eb1d5c045bab47a78f5c02348d8f004f7229a7b8fef16608d
+bash-3.2$ cd Pota[K[K[K[K[K[K[Kpwd
+/var
+bash-3.2$ cd
+bash-3.2$ cd po[K[KPotatoe/
+bash-3.2$ cd docker/
+bash-3.2$ docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name apache apache
+Unable to find image 'apache:latest' locally
+docker: Error response from daemon: pull access denied for apache, repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+bash-3.2$ docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name apache apache[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[Ktest test[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kbuild[C[C[C[C[C[C[C[C[C[C[2Pcd docker/Potatoe/[Kpwddocker rmi $(docker images -q)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pcontainer lsrm d331647dfbbc$(docker ps -a -q)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@stop[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Klscd /var/web:/var/[C[C[C[C[C[C[C[C[C[Cdocker container ls[C[C[C[C[C[C[C[C[C[Cls[Kcd /vardocker container ls[C[C[C[C[C[C[C[C[C[Ccurl http://localhost:8080[Kt:8080[K[C[C[C[C[C[C[C[C[C[C[1Pdocker container ls[1@i[C[C[C[C[C[C[C[C[C[Crun --rm -d -p 8080:80 -v `pwd`/var/www/html --name test test web:/var/www/html --name apache apache[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbuild -t test .[K[C[C[C[C[C[C[C[C[C[C[12Pcd docker/docker build -t test .[C[C[C[C[C[C[C[C[C[C[12Pcd docker/docker build -t test .
+Sending build context to Docker daemon  14.85kB
+Step 1/10 : FROM ubuntu:14.04
+14.04: Pulling from library/ubuntu
+
+[1A[1K[K99ad4e3ced4d: Pulling fs layer [1B
+[1A[1K[Kec5a723f4e2a: Pulling fs layer [1B
+[1A[1K[K2a175e11567c: Pulling fs layer [1B
+[1A[1K[K8d26426e95e0: Pulling fs layer [1B
+[1A[1K[K46e451596b7c: Pulling fs layer [1B[1A[1K[K46e451596b7c: Waiting [1B[2A[1K[K8d26426e95e0: Waiting [2B[3A[1K[K2a175e11567c: Downloading [==================================================>]     630B/630B[3B[3A[1K[K2a175e11567c: Verifying Checksum [3B[3A[1K[K2a175e11567c: Download complete [3B[4A[1K[Kec5a723f4e2a: Downloading [===========>                                       ]  16.38kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Downloading [==================================================>]  72.66kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Verifying Checksum [4B[4A[1K[Kec5a723f4e2a: Download complete [4B[5A[1K[K99ad4e3ced4d: Downloading [>                                                  ]  526.8kB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==>                                                ]  3.197MB/73MB[5B[2A[1K[K8d26426e95e0: Downloading [==================================================>]     851B/851B[2B[2A[1K[K8d26426e95e0: Verifying Checksum [2B[5A[1K[K99ad4e3ced4d: Downloading [===>                                               ]  5.334MB/73MB[5B[1A[1K[K46e451596b7c: Download complete [1B[5A[1K[K99ad4e3ced4d: Downloading [=====>                                             ]  7.477MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [======>                                            ]  9.592MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [========>                                          ]  11.72MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=========>                                         ]  13.86MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===========>                                       ]  16.52MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=============>                                     ]   19.2MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==============>                                    ]  21.33MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [================>                                  ]     24MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=================>                                 ]  26.13MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===================>                               ]  28.26MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [====================>                              ]  30.38MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [======================>                            ]  33.05MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [========================>                          ]   35.7MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==========================>                        ]  38.35MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [============================>                      ]  41.02MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=============================>                     ]  42.61MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==============================>                    ]   44.2MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===============================>                   ]  46.33MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=================================>                 ]  48.45MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===================================>               ]  51.11MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [====================================>              ]  53.77MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [======================================>            ]  56.41MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [========================================>          ]  58.54MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=========================================>         ]  60.15MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [==========================================>        ]  61.74MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===========================================>       ]  63.34MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [============================================>      ]  65.48MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=============================================>     ]  67.08MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [===============================================>   ]   69.2MB/73MB[5B[5A[1K[K99ad4e3ced4d: Downloading [=================================================> ]  71.87MB/73MB[5B[5A[1K[K99ad4e3ced4d: Download complete [5B[5A[1K[K99ad4e3ced4d: Extracting [>                                                  ]  557.1kB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==>                                                ]  3.342MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===>                                               ]  5.571MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=====>                                             ]  8.356MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=======>                                           ]  11.14MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=========>                                         ]  13.93MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===========>                                       ]  16.71MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=============>                                     ]   19.5MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===============>                                   ]  22.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [================>                                  ]  24.51MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==================>                                ]  26.74MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===================>                               ]  28.97MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=====================>                             ]   31.2MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [======================>                            ]  33.42MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [========================>                          ]  36.21MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==========================>                        ]  38.99MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===========================>                       ]  40.67MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=============================>                     ]  42.89MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===============================>                   ]  45.68MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [================================>                  ]  47.91MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==================================>                ]  50.14MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===================================>               ]  52.36MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=====================================>             ]  54.03MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [======================================>            ]  55.71MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=======================================>           ]  57.38MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [========================================>          ]  58.49MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=========================================>         ]  61.28MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [===========================================>       ]  64.06MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=============================================>     ]  66.29MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==============================================>    ]  67.96MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [================================================>  ]  70.19MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=================================================> ]  71.86MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [=================================================> ]  72.97MB/73MB[5B[5A[1K[K99ad4e3ced4d: Extracting [==================================================>]     73MB/73MB[5B[5A[1K[K99ad4e3ced4d: Pull complete [5B[4A[1K[Kec5a723f4e2a: Extracting [======================>                            ]  32.77kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Extracting [==================================================>]  72.66kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Extracting [==================================================>]  72.66kB/72.66kB[4B[4A[1K[Kec5a723f4e2a: Pull complete [4B[3A[1K[K2a175e11567c: Extracting [==================================================>]     630B/630B[3B[3A[1K[K2a175e11567c: Extracting [==================================================>]     630B/630B[3B[3A[1K[K2a175e11567c: Pull complete [3B[2A[1K[K8d26426e95e0: Extracting [==================================================>]     851B/851B[2B[2A[1K[K8d26426e95e0: Extracting [==================================================>]     851B/851B[2B[2A[1K[K8d26426e95e0: Pull complete [2B[1A[1K[K46e451596b7c: Extracting [==================================================>]     163B/163B[1B[1A[1K[K46e451596b7c: Extracting [==================================================>]     163B/163B[1B[1A[1K[K46e451596b7c: Pull complete [1BDigest: sha256:1dfe8e11ae802acd973c688479b5d910ed1642e3ea3e4b7e5b896dab7b0f70cd
+Status: Downloaded newer image for ubuntu:14.04
+ ---> a35e70164dfb
+Step 2/10 : RUN apt-get update
+ ---> Running in 5e8cb5988cb3
+Ign http://archive.ubuntu.com trusty InRelease
+Get:1 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Get:2 http://archive.ubuntu.com trusty-backports InRelease [65.9 kB]
+Get:3 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:4 http://archive.ubuntu.com trusty Release.gpg [933 B]
+Get:5 http://archive.ubuntu.com trusty Release [58.5 kB]
+Get:6 http://archive.ubuntu.com trusty-updates/universe Sources [248 kB]
+Get:7 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1320 kB]
+Get:8 http://security.ubuntu.com trusty-security/universe Sources [83.2 kB]
+Get:9 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [21.4 kB]
+Get:10 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [576 kB]
+Get:11 http://security.ubuntu.com trusty-security/main amd64 Packages [896 kB]
+Get:12 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [16.0 kB]
+Get:13 http://archive.ubuntu.com trusty-backports/main amd64 Packages [14.7 kB]
+Get:14 http://archive.ubuntu.com trusty-backports/restricted amd64 Packages [40 B]
+Get:15 http://archive.ubuntu.com trusty-backports/universe amd64 Packages [52.5 kB]
+Get:16 http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages [1392 B]
+Get:17 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+Get:18 http://security.ubuntu.com trusty-security/restricted amd64 Packages [18.1 kB]
+Get:19 http://security.ubuntu.com trusty-security/universe amd64 Packages [267 kB]
+Get:20 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [4723 B]
+Get:21 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Get:22 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+Get:23 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Get:24 http://archive.ubuntu.com trusty/multiverse amd64 Packages [169 kB]
+Fetched 21.2 MB in 13s (1564 kB/s)
+Reading package lists...
+Removing intermediate container 5e8cb5988cb3
+ ---> 86b3b57bf95e
+Step 3/10 : RUN apt-get -q -y install apache2
+ ---> Running in 5e58a6acc545
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libasn1-8-heimdal libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal
+  libkrb5-26-heimdal libldap-2.4-2 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libwind0-heimdal libxml2 openssl
+  sgml-base ssl-cert xml-core
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine apache2-suexec-custom ufw
+  apache2-utils libsasl2-modules-otp libsasl2-modules-ldap
+  libsasl2-modules-sql libsasl2-modules-gssapi-mit
+  libsasl2-modules-gssapi-heimdal ca-certificates sgml-base-doc
+  openssl-blacklist debhelper
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libasn1-8-heimdal libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal
+  libkrb5-26-heimdal libldap-2.4-2 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libwind0-heimdal libxml2 openssl
+  sgml-base ssl-cert xml-core
+0 upgraded, 25 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3442 kB of archives.
+After this operation, 12.6 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libroken18-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [39.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libasn1-8-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [160 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libhcrypto4-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [84.1 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libheimbase1-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [29.0 kB]
+Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libwind0-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [47.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libhx509-5-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [104 kB]
+Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libkrb5-26-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [196 kB]
+Get:8 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libheimntlm0-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [15.2 kB]
+Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libgssapi3-heimdal amd64 1.6~git20131207+dfsg-1ubuntu1.2 [89.7 kB]
+Get:10 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-modules-db amd64 2.1.25.dfsg1-17build1 [14.9 kB]
+Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-2 amd64 2.1.25.dfsg1-17build1 [56.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libldap-2.4-2 amd64 2.4.31-1+nmu2ubuntu8.4 [153 kB]
+Get:13 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libxml2 amd64 2.9.1+dfsg1-3ubuntu4.12 [573 kB]
+Get:14 http://archive.ubuntu.com/ubuntu/ trusty/main sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1 [85.1 kB]
+Get:16 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1 [76.4 kB]
+Get:17 http://archive.ubuntu.com/ubuntu/ trusty/main libsasl2-modules amd64 2.1.25.dfsg1-17build1 [64.3 kB]
+Get:18 http://archive.ubuntu.com/ubuntu/ trusty-updates/main openssl amd64 1.0.1f-1ubuntu2.23 [490 kB]
+Get:19 http://archive.ubuntu.com/ubuntu/ trusty/main xml-core all 0.13+nmu2 [23.3 kB]
+Get:20 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1 [10.5 kB]
+Get:21 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1 [8634 B]
+Get:22 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-bin amd64 2.4.7-1ubuntu4.18 [844 kB]
+Get:23 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-data all 2.4.7-1ubuntu4.18 [160 kB]
+Get:24 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2 amd64 2.4.7-1ubuntu4.18 [87.5 kB]
+Get:25 http://archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33 [16.6 kB]
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0m[91mdpkg-preconfigure: unable to re-open stdin: 
+[0mFetched 3442 kB in 1s (2183 kB/s)
+Selecting previously unselected package libroken18-heimdal:amd64.
+(Reading database ... 11571 files and directories currently installed.)
+Preparing to unpack .../libroken18-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../libasn1-8-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../libhcrypto4-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../libheimbase1-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../libwind0-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../libhx509-5-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../libkrb5-26-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../libheimntlm0-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../libgssapi3-heimdal_1.6~git20131207+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../libsasl2-modules-db_2.1.25.dfsg1-17build1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.25.dfsg1-17build1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../libsasl2-2_2.1.25.dfsg1-17build1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.25.dfsg1-17build1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../libldap-2.4-2_2.4.31-1+nmu2ubuntu8.4_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.31-1+nmu2ubuntu8.4) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../libxml2_2.9.1+dfsg1-3ubuntu4.12_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.12) ...
+Selecting previously unselected package sgml-base.
+Preparing to unpack .../sgml-base_1.26+nmu4ubuntu1_all.deb ...
+Unpacking sgml-base (1.26+nmu4ubuntu1) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../libapr1_1.5.0-1_amd64.deb ...
+Unpacking libapr1:amd64 (1.5.0-1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../libaprutil1_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.5.3-1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../libsasl2-modules_2.1.25.dfsg1-17build1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.25.dfsg1-17build1) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../openssl_1.0.1f-1ubuntu2.23_amd64.deb ...
+Unpacking openssl (1.0.1f-1ubuntu2.23) ...
+Selecting previously unselected package xml-core.
+Preparing to unpack .../xml-core_0.13+nmu2_all.deb ...
+Unpacking xml-core (0.13+nmu2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../libaprutil1-ldap_1.5.3-1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.5.3-1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../apache2-bin_2.4.7-1ubuntu4.18_amd64.deb ...
+Unpacking apache2-bin (2.4.7-1ubuntu4.18) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../apache2-data_2.4.7-1ubuntu4.18_all.deb ...
+Unpacking apache2-data (2.4.7-1ubuntu4.18) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../apache2_2.4.7-1ubuntu4.18_amd64.deb ...
+Unpacking apache2 (2.4.7-1ubuntu4.18) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../ssl-cert_1.0.33_all.deb ...
+Unpacking ssl-cert (1.0.33) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up libroken18-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libasn1-8-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libhcrypto4-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libheimbase1-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libwind0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libhx509-5-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libkrb5-26-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libheimntlm0-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libgssapi3-heimdal:amd64 (1.6~git20131207+dfsg-1ubuntu1.2) ...
+Setting up libsasl2-modules-db:amd64 (2.1.25.dfsg1-17build1) ...
+Setting up libsasl2-2:amd64 (2.1.25.dfsg1-17build1) ...
+Setting up libldap-2.4-2:amd64 (2.4.31-1+nmu2ubuntu8.4) ...
+Setting up libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.12) ...
+Setting up sgml-base (1.26+nmu4ubuntu1) ...
+Setting up libapr1:amd64 (1.5.0-1) ...
+Setting up libaprutil1:amd64 (1.5.3-1) ...
+Setting up libsasl2-modules:amd64 (2.1.25.dfsg1-17build1) ...
+Setting up openssl (1.0.1f-1ubuntu2.23) ...
+Setting up xml-core (0.13+nmu2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+Setting up libaprutil1-ldap:amd64 (1.5.3-1) ...
+Setting up apache2-bin (2.4.7-1ubuntu4.18) ...
+Setting up apache2-data (2.4.7-1ubuntu4.18) ...
+Setting up apache2 (2.4.7-1ubuntu4.18) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+[91minvoke-rc.d: policy-rc.d denied execution of start.
+[0mSetting up ssl-cert (1.0.33) ...
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+[0m[91mdebconf: (This frontend requires a controlling tty.)
+[0m[91mdebconf: falling back to frontend: Teletype
+[0mProcessing triggers for libc-bin (2.19-0ubuntu6.14) ...
+Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Removing intermediate container 5e58a6acc545
+ ---> 097253741125
+Step 4/10 : ENV APACHE_RUN_USER www-data
+ ---> Running in 69b645856d39
+Removing intermediate container 69b645856d39
+ ---> 6327e4047148
+Step 5/10 : ENV APACHE_RUN_GROUP www-data
+ ---> Running in ac0682fca8a7
+Removing intermediate container ac0682fca8a7
+ ---> af737c6da891
+Step 6/10 : ENV APACHE_LOG_DIR /var/log/apache2
+ ---> Running in 15bbe537e283
+Removing intermediate container 15bbe537e283
+ ---> 48683506e5b9
+Step 7/10 : RUN mkdir -p /var/lock/apache2 /var/run/apache2
+ ---> Running in b6bcf92b4ca8
+Removing intermediate container b6bcf92b4ca8
+ ---> fd3740d18809
+Step 8/10 : EXPOSE 80
+ ---> Running in 76481b647de5
+Removing intermediate container 76481b647de5
+ ---> 1dfa22355531
+Step 9/10 : VOLUME /var/www/html
+ ---> Running in 596703f1bb84
+Removing intermediate container 596703f1bb84
+ ---> 6a8611eab732
+Step 10/10 : CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
+ ---> Running in 38e89fa485bf
+Removing intermediate container 38e89fa485bf
+ ---> 8adddc79e626
+Successfully built 8adddc79e626
+Successfully tagged test:latest
+bash-3.2$ docker build -t test .[K -t test .[C[C[C[C[C[C[C[C[C[C[Kdocker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name apache apache
+Unable to find image 'apache:latest' locally
+^[[Adocker: Error response from daemon: pull access denied for apache, repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+bash-3.2$ docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name apache apache[K[K[K[K[K[K[K[K[K[K[K[K[Ktest test
+96b6e8f7815c94fcf69689d7393f2b7e0623d8e60a8124a807ce7a9a6935deb2
+docker: Error response from daemon: error while creating mount source path '/Users/jasonnguy/Potatoe/docker/web': mkdir /Users/jasonnguy/Potatoe/docker/web: permission denied.
+bash-3.2$ docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test[C[C[C[C[C[C[C[C[C[C[Kdocker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test[1@s[1@u[C[1@d[1@o[1@ 
+Password:
+a19275ae8a8ed793196f56cf4d6642530132999151c360ebe32b985b79c967f8
+docker: Error response from daemon: error while creating mount source path '/Users/jasonnguy/Potatoe/docker/web': mkdir /Users/jasonnguy/Potatoe/docker/web: permission denied.
+bash-3.2$ cd
+bash-3.2$ cdsudo docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test
+60fc8b01c31edd1c7d707e57e95d60e18d0882e7b80979aae506ff821a681793
+bash-3.2$ curl http://localhost:8080
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /</title>
+ </head>
+ <body>
+<h1>Index of /</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 8080</address>
+</body></html>
+bash-3.2$ cd web
+bash-3.2$ ls
+bash-3.2$ cd /var
+bash-3.2$ ls
+agentx		db		jabberd		mail		root		spool
+at		empty		lib		msgs		rpc		tmp
+audit		folders		log		netboot		run		vm
+backups		install		ma		networkd	rwho		yp
+bash-3.2$ pwd
+/var
+bash-3.2$ cd web/var
+bash: cd: web/var: No such file or directory
+bash-3.2$ /var/www/htmlc/var/www/html[C[C[C[C[C[C[C[C[C[C[Cd/var/www/html /var/www/html
+bash: cd: /var/www/html: No such file or directory
+bash-3.2$ cd /var/www/html[6Pweb/varpwd[Kcd web/var/var/www/html[C[C[C[C[C[C[C[C[C[C[Kdocker stop $(docker ps -a -q)
+
+60fc8b01c31e
+bash-3.2$ 
+bash-3.2$ docker rm $(docker ps -a -q)
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...] [flags]
+
+Remove one or more containers
+bash-3.2$ docker rm $(docker ps -a -q)[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K60fc8b01c31e
+Error: No such container: 60fc8b01c31e
+bash-3.2$ docker o[Kcontainer p[Kls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker container ls[K[K[K
+
+Usage:	docker container COMMAND
+
+Manage containers
+
+Options:
+
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Run a command in a new container
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+bash-3.2$ docker container[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdocker rm $(docker ps -a -q)
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...] [flags]
+
+Remove one or more containers
+bash-3.2$ 
+bash-3.2$ docker rmi $(docker images -q)
+Untagged: test:latest
+Deleted: sha256:8adddc79e626a27c896cac7ddcedc613ba21069708c2fa469567ae6d3ecee4f9
+Deleted: sha256:6a8611eab7322218917b777008b96917831e7dafe472988fcb7eb36cf43af7d1
+Deleted: sha256:1dfa22355531205d54c8da23c3a348417479adcce8f59357eed4ce10e49e2a9e
+Deleted: sha256:fd3740d18809aebdd08e215fe0e7dcbdcc2a0e108994e45edd7e453b53bd99eb
+Deleted: sha256:7a9ab47a8601e0b04e41d9c9aa9b93c0c3887f5c66922a430651fa20ccd241a5
+Deleted: sha256:48683506e5b957edf112b835fe851ce094d9c5ae3c2464bee00ec6bbcadf8446
+Deleted: sha256:af737c6da891e9206c15a365dd296c65ce2c3dd7f5764a831e0931941f838807
+Deleted: sha256:6327e4047148bbf515998c6001e4e2c9b8bad5f953751729071231acfef9fe16
+Deleted: sha256:09725374112513dca5b8484e90f9cf00f9fddadc793a2f787ee0b73a86efbc60
+Deleted: sha256:2701c9382be90fa86f4a9ff1e2d9748fef9330da46c56d17238441c9f01bff3e
+Deleted: sha256:86b3b57bf95e9a43b6cbe87c7434125253dfb18898498fcdfc8e384ecccd9a0f
+Deleted: sha256:21e4345d0b6c31682387e8c99558233badcf9830312ac803f15c381e6f943fc1
+Untagged: ubuntu:14.04
+Untagged: ubuntu@sha256:1dfe8e11ae802acd973c688479b5d910ed1642e3ea3e4b7e5b896dab7b0f70cd
+Deleted: sha256:a35e70164dfb0dd7a9fec8be0b00017a2277c5a221dcab8ffa75f876ed0aae3d
+Deleted: sha256:1018c12947560fb13fe662f31507747509a50f9f85d3ef1ff4f07d350a71d925
+Deleted: sha256:4e83c47ca309e77d42f06e02eab28c827ac7d1f6eeb0709c88f954567ae63c64
+Deleted: sha256:fd354ce27c940129b1d6e00615b3eb014a252cdc332e0d74a39f4f04837b1625
+Deleted: sha256:43e66901c81641b7bf9cbfcb4e0e4aeaf79765747713fc1fdbca266d3cefd4a6
+Deleted: sha256:92fb50b4d953c72eb1d5c045bab47a78f5c02348d8f004f7229a7b8fef16608d
+bash-3.2$ 
+bash-3.2$ docker rmi $(docker images -q)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P $(docker ps -a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pcontainer lsrm 60fc8b01c31e$(docker ps -a -q)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@stop[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pcd /var/www/html[6Pweb/varpwd[Kcd web/varpwd[K[1Plscd /varls[Kcd weburl http://localhost:8080[C[C[C[C[C[C[C[C[C[Csudo docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test[C[C[C[C[C[C[C[C[C[Ccd[Ksudo docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test[C[C[C[C[C[C[C[C[C[Ccd[Ksudo docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test[C[C[C[C[C[C[C[C[C[Ccd[Ksudo docker run --rm -d -p 8080:80 -v `pwd`/web:/var/www/html --name test test
