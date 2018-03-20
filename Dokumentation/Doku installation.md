@@ -1,4 +1,4 @@
-# Installationslog
+# Dokumentation
 
 ## _27_02_18_  
 Git habe ich auch mittels der Seite installiert
@@ -40,6 +40,6 @@ Aktuell versuche ich mein Vagrantfile so zu konfigurieren das ich mittels port f
 es hat funktioniert nur griff ich von der falschen IP-adresse auf meinem Apache server zu.
 ### Firewall
 Ich habe jetzt mein Vagrantfile erweiter mit einer Firewall und einem Reverproxy.
-was ich neu
+was ich neu implementiert habe ist das ich jetzt mittels provisioning die Shell Befehle in ein externes shell File habe, welches dann vom VM vagrantfile genutzt wird. um den Apache server sowie die Firewall zu insatllieren.
 Das Problem das ich hatte war das mein Vagrantfile die Firewall nicht aktiviert hat.
 dies habe ich gelöst indem ich `-f` bei `sudo ufw enable` eingefügt habe --> `sudo ufw -f enable`
