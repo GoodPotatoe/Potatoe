@@ -30,6 +30,16 @@ aber jedoch funktioniert es noch nicht siehe `log_07_03_18`, `07_03_18_v2`, `07_
 Jetzt funktioniert das Dockerfile das Problem war, ich dachte es funktioniere nicht.
 Ich habe jetzt mittels docker ein Apache2 eingerichtet.
 Siehe Docker Build wie ich das Docker Image erstelle und den Container starte.
+Siehe log_13_03_18
 
 aktuell versuche ich ein Dockerimage zu kreeieren mit einem Apache2 webserver welches mit einer Mysql Datenbank verbunden ist.
 Das Dockerfile funktioniert der Apache Server läuft , jedoch funktioniert Mysql noch nicht. für Dockerfile siehe Apache_mysql/Dockerfile
+
+## _20.03.18_
+Aktuell versuche ich mein Vagrantfile so zu konfigurieren das ich mittels port forwarding zugreiffen kann.
+es hat funktioniert nur griff ich von der falschen IP-adresse auf meinem Apache server zu.
+### Firewall
+Ich habe jetzt mein Vagrantfile erweiter mit einer Firewall und einem Reverproxy.
+was ich neu
+Das Problem das ich hatte war das mein Vagrantfile die Firewall nicht aktiviert hat.
+dies habe ich gelöst indem ich `-f` bei `sudo ufw enable` eingefügt habe --> `sudo ufw -f enable`
