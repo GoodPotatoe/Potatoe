@@ -49,12 +49,19 @@ Ich habe mein Vagrantfile noch so angepasst, dass bei meine SQL-Datenbank noch e
 siehe Log_27_03_18 sowie Vagrantfile 
 
 ## Test
-Apache Webserver
+### Apache Webserver
 
-Man kann den Apache Server testen ober er Aktiv ist indem man entweder im Browser
+Man kann den Apache Server testen ob er Aktiv ist indem man entweder im Browser
 'curl localhost:8080'
 dann gibt es das html file aus des Webservers
 Oder man geht vom Browser und gibt 'localhost:8080' ein dann sollte folgendes angezeigt werden.
 
 ![Apache](apache.jpg)
+
+### Mysql
+
+Man kann den Mysql Server testen indem man auf der VM
+folgendes eingibt 'mysql -u root -p status'
+dann wird man aufgefordert das Password für den Mysql Server einzugeben
+
 
