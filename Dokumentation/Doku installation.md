@@ -12,7 +12,7 @@ und eine Script geschrieben welches mir meine Daten auf github hochladet.
 für alle Commands Siehe Log_27_02_18.txt
 
 ## _06.03.18_  
-Aktuell mache ich eine Liste mit Markdown shortcuts da dies von Vroteil ist und dabei lerne ich selber noch ein wenig die Markdown Shortcuts.
+Aktuell mache ich eine Liste mit Markdown shortcuts da dies von Vorteil ist und dabei lerne ich selber noch ein wenig die Markdown Shortcuts.
 Zusätzlich habe ich noch eine Liste mit Linuxbefehlen erstellt und deis bereits in Markdown dokumentiert
 mit einem Vagrantfile einen Apache Server einrichten
 Siehe vagrantfile für configs  
@@ -43,3 +43,7 @@ Ich habe jetzt mein Vagrantfile erweiter mit einer Firewall und einem Reverproxy
 was ich neu implementiert habe ist das ich jetzt mittels provisioning die Shell Befehle in ein externes shell File habe, welches dann vom VM vagrantfile genutzt wird. um den Apache server sowie die Firewall zu insatllieren.
 Das Problem das ich hatte war das mein Vagrantfile die Firewall nicht aktiviert hat.
 dies habe ich gelöst indem ich `-f` bei `sudo ufw enable` eingefügt habe --> `sudo ufw -f enable`
+
+## _27.03.18_
+Ich habe mein Vagrantfile noch so angepasst, dass bei meine SQL-Datenbank noch ein Passwort gesetzt wird
+siehe Log_27_03_18 sowie Vagrantfile 
