@@ -1,5 +1,5 @@
 git status
-git add Dokumentation/
+git add Potatoe/
 git push
-git commit -m "Dokumentation"
+git commit -m "Potatoe"
 git push -u origin master
