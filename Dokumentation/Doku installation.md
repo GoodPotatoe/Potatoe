@@ -47,3 +47,14 @@ dies habe ich gelöst indem ich `-f` bei `sudo ufw enable` eingefügt habe --> `
 ## _27.03.18_
 Ich habe mein Vagrantfile noch so angepasst, dass bei meine SQL-Datenbank noch ein Passwort gesetzt wird
 siehe Log_27_03_18 sowie Vagrantfile 
+
+## Test
+Apache Webserver
+
+Man kann den Apache Server testen ober er Aktiv ist indem man entweder im Browser
+'curl localhost:8080'
+dann gibt es das html file aus des Webservers
+Oder man geht vom Browser und gibt 'localhost:8080' ein dann sollte folgendes angezeigt werden.
+
+![Apache](apache.jpg)
+
