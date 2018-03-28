@@ -1965,4 +1965,7 @@ bash-3.2$ curl localhost:8080
   </body>
 </html>
 
-bash-3.2$ 
+bash-3.2$ exit
+exit
+
+Script done on Tue Mar 27 14:45:15 2018
