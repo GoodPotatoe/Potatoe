@@ -60,7 +60,7 @@ Oder man geht vom Browser und gibt 'localhost:8080' ein dann sollte folgendes an
 
 ![Apache](apache.jpg)
 
-### Mysql
+### Mysqls
 
 Man kann den Mysql Server testen indem man auf der VM
 folgendes eingibt 'mysqladmin -u root -p status'
