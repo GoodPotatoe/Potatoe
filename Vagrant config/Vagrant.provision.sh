@@ -7,7 +7,7 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password password tes
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password test123'
 #Mysql installieren
 sudo apt-get install mysql-server -y
-sudo apt-get install ufw
+sudo apt-get install ufw -y
 sudo apt-get autoremove -y
 
 #Firewall Statusabfrage
@@ -39,4 +39,3 @@ vagrant ssh database
 sudo ufw allow from any to any port 3306
 exit
 
-sudo mysqladmin -u root -p status

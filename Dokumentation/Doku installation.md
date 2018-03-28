@@ -49,6 +49,8 @@ Ich habe mein Vagrantfile noch so angepasst, dass bei meine SQL-Datenbank noch e
 siehe Log_27_03_18 sowie Vagrantfile 
 
 ## Test
+alle Konfigurationen des Vagrantfiles können unter Potatoe/Vagrant config/ Vagrantfile und Vagrant.provision.sh eingsehen werden
+
 ### Apache Webserver
 
 Man kann den Apache Server testen ob er Aktiv ist indem man entweder im Browser
@@ -61,7 +63,10 @@ Oder man geht vom Browser und gibt 'localhost:8080' ein dann sollte folgendes an
 ### Mysql
 
 Man kann den Mysql Server testen indem man auf der VM
-folgendes eingibt 'mysql -u root -p status'
+folgendes eingibt 'mysqladmin -u root -p status'
 dann wird man aufgefordert das Password für den Mysql Server einzugeben
+danach wird folgendes angezeigt:
+
+![Mysql](mysql.jpg)
 
 
