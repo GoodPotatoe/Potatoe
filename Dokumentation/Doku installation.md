@@ -48,6 +48,13 @@ dies habe ich gelöst indem ich `-f` bei `sudo ufw enable` eingefügt habe --> `
 Ich habe mein Vagrantfile noch so angepasst, dass bei meine SQL-Datenbank noch ein Passwort gesetzt wird
 siehe Log_27_03_18 sowie Vagrantfile 
 
+## _03.04.18_  
+
+Nun Beginne ich mit der LB2 dabei hat Docker eine zentrale Rolle
+Neu habe ich jetzt noch die default html seite meines Apache servers ersetzt indem ich folgendes im Vagrant File konfiguriert habe
+`config.vm.synced_folder "/Users/jasonnguy/reveal.js/","/var/www/html" , disabled: false`
+ Zuerst kommt der Zielpfad danach der Pfad auf der VM
+ 
 ## Test
 alle Konfigurationen des Vagrantfiles können unter Potatoe/Vagrant config/ Vagrantfile und Vagrant.provision.sh eingsehen werden
 
@@ -71,7 +78,7 @@ danach wird folgendes angezeigt:
 
 
 ### Firewall
-Die Firewall ist mit dem Befehl  `sudo ufw status` abrufbar
+Die Firewall ist mit dem Befehl  `sudo ufw status` abrufbar smoit sind die Firewall Regeln ersichtlich und ob die Firewall aktiv ist.
 
-
+![Firewall](fire.jpg)
 

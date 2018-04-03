@@ -17,6 +17,7 @@ sudo ufw status
 sudo ufw -f enable 
 sudo ufw -f enable 
 sudo apt-get install libapache2-mod-proxy-html libxml2-dev -y
+
 #proxy aktivieren
 sudo a2enmod proxy
 sudo a2enmod proxy_html
