@@ -54,19 +54,24 @@ alle Konfigurationen des Vagrantfiles können unter Potatoe/Vagrant config/ Vagr
 ### Apache Webserver
 
 Man kann den Apache Server testen ob er Aktiv ist indem man entweder im Browser
-'curl localhost:8080'
+`curl localhost:8080`
 dann gibt es das html file aus des Webservers
-Oder man geht vom Browser und gibt 'localhost:8080' ein dann sollte folgendes angezeigt werden.
+Oder man geht vom Browser und gibt `localhost:8080` ein dann sollte folgendes angezeigt werden.
 
 ![Apache](apache.jpg)
 
 ### Mysql
 
 Man kann den Mysql Server testen indem man auf der VM
-folgendes eingibt 'mysqladmin -u root -p status'
+folgendes eingibt `mysqladmin -u root -p status`
 dann wird man aufgefordert das Password für den Mysql Server einzugeben
 danach wird folgendes angezeigt:
 
 ![Mysql](mysql.jpg)
+
+
+### Firewall
+Die Firewall ist mit dem Befehl  `sudo ufw status` abrufbar
+
 
 
