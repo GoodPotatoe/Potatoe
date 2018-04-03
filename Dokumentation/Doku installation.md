@@ -52,7 +52,7 @@ siehe Log_27_03_18 sowie Vagrantfile
 
 Nun Beginne ich mit der LB2 dabei hat Docker eine zentrale Rolle
 Neu habe ich jetzt noch die default html seite meines Apache servers ersetzt indem ich folgendes im Vagrant File konfiguriert habe
-`config.vm.synced_folder "/Users/jasonnguy/reveal.js/","/var/www/html" , disabled: false`
+`config.vm.synced_folder "/Users/jasonnguy/reveal.js/","/var/www/html"`
  Zuerst kommt der Zielpfad danach der Pfad auf der VM.
  
 ## Test
