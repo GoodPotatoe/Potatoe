@@ -82,4 +82,8 @@ Die Firewall ist mit dem Befehl  `sudo ufw status` abrufbar smoit sind die Firew
 
 ![Firewall](fire.jpg)
 
-## Docker
+## _10.04.18_  
+
+### Docker
+Nun beginne ich mit der LB2 bei der wir mit Docker arbeiten müssen.
+ich habe vor einen Apache webserver einzubinden mit einer sql datenbank.

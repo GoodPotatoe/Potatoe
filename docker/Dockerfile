@@ -1,10 +1,10 @@
 #
-#
-#
 FROM ubuntu:14.04
 
 RUN apt-get update
-RUN apt-get -q -y install apache2 
+RUN apt-get install apache2   -y
+RUN apt-get install ufw -y
+
 
 # Konfiguration Apache
 ENV APACHE_RUN_USER www-data
