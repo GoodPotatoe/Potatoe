@@ -87,3 +87,4 @@ Die Firewall ist mit dem Befehl  `sudo ufw status` abrufbar smoit sind die Firew
 ### Docker
 Nun beginne ich mit der LB2 bei der wir mit Docker arbeiten müssen.
 ich habe vor einen Apache webserver einzubinden mit einer sql datenbank.
+Docker compose wird genutz um mehrere Container  zu definierung und zu betreiben
