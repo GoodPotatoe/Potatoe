@@ -82,3 +82,4 @@ Die Firewall ist mit dem Befehl  `sudo ufw status` abrufbar smoit sind die Firew
 
 ![Firewall](fire.jpg)
 
+## Docker

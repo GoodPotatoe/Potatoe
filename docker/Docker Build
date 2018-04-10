@@ -1,5 +1,5 @@
 `docker build -t test . `--> Docker image erstellen
-`docker run -p 4000:80 test `--> service starten
+`docker run -d -p 4000:80 test `--> service starten über port 4000   -d = run in background
 `docker container ls` --> container file überprüfen
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
 c65364855c5c        test                "/bin/sh -c '/bin/ba…"   2 minutes ago       Up 2 minutes        0.0.0.0:4000->80/tcp   clever_saha
