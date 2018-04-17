@@ -98,11 +98,13 @@ Heute füge ich noch das Monitoring von meinem Dockerfile ein. Sowie die RAM Beg
 
 
 ### Firewall
-Die Firewall ist mit dem Befehl  `sudo ufw status` abrufbar smoit sind die Firewall Regeln ersichtlich und ob die Firewall aktiv ist.
+Die Firewall ist mit dem Befehl  `sudo ufw status` abrufbar somit sind die Firewall Regeln ersichtlich und ob die Firewall aktiv ist.
+
 ![Firewall](ufw.jpg)
 
 mit dem Befehl 
 `docker stats` kann man den Container monitoren
+
 ![Firewall](stats.jpg)
 
 
