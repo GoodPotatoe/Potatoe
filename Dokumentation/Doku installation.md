@@ -94,7 +94,7 @@ Als nächstet installiere ich die Firewall und implementiere einen User und scha
 ## _17.04.18_  
 Heute füge ich noch das Monitoring von meinem Dockerfile ein. Sowie die RAM Begrenzung. Bei jedem Dockerfile
 
-## Test
+## Test / Sicherheit
 
 
 ### Firewall
@@ -126,8 +126,6 @@ Zugriff auf Übersicht über localhost:8080 im Browser
 
 #### Monitoring vom Container
 ![container1](container2.jpg)
-
-## Sicherheit
 
 ### RAM Begrenzung
 Die Maximale RAM kann mit folgendem Befehl festgelegt werden.
