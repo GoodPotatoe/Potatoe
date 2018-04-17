@@ -10,9 +10,11 @@ RUN apt-get install ufw -y
 
 
 #proxy aktivieren
+#Reverse Proxy
 RUN a2enmod proxy
-RUN a2enmod proxy_html
 RUN a2enmod proxy_http
+RUN a2enmod proxy_balancer
+RUN a2enmod lbmethod_byrequests
 
 CMD systemctl restart apache2
 
