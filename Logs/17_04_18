@@ -1115,4 +1115,6 @@ CONTAINER ID        IMAGE                    COMMAND                  CREATED   
 f48f135f6ad2        test                     "/bin/bash"              3 minutes ago        Exited (127) 2 minutes ago                            wizardly_easley
 bash-3.2$ docker stop f48f135f6ad2
 f48f135f6ad2
-bash-3.2$ docker stop f48f135f6ad2[C[C[C[C[C[C[C[C[C[C[Kdocker start 
+bash-3.2$ docker stop f48f135f6ad2[C[C[C[C[C[C[C[C[C[C[Kdocker start f48f135f6ad2
+f48f135f6ad2
+bash-3.2$ 
