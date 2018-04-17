@@ -112,13 +112,21 @@ Zugriff auf Übersicht über localhost:8080 im Browser
 `docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 apache/cadvisor`
 ![cadvisor](cadvisor.jpg)
 
+
+
+
 ### Monitoring Container
 #### Unter **Docker Containers** --> 
 ![container](container.jpg)
 
 
-#### Unter **Subcontainers** -->Den jeweiligen Container auswählen.
+
+
+#### Unter **Subcontainers** --> Den jeweiligen Container auswählen.
 ![container1](container1.jpg)
+
+
+
 
 
 #### Monitoring vom Container
