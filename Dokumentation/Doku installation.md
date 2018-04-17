@@ -113,12 +113,15 @@ Zugriff auf Übersicht über localhost:8080 im Browser
 ![cadvisor](cadvisor.jpg)
 
 ### Monitoring Container
-Das Monitoring der anderen Container kann man hier sehen.
-unter **Docker Containers** --> unter **Subcontainers** --> den jeweiligen Container auswählen.
+#### Unter **Docker Containers** --> 
 ![container](container.jpg)
 
+
+#### Unter **Subcontainers** -->Den jeweiligen Container auswählen.
 ![container1](container1.jpg)
 
+
+#### Monitoring vom Container
 ![container1](container2.jpg)
 
 ## Sicherheit
