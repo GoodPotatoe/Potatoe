@@ -1,0 +1,1118 @@
+Script started on Tue Apr 17 13:09:42 2018
+[?1034hbash-3.2$ cd
+bash-3.2$ cdPo[K[K Potatoe/docker1/
+bash-3.2$ docker run -d --[K[Ktest cav[K[Kadvisor - v[K[Kv/:/rootfs:ro -v /var/run:/var/run:rw -v  /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor :latest
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+bash-3.2$ docker run -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor::latest
+Unable to find image 'test:latest' locally
+docker: Error response from daemon: pull access denied for test, repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+bash-3.2$ docker images ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+bash-3.2$ docker build -d[Kt test[K[K[K[Ktest
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | - [flags]
+
+Build an image from a Dockerfile
+bash-3.2$ docker build -t test .
+Sending build context to Docker daemon  12.29kB
+Step 1/20 : FROM ubuntu:16.04
+ ---> f975c5035748
+Step 2/20 : RUN apt-get update
+ ---> Using cache
+ ---> 9895a33e1794
+Step 3/20 : RUN apt-get -y install apt-utils
+ ---> Using cache
+ ---> bbcf945196e4
+Step 4/20 : RUN apt-get -y upgrade
+ ---> Using cache
+ ---> 726237a897f8
+Step 5/20 : RUN apt-get -y install apache2
+ ---> Using cache
+ ---> 6bed35e8d33c
+Step 6/20 : RUN apt-get install ufw -y
+ ---> Using cache
+ ---> 9324d240c6b3
+Step 7/20 : RUN a2enmod proxy
+ ---> Using cache
+ ---> eaac0f687163
+Step 8/20 : RUN a2enmod proxy_html
+ ---> Using cache
+ ---> 763c9889d41a
+Step 9/20 : RUN a2enmod proxy_http
+ ---> Using cache
+ ---> 35479ecbcefa
+Step 10/20 : CMD systemctl restart apache2
+ ---> Using cache
+ ---> 305dff752a15
+Step 11/20 : ENV APACHE_RUN_USER www-data
+ ---> Using cache
+ ---> a293b8a2c3f3
+Step 12/20 : ENV APACHE_RUN_GROUP www-data
+ ---> Using cache
+ ---> d1ec936dfa64
+Step 13/20 : ENV APACHE_LOG_DIR /var/log/apache2
+ ---> Using cache
+ ---> 4fbc9a9a0a17
+Step 14/20 : RUN mkdir -p /var/lock/apache2 /var/run/apache2
+ ---> Using cache
+ ---> b11d088fed49
+Step 15/20 : EXPOSE 80
+ ---> Using cache
+ ---> 33f69c2b6d95
+Step 16/20 : VOLUME /var/www/html
+ ---> Using cache
+ ---> a0ab29533da0
+Step 17/20 : CMD /usr/sbin/apache2ctl -D FOREGROUND
+ ---> Using cache
+ ---> aeee871333ee
+Step 18/20 : ADD  index.html /var/www/html
+ ---> Using cache
+ ---> 831d2288937e
+Step 19/20 : ADD ufw.sh .
+ ---> Using cache
+ ---> 99a95790db36
+Step 20/20 : RUN chmod +x ./ufw.sh
+ ---> Using cache
+ ---> 2587b83cf7f0
+Successfully built 2587b83cf7f0
+Successfully tagged test:latest
+bash-3.2$ docker build -t test .[C[C[C[C[C[C[C[C[C[C[Kdocker build -t test .[K[4Pimages lsrun -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor::latest
+d4d03d6fa33b343df15526bc6a7b6d1ab05ee8a6f31437c0aedf4f9a78b86310
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:348: starting container process caused "exec: \"cadvisor\": executable file not found in $PATH": unknown.
+bash-3.2$ docker run -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor::latest[A[A[C[C[C[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[Cdocker run -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor::latest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:l[1Patest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:la[1Ptest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:lat[1Pest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:late[1Pst[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:lates[1Pt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:latest[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:latest [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P:latest
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct:latest [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce:latestt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs:latest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct:latest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+92d1532329de61215aa090c5e3727a3d83b42cbf2c929f43c759efbe3138a8bd
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:348: starting container process caused "exec: \"cadvisor\": executable file not found in $PATH": unknown.
+bash-3.2$ docker run -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/test:lateest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1:ro -p 8080:8080 google/test:latest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1/:/var/lib/docker1:ro -p 8080:8080 google/test:latest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+1a7933ee88da2140aabbffb9330d283fc0d1a5e9762e2a9d5aa33cbae9d1aa16
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:348: starting container process caused "exec: \"cadvisor\": executable file not found in $PATH": unknown.
+bash-3.2$ docker run -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker1/:/var/lib/docker1:ro -p 8080:8080 google/test:laatest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/:/var/lib/docker:ro -p 8080:8080 google/test:late[2Pst[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccadvisor:latest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctest:late[4Pst[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1/:/var/lib/docker1:ro -p 8080:8080 google/test:latest[A[A[C[C[C[C[C[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[Cdocker run -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker1/:/var/lib/docker1:ro -p 8080:8080 google/test:laatest
+a33ebafbceb71bbcd041b3f40fbf22dc3751ded36d0c14efb39f6d0036afd7c1
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:348: starting container process caused "exec: \"cadvisor\": executable file not found in $PATH": unknown.
+bash-3.2$ docker run -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker1/:/var/lib/docker1:ro -p 8080:8080 google/test:laatest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/:/var/lib/docker:ro -p 8080:8080 google/test:late[2Pst[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccadvisor:latest[A[A[C[C[C[C[C[C[C[C[C[Cbuild -t test .[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[4Pimages lsrun -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor::latest[A[A[C[C[C[C[C[C[C[C[C[Cimages ls[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crun -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor::latest
+3e1d22ccfeb821838bb01c619aa5b13da57726bc1fca46581092dcacecc5c672
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:348: starting container process caused "exec: \"cadvisor\": executable file not found in $PATH": unknown.
+bash-3.2$ docker run -d test cadvisor -v/:/rootfs:ro -v /var/run:/var/run:rw -v //sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor::latest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1/:/var/lib/docker1:ro -p 8080:8080 google/test:la[2Ptest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/:/var/lib/docker:ro -p 8080:8080 google/test:late[2Pst[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccadvisor:latest[A[A[C[C[C[C[C[C[C[C[C[Cbuild -t test .[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[4Pimages ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+bash-3.2$ docker images ls[1P ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+apache              latest              2587b83cf7f0        6 days ago          316MB
+test                latest              2587b83cf7f0        6 days ago          316MB
+ubuntu              16.04               f975c5035748        5 weeks ago         112MB
+bash-3.2$ docker image ls[C[C[C[C[C[C[C[C[C[C[Kdocker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw  -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvi sor:latest
+Unable to find image 'google/cadvisor:latest' locally
+latest: Pulling from google/cadvisor
+
+[1A[1K[Kab7e51e37a18: Pulling fs layer [1B
+[1A[1K[Ka2dc2f1bce51: Pulling fs layer [1B
+[1A[1K[K3b017de60d4f: Pulling fs layer [1B[3A[1K[Kab7e51e37a18: Downloading  32.77kB/2.388MB[3B[1A[1K[K3b017de60d4f: Downloading   77.2kB/7.583MB[1B[2A[1K[Ka2dc2f1bce51: Downloading  146.5kB/14.36MB[2B[3A[1K[Kab7e51e37a18: Downloading  491.5kB/2.388MB[3B[1A[1K[K3b017de60d4f: Downloading  752.8kB/7.583MB[1B[2A[1K[Ka2dc2f1bce51: Downloading  900.9kB/14.36MB[2B[3A[1K[Kab7e51e37a18: Downloading  1.245MB/2.388MB[3B[1A[1K[K3b017de60d4f: Downloading  1.408MB/7.583MB[1B[2A[1K[Ka2dc2f1bce51: Downloading   1.79MB/14.36MB[2B[3A[1K[Kab7e51e37a18: Downloading  2.287MB/2.388MB[3B[3A[1K[Kab7e51e37a18: Download complete [3B[3A[1K[Kab7e51e37a18: Extracting  32.77kB/2.388MB[3B[1A[1K[K3b017de60d4f: Downloading  2.472MB/7.583MB[1B[2A[1K[Ka2dc2f1bce51: Downloading  2.822MB/14.36MB[2B[3A[1K[Kab7e51e37a18: Extracting  491.5kB/2.388MB[3B[1A[1K[K3b017de60d4f: Downloading  3.539MB/7.583MB[1B[3A[1K[Kab7e51e37a18: Extracting  2.388MB/2.388MB[3B[3A[1K[Kab7e51e37a18: Extracting  2.388MB/2.388MB[3B[2A[1K[Ka2dc2f1bce51: Downloading  3.562MB/14.36MB[2B[1A[1K[K3b017de60d4f: Downloading  4.611MB/7.583MB[1B[3A[1K[Kab7e51e37a18: Pull complete [3B[2A[1K[Ka2dc2f1bce51: Downloading  4.001MB/14.36MB[2B[1A[1K[K3b017de60d4f: Downloading  5.686MB/7.583MB[1B[2A[1K[Ka2dc2f1bce51: Downloading  4.296MB/14.36MB[2B[1A[1K[K3b017de60d4f: Downloading   6.68MB/7.583MB[1B[2A[1K[Ka2dc2f1bce51: Downloading  4.735MB/14.36MB[2B[1A[1K[K3b017de60d4f: Downloading  7.496MB/7.583MB[1B[1A[1K[K3b017de60d4f: Download complete [1B[2A[1K[Ka2dc2f1bce51: Downloading  5.027MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  5.333MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  5.777MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  6.217MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  6.656MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  7.099MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  7.538MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  7.989MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  8.433MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  8.888MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  9.336MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  9.784MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  10.24MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading   10.7MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  11.15MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  11.62MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  12.06MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  12.51MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  12.96MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  13.41MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading  13.85MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Downloading   14.3MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Verifying Checksum [2B[2A[1K[Ka2dc2f1bce51: Download complete [2B[2A[1K[Ka2dc2f1bce51: Extracting  163.8kB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Extracting  491.5kB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Extracting  8.192MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Extracting  13.27MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Extracting  14.36MB/14.36MB[2B[2A[1K[Ka2dc2f1bce51: Pull complete [2B[1A[1K[K3b017de60d4f: Extracting   98.3kB/7.583MB[1B[1A[1K[K3b017de60d4f: Extracting  1.278MB/7.583MB[1B[1A[1K[K3b017de60d4f: Extracting  4.424MB/7.583MB[1B[1A[1K[K3b017de60d4f: Extracting  7.583MB/7.583MB[1B[1A[1K[K3b017de60d4f: Pull complete [1BDigest: sha256:9e347affc725efd3bfe95aa69362cf833aa810f84e6cb9eed1cb65c35216632a
+Status: Downloaded newer image for google/cadvisor:latest
+docker: Error response from daemon: Conflict. The container name "/cadvisor" is already in use by container "e5fb3766f48730f7311052e6320f2cd29b835f4e873ea72a94d998cfeea9156f". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+bash-3.2$ docker ca[Kontainer
+
+Usage:	docker container COMMAND
+
+Manage containers
+
+Options:
+
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Run a command in a new container
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+bash-3.2$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                       PORTS                  NAMES
+3e1d22ccfeb8        test                "cadvisor -v/:/rootf…"   About a minute ago   Created                      80/tcp                 laughing_bell
+a33ebafbceb7        test                "cadvisor -v/:/rootf…"   2 minutes ago        Created                      80/tcp                 blissful_cori
+1a7933ee88da        test                "cadvisor -v/:/rootf…"   4 minutes ago        Created                      80/tcp                 agitated_villani
+92d1532329de        test                "cadvisor -v/:/rootf…"   4 minutes ago        Created                      80/tcp                 stupefied_ramanujan
+d4d03d6fa33b        test                "cadvisor -v/:/rootf…"   6 minutes ago        Created                      80/tcp                 elated_franklin
+b815cff9500f        apache              "/bin/sh -c '/usr/sb…"   6 days ago           Exited (255) 7 minutes ago   0.0.0.0:4000->80/tcp   sleepy_cray
+e5fb3766f487        apache              "/bin/sh -c '/usr/sb…"   6 days ago           Exited (1) 6 days ago                               cadvisor
+bash-3.2$ docker stop $(docker ps -a -q)
+3e1d22ccfeb8
+a33ebafbceb7
+1a7933ee88da
+92d1532329de
+d4d03d6fa33b
+b815cff9500f
+e5fb3766f487
+bash-3.2$ docker rm $(docker ps -a -q)
+3e1d22ccfeb8
+a33ebafbceb7
+1a7933ee88da
+92d1532329de
+d4d03d6fa33b
+b815cff9500f
+e5fb3766f487
+bash-3.2$ docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw  -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvi sor:latest
+e0d593a05c9e9ac08f053e116ab3214e70d4ab603496bb0496a732a3b23d72e9
+bash-3.2$ locah[K[K[K[K[Kdocker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw --v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvissor:latest[A[A[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C
+bash-3.2$ docker ub[K[Kdocker run -d -p 4000:80 test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crun -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw --v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvissor:latest[A[A[C[C[C[C[C[C[C[Cm $(docker ps -a -q)[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cun -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw --v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvissor:latest[A[A[C[C[C[C[C[C[C[34Pdocker run -d -p 4000:80 test
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crun -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw --v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvissor:latest[A[A[C[C[C[C[C[C[C[Cm $(docker ps -a -q)[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Error response from daemon: You cannot remove a running container e0d593a05c9e9ac08f053e116ab3214e70d4ab603496bb0496a732a3b23d72e9. Stop the container before attempting removal or force remove
+bash-3.2$ docker rm $(docker ps -a -q)[C[C[C[C[C[C[C[C[C[C[Kdocker run -d -p 4000:80 test
+3559cb162e9e63d13c6eb0ec47605a5eea8a1ee5f1da5d50f998ab9694a1e86b
+bash-3.2$ docker ps
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                    NAMES
+3559cb162e9e        test                     "/bin/sh -c '/usr/sb…"   2 minutes ago       Up 2 minutes        0.0.0.0:4000->80/tcp     compassionate_poincare
+e0d593a05c9e        google/cadvisor:latest   "/usr/bin/cadvisor -…"   14 minutes ago      Up 14 minutes       0.0.0.0:8080->8080/tcp   cadvisor
+bash-3.2$ docker stopcompassionate_poincare[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K compassionate_poincare
+compassionate_poincare
+bash-3.2$ dok[Kcker rm compassionate_poincare
+compassionate_poincare
+bash-3.2$ docker rm compassionate_poincare[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@stop[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps[Krun -d -p 4000:80 test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pm $(docker ps -a -q)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cun -d -p 4000:80 test[C[C[C[C[C[C[C[C[C[C[C
+b65e4314b492ba4f32fabbf873bd89e76b6b72579be11ea78859bcff9b2e9c60
+bash-3.2$ docker run --privileged -ti #container_name /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[ /bin/bashA /bin/bash[11Pd -p 4000:80 test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm compassionate_poincare[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@stop[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Error response from daemon: No such container: compassionate_poincare
+bash-3.2$ docker ps -a
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                    NAMES
+b65e4314b492        test                     "/bin/sh -c '/usr/sb…"   20 seconds ago      Up 21 seconds       0.0.0.0:4000->80/tcp     jovial_curie
+e0d593a05c9e        google/cadvisor:latest   "/usr/bin/cadvisor -…"   26 minutes ago      Up 26 minutes       0.0.0.0:8080->8080/tcp   cadvisor
+bash-3.2$ docker ps -astop compassionate_poincare[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kb65e4314b492
+b65e4314b492
+bash-3.2$ docker rm b65e4314b492
+b65e4314b492
+bash-3.2$ ro[K[Kd[Kdocker rm b65e4314b492[2@stop[C[C[C[C[C[C[C[C[C[C[C[C[Cps -a[Kstop compassionate_poincare[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Prun -d -p 4000:80 test
+aed633b9022be7f9f1a524d8514c46b638bb74fe99b6fb562fb3033684ff69e0
+bash-3.2$ docker run -d -p 4000:80 test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pm b65e4314b492un -d -p 4000:80 test[C[C[C[C[C[C[C[C[C[C[Kdocker rm image test
+Error: No such container: image
+Error: No such container: test
+bash-3.2$ docker image ös [K[K[Kls -a
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+apache              latest              2587b83cf7f0        6 days ago          316MB
+test                latest              2587b83cf7f0        6 days ago          316MB
+<none>              <none>              99a95790db36        6 days ago          316MB
+<none>              <none>              831d2288937e        6 days ago          316MB
+<none>              <none>              a0ab29533da0        6 days ago          316MB
+<none>              <none>              aeee871333ee        6 days ago          316MB
+<none>              <none>              b11d088fed49        6 days ago          316MB
+<none>              <none>              33f69c2b6d95        6 days ago          316MB
+<none>              <none>              4fbc9a9a0a17        6 days ago          316MB
+<none>              <none>              a293b8a2c3f3        6 days ago          316MB
+<none>              <none>              305dff752a15        6 days ago          316MB
+<none>              <none>              d1ec936dfa64        6 days ago          316MB
+<none>              <none>              35479ecbcefa        6 days ago          316MB
+<none>              <none>              763c9889d41a        6 days ago          316MB
+<none>              <none>              eaac0f687163        6 days ago          316MB
+<none>              <none>              9324d240c6b3        6 days ago          316MB
+<none>              <none>              6bed35e8d33c        6 days ago          285MB
+<none>              <none>              726237a897f8        6 days ago          186MB
+<none>              <none>              bbcf945196e4        6 days ago          160MB
+<none>              <none>              9895a33e1794        6 days ago          153MB
+ubuntu              16.04               f975c5035748        5 weeks ago         112MB
+google/cadvisor     latest              75f88e3ec333        4 months ago        62.2MB
+bash-3.2$ docker rm images[K id[K[K[K[K[K[K[K[K2587b83cf7f0
+Error: No such container: 2587b83cf7f0
+bash-3.2$ docker rm 2587b83cf7f0[1@i[1@m[1@a[1@g[1@e[1@ 
+Error response from daemon: conflict: unable to delete 2587b83cf7f0 (cannot be forced) - image is being used by running container aed633b9022b
+bash-3.2$ docker container stop test
+Error response from daemon: No such container: test
+bash-3.2$ docker container stop test[C[C[C[C[C[C[C[C[C[C[Kdpcl[K[K[Kocker ps -a
+CONTAINER ID        IMAGE                    COMMAND                  CREATED              STATUS              PORTS                    NAMES
+aed633b9022b        test                     "/bin/sh -c '/usr/sb…"   About a minute ago   Up About a minute   0.0.0.0:4000->80/tcp     amazing_jennings
+e0d593a05c9e        google/cadvisor:latest   "/usr/bin/cadvisor -…"   28 minutes ago       Up 28 minutes       0.0.0.0:8080->8080/tcp   cadvisor
+bash-3.2$ docker ps -acontainer stop test[K[K[K[Ke0d593a05c9e
+e0d593a05c9e
+bash-3.2$ docker container stop e0d593a05c9e[1P e0d593a05c9e[1P e0d593a05c9e[1P e0d593a05c9e[1P e0d593a05c9er e0d593a05c9em e0d593a05c9e
+e0d593a05c9e
+bash-3.2$ docker container rm e0d593a05c9e[2@stop[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps -a[Kcontainer stop test[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimage rm 2587b83cf7f0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6@image [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Error response from daemon: conflict: unable to delete 2587b83cf7f0 (cannot be forced) - image is being used by running container aed633b9022b
+bash-3.2$ docker contaier ps
+docker: 'contaier' is not a docker command.
+See 'docker --help'
+bash-3.2$ docker contaier ps[1@n
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+aed633b9022b        test                "/bin/sh -c '/usr/sb…"   2 minutes ago       Up 2 minutes        0.0.0.0:4000->80/tcp   amazing_jennings
+bash-3.2$ docker container ps[1P[C[C[C[C[Cimage rm 2587b83cf7f0[K[K[K[K[K[K[K[K[Kcontainer rm e0d593a05c9e[2@stop[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[Kaed633b9022b
+dok   aed633b9022b
+bash-3.2$ docker container stop aed633b9022b[1P aed633b9022b[1P aed633b9022b[1P aed633b9022b[1P aed633b9022br aed633b9022bm aed633b9022b[C aed633b9022b[1Paed633b9022b
+aed633b9022b
+bash-3.2$ docker container rm aed633b9022b[2@stop[C[C[C[C[C[C[C[C[C[C[C[C[Cps[K[1P[C[C[C[C[Cimage rm 258[K[K[K2587b83cf7f0
+Error response from daemon: conflict: unable to delete 2587b83cf7f0 (must be forced) - image is referenced in multiple repositories
+bash-3.2$ docker contai[Kner -[K[K[K[K[Kiner -s[K[Kps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker container ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bash-3.2$ docker container ps -a[C[C[C[C[C[C[C[C[C[C[Kdocker container ps -a[K -a[C[C[C[C[C[C[C[C[C[C[Kdocker container ps -a[Kimage rm 2587b83cf7f0 -f
+Untagged: apache:latest
+Untagged: test:latest
+Deleted: sha256:2587b83cf7f0a18adb5de4c5116193b50fd8ee578110192847f79f439cbcaf0c
+Deleted: sha256:af21edd7847ef0cafad15a0b707e196bb0f702f17f13288737a93620cf09da37
+Deleted: sha256:99a95790db36e25ebe92a322d985aa69648070190d87a5bb5b72162b7b80820d
+Deleted: sha256:c149fa5b7500f86530305783cda92b7ba75881fdab1808b28bcc6a3e51587078
+Deleted: sha256:831d2288937edd5c1f25019a106a5cc321cded425d0f6fc6d50f55de20461833
+Deleted: sha256:16171ec3e0973ed85d7376328e758292e2a0b82ef92c1483ef8e2f2b730a24e8
+Deleted: sha256:aeee871333ee007fc1ede72d13b1463a4bfd31fa2e92560af4a32de14d495066
+Deleted: sha256:a0ab29533da000ca2f264129d0c3772012a63c8f057584a4112ca7eccb7a8055
+Deleted: sha256:33f69c2b6d950e84d6f182cad2474ed8b87bf75e330142b6ef057c9c9dcecfd6
+Deleted: sha256:b11d088fed49bcfe4c1361f32e2c01efef2ce67a9575f07a70afd552e8a57428
+Deleted: sha256:0a7cf68b1702da7f26763541df9e9daba9eca6665df96b400b6fd87ebaf377c1
+Deleted: sha256:4fbc9a9a0a17eb7a39ac35dcdb310f7d858397c527f97d63e76438ff6a707dd7
+Deleted: sha256:d1ec936dfa643ff02a6ee37687930a1aa178ba64973a05552fe2b4cda3ce038f
+Deleted: sha256:a293b8a2c3f3db9bcd5cdbd6f7bb93b18ab4e29f92c1a6848a08bed4e27023e4
+Deleted: sha256:305dff752a15f1a8705fddf45a9c6d476c5bb099794b859f33db5903a370e473
+Deleted: sha256:35479ecbcefabfb9cd07e92f81fdefcb9355305f4ca959ded1cc66380b2edf42
+Deleted: sha256:2b991d35fc6115df2680f655a7bf6b1f3145836f278b2b03c309b5b0612d6105
+Deleted: sha256:763c9889d41a5f2aa84203da9910a0217648f9241a5de20e31c16337645edc58
+Deleted: sha256:1487b86d13ffe95402407d5b7713f4e7247e4dcae363dbc3f1ccba68a9942b52
+Deleted: sha256:eaac0f687163cfcdd0aa97a74e3449df580c454401648962a4c50a04511981ea
+Deleted: sha256:8edaf22b210a579066bbcf20bdd105d64182ff80f553bfd407d2c44e96d6d6df
+Deleted: sha256:9324d240c6b3d5b7eab12ad408416ee303c221bf1f9aaaf16c5efa13818d743a
+Deleted: sha256:59e06e15a5973b505f097bef96423513a1b7ec8cc44ffecbb84078d4e8ff1e4e
+Deleted: sha256:6bed35e8d33c67c4dadaa31547fd9f0bb4ddfe0e2fe2c73798c5bd247e82b47e
+Deleted: sha256:62f448091fded14bddc7651b2dc2ace6051b9a79f32126ac64d45fbd26314147
+Deleted: sha256:726237a897f8b15bfe7145326907f479f0303e9abd66603da2234b82a025647c
+Deleted: sha256:f6abf797394deb6200bdbb68db22a81d6260446bc4172963839ee85f97423666
+Deleted: sha256:bbcf945196e4c201fe03a01106e537bf3f33cfca3db99c128bd151631268c1dc
+Deleted: sha256:7ec112012bf73775dfa1c6a9c9c08b62c87d7500446fc041ddee5f9f64dadf5d
+Deleted: sha256:9895a33e179412e77ce2aa9a9b3a16ff1307036cf340f9867ebf2ff25ad71304
+Deleted: sha256:9ce2c9dc8676003ac754a7eb588ee8d68d2bbf8c07ebbff8dbda89e70a1aa40d
+bash-3.2$ docker image -ls[K[K[Kls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              16.04               f975c5035748        5 weeks ago         112MB
+google/cadvisor     latest              75f88e3ec333        4 months ago        62.2MB
+bash-3.2$ docker build -t test
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | - [flags]
+
+Build an image from a Dockerfile
+bash-3.2$ docker build -t test[C[C[C[C[C[C[C[C[C[C[K.[Kdocker build -t test .
+Sending build context to Docker daemon  12.29kB
+Step 1/21 : FROM ubuntu:16.04
+ ---> f975c5035748
+Step 2/21 : RUN apt-get update
+ ---> Running in 83e714740564
+Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+Get:4 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [78.5 kB]
+Get:5 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [602 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial/universe Sources [9802 kB]
+Get:8 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.7 kB]
+Get:9 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [431 kB]
+Get:10 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [3489 B]
+Get:11 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [176 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/universe Sources [253 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [979 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [13.1 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [799 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [18.5 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [5153 B]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [7734 B]
+Fetched 25.1 MB in 6s (3922 kB/s)
+Reading package lists...
+Removing intermediate container 83e714740564
+ ---> 51bd68aa9448
+Step 3/21 : RUN apt-get -y install apt-utils
+ ---> Running in b888fc150104
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  apt libapt-inst2.0 libapt-pkg5.0
+Suggested packages:
+  aptitude | synaptic | wajig dpkg-dev apt-doc python-apt
+The following NEW packages will be installed:
+  apt-utils libapt-inst2.0
+The following packages will be upgraded:
+  apt libapt-pkg5.0
+2 upgraded, 2 newly installed, 0 to remove and 12 not upgraded.
+Need to get 2001 kB of archives.
+After this operation, 1208 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libapt-pkg5.0 amd64 1.2.26 [706 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apt amd64 1.2.26 [1043 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libapt-inst2.0 amd64 1.2.26 [55.4 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apt-utils amd64 1.2.26 [197 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 2001 kB in 2s (717 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4768 files and directories currently installed.)
+Preparing to unpack .../libapt-pkg5.0_1.2.26_amd64.deb ...
+Unpacking libapt-pkg5.0:amd64 (1.2.26) over (1.2.25) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libapt-pkg5.0:amd64 (1.2.26) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4768 files and directories currently installed.)
+Preparing to unpack .../archives/apt_1.2.26_amd64.deb ...
+Unpacking apt (1.2.26) over (1.2.25) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up apt (1.2.26) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Selecting previously unselected package libapt-inst2.0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4768 files and directories currently installed.)
+Preparing to unpack .../libapt-inst2.0_1.2.26_amd64.deb ...
+Unpacking libapt-inst2.0:amd64 (1.2.26) ...
+Selecting previously unselected package apt-utils.
+Preparing to unpack .../apt-utils_1.2.26_amd64.deb ...
+Unpacking apt-utils (1.2.26) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libapt-inst2.0:amd64 (1.2.26) ...
+Setting up apt-utils (1.2.26) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Removing intermediate container b888fc150104
+ ---> 9e735d5b8270
+Step 4/21 : RUN apt-get -y upgrade
+ ---> Running in b665ddf5a115
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  dpkg libapparmor1 libgcrypt20 libpam-modules libpam-modules-bin
+  libpam-runtime libpam0g libsystemd0 libudev1 perl-base systemd systemd-sysv
+12 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 8021 kB of archives.
+After this operation, 18.4 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 dpkg amd64 1.18.4ubuntu1.4 [2088 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl-base amd64 5.22.1-9ubuntu0.3 [1286 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpam0g amd64 1.1.8-3.2ubuntu2.1 [55.6 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpam-modules-bin amd64 1.1.8-3.2ubuntu2.1 [36.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpam-modules amd64 1.1.8-3.2ubuntu2.1 [244 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libapparmor1 amd64 2.10.95-0ubuntu2.9 [29.9 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsystemd0 amd64 229-4ubuntu21.2 [205 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 systemd amd64 229-4ubuntu21.2 [3634 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 systemd-sysv amd64 229-4ubuntu21.2 [11.9 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgcrypt20 amd64 1.6.5-2ubuntu0.4 [337 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpam-runtime all 1.1.8-3.2ubuntu2.1 [37.9 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libudev1 amd64 229-4ubuntu21.2 [54.4 kB]
+[91mdebconf: unable to initialize frontend: Dialog
+[0m[91mdebconf: (TERM is not set, so the dialog frontend is not usable.)
+[0m[91mdebconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+[0m[91mdebconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7, <> line 12.)
+[0m[91mdebconf: falling back to frontend: Teletype
+[0m[91mdpkg-preconfigure: unable to re-open stdin: 
+[0mFetched 8021 kB in 2s (3129 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../dpkg_1.18.4ubuntu1.4_amd64.deb ...
+Unpacking dpkg (1.18.4ubuntu1.4) over (1.18.4ubuntu1.3) ...
+Setting up dpkg (1.18.4ubuntu1.4) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../perl-base_5.22.1-9ubuntu0.3_amd64.deb ...
+Unpacking perl-base (5.22.1-9ubuntu0.3) over (5.22.1-9ubuntu0.2) ...
+Setting up perl-base (5.22.1-9ubuntu0.3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../libpam0g_1.1.8-3.2ubuntu2.1_amd64.deb ...
+Unpacking libpam0g:amd64 (1.1.8-3.2ubuntu2.1) over (1.1.8-3.2ubuntu2) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libpam0g:amd64 (1.1.8-3.2ubuntu2.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../libpam-modules-bin_1.1.8-3.2ubuntu2.1_amd64.deb ...
+Unpacking libpam-modules-bin (1.1.8-3.2ubuntu2.1) over (1.1.8-3.2ubuntu2) ...
+Setting up libpam-modules-bin (1.1.8-3.2ubuntu2.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../libpam-modules_1.1.8-3.2ubuntu2.1_amd64.deb ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Unpacking libpam-modules:amd64 (1.1.8-3.2ubuntu2.1) over (1.1.8-3.2ubuntu2) ...
+Setting up libpam-modules:amd64 (1.1.8-3.2ubuntu2.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../libapparmor1_2.10.95-0ubuntu2.9_amd64.deb ...
+Unpacking libapparmor1:amd64 (2.10.95-0ubuntu2.9) over (2.10.95-0ubuntu2.8) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libapparmor1:amd64 (2.10.95-0ubuntu2.9) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../libsystemd0_229-4ubuntu21.2_amd64.deb ...
+Unpacking libsystemd0:amd64 (229-4ubuntu21.2) over (229-4ubuntu21.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libsystemd0:amd64 (229-4ubuntu21.2) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../systemd_229-4ubuntu21.2_amd64.deb ...
+Unpacking systemd (229-4ubuntu21.2) over (229-4ubuntu21.1) ...
+Setting up systemd (229-4ubuntu21.2) ...
+Initializing machine ID from random generator.
+addgroup: The group `systemd-journal' already exists as a system group. Exiting.
+Operation failed: No such file or directory
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../systemd-sysv_229-4ubuntu21.2_amd64.deb ...
+Unpacking systemd-sysv (229-4ubuntu21.2) over (229-4ubuntu21.1) ...
+Setting up systemd-sysv (229-4ubuntu21.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../libgcrypt20_1.6.5-2ubuntu0.4_amd64.deb ...
+Unpacking libgcrypt20:amd64 (1.6.5-2ubuntu0.4) over (1.6.5-2ubuntu0.3) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libgcrypt20:amd64 (1.6.5-2ubuntu0.4) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../libpam-runtime_1.1.8-3.2ubuntu2.1_all.deb ...
+Unpacking libpam-runtime (1.1.8-3.2ubuntu2.1) over (1.1.8-3.2ubuntu2) ...
+Setting up libpam-runtime (1.1.8-3.2ubuntu2.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../libudev1_229-4ubuntu21.2_amd64.deb ...
+Unpacking libudev1:amd64 (229-4ubuntu21.2) over (229-4ubuntu21.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libudev1:amd64 (229-4ubuntu21.2) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Removing intermediate container b665ddf5a115
+ ---> f1bfda7c9df0
+Step 5/21 : RUN apt-get -y install apache2
+ ---> Running in ac2a22144da1
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils file ifupdown iproute2
+  isc-dhcp-client isc-dhcp-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libasn1-8-heimdal libatm1 libdns-export162 libexpat1
+  libffi6 libgdbm3 libgmp10 libgnutls30 libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal
+  libicu55 libidn11 libisc-export160 libkrb5-26-heimdal libldap-2.4-2
+  liblua5.1-0 libmagic1 libmnl0 libnettle6 libp11-kit0 libperl5.22
+  libroken18-heimdal libsasl2-2 libsasl2-modules libsasl2-modules-db
+  libsqlite3-0 libssl1.0.0 libtasn1-6 libwind0-heimdal libxml2 libxtables11
+  mime-support netbase openssl perl perl-modules-5.22 rename sgml-base
+  ssl-cert xml-core
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw
+  ppp rdnssd iproute2-doc resolvconf avahi-autoipd isc-dhcp-client-ddns
+  apparmor gnutls-bin libsasl2-modules-otp libsasl2-modules-ldap
+  libsasl2-modules-sql libsasl2-modules-gssapi-mit
+  | libsasl2-modules-gssapi-heimdal ca-certificates perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make sgml-base-doc
+  openssl-blacklist debhelper
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils file ifupdown iproute2
+  isc-dhcp-client isc-dhcp-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libasn1-8-heimdal libatm1 libdns-export162 libexpat1
+  libffi6 libgdbm3 libgmp10 libgnutls30 libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal
+  libicu55 libidn11 libisc-export160 libkrb5-26-heimdal libldap-2.4-2
+  liblua5.1-0 libmagic1 libmnl0 libnettle6 libp11-kit0 libperl5.22
+  libroken18-heimdal libsasl2-2 libsasl2-modules libsasl2-modules-db
+  libsqlite3-0 libssl1.0.0 libtasn1-6 libwind0-heimdal libxml2 libxtables11
+  mime-support netbase openssl perl perl-modules-5.22 rename sgml-base
+  ssl-cert xml-core
+0 upgraded, 57 newly installed, 0 to remove and 0 not upgraded.
+Need to get 22.7 MB of archives.
+After this operation, 102 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatm1 amd64 1:2.5.1-1.5 [24.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmnl0 amd64 1.0.3-5 [12.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgdbm3 amd64 1.8.3-13.1 [16.9 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl-modules-5.22 all 5.22.1-9ubuntu0.3 [2646 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libperl5.22 amd64 5.22.1-9ubuntu0.3 [3402 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl amd64 5.22.1-9ubuntu0.3 [237 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial/main amd64 mime-support all 3.59ubuntu1 [31.0 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 libapr1 amd64 1.5.2-3 [86.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexpat1 amd64 2.1.0-7ubuntu0.16.04.3 [71.2 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl1.0.0 amd64 1.0.2g-1ubuntu4.11 [1082 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1 amd64 1.5.4-1build1 [77.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsqlite3-0 amd64 3.11.0-1ubuntu1 [396 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1-dbd-sqlite3 amd64 1.5.4-1build1 [10.6 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgmp10 amd64 2:6.1.0+dfsg-2 [240 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnettle6 amd64 3.2-1ubuntu0.16.04.1 [93.5 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhogweed4 amd64 3.2-1ubuntu0.16.04.1 [136 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libidn11 amd64 1.32-3ubuntu1.2 [46.5 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi6 amd64 3.2.1-4 [17.8 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libp11-kit0 amd64 0.23.2-5~ubuntu16.04.1 [105 kB]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtasn1-6 amd64 4.7-3ubuntu0.16.04.3 [43.5 kB]
+Get:22 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgnutls30 amd64 3.4.10-4ubuntu1.4 [548 kB]
+Get:23 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libroken18-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [41.4 kB]
+Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasn1-8-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [174 kB]
+Get:25 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhcrypto4-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [85.0 kB]
+Get:26 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimbase1-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [29.3 kB]
+Get:27 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libwind0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [47.8 kB]
+Get:28 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhx509-5-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [107 kB]
+Get:29 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5-26-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [202 kB]
+Get:30 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimntlm0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [15.1 kB]
+Get:31 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgssapi3-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [96.1 kB]
+Get:32 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules-db amd64 2.1.26.dfsg1-14build1 [14.5 kB]
+Get:33 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-2 amd64 2.1.26.dfsg1-14build1 [48.7 kB]
+Get:34 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.2 [160 kB]
+Get:35 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1-ldap amd64 1.5.4-1build1 [8720 B]
+Get:36 http://archive.ubuntu.com/ubuntu xenial/main amd64 liblua5.1-0 amd64 5.1.5-8ubuntu1 [102 kB]
+Get:37 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libicu55 amd64 55.1-7ubuntu0.4 [7646 kB]
+Get:38 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libxml2 amd64 2.9.3+dfsg1-1ubuntu0.5 [697 kB]
+Get:39 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-bin amd64 2.4.18-2ubuntu3.5 [925 kB]
+Get:40 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-utils amd64 2.4.18-2ubuntu3.5 [82.3 kB]
+Get:41 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-data all 2.4.18-2ubuntu3.5 [162 kB]
+Get:42 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2 amd64 2.4.18-2ubuntu3.5 [86.7 kB]
+Get:43 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmagic1 amd64 1:5.25-2ubuntu1 [216 kB]
+Get:44 http://archive.ubuntu.com/ubuntu xenial/main amd64 file amd64 1:5.25-2ubuntu1 [21.2 kB]
+Get:45 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 iproute2 amd64 4.3.0-1ubuntu3.16.04.3 [522 kB]
+Get:46 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ifupdown amd64 0.8.10ubuntu1.2 [54.9 kB]
+Get:47 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.10 [153 kB]
+Get:48 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.10 [666 kB]
+Get:49 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-client amd64 4.3.3-5ubuntu12.10 [224 kB]
+Get:50 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-common amd64 4.3.3-5ubuntu12.10 [105 kB]
+Get:51 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxtables11 amd64 1.6.0-2ubuntu3 [27.2 kB]
+Get:52 http://archive.ubuntu.com/ubuntu xenial/main amd64 netbase all 5.3 [12.9 kB]
+Get:53 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules amd64 2.1.26.dfsg1-14build1 [47.5 kB]
+Get:54 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssl amd64 1.0.2g-1ubuntu4.11 [492 kB]
+Get:55 http://archive.ubuntu.com/ubuntu xenial/main amd64 xml-core all 0.13+nmu2 [23.3 kB]
+Get:56 http://archive.ubuntu.com/ubuntu xenial/main amd64 rename all 0.20-4 [12.0 kB]
+Get:57 http://archive.ubuntu.com/ubuntu xenial/main amd64 ssl-cert all 1.0.37 [16.9 kB]
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7, <> line 57.)
+debconf: falling back to frontend: Teletype
+[0m[91mdpkg-preconfigure: unable to re-open stdin: 
+[0mFetched 22.7 MB in 2s (10.7 MB/s)
+Selecting previously unselected package libatm1:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4856 files and directories currently installed.)
+Preparing to unpack .../libatm1_1%3a2.5.1-1.5_amd64.deb ...
+Unpacking libatm1:amd64 (1:2.5.1-1.5) ...
+Selecting previously unselected package libmnl0:amd64.
+Preparing to unpack .../libmnl0_1.0.3-5_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.3-5) ...
+Selecting previously unselected package libgdbm3:amd64.
+Preparing to unpack .../libgdbm3_1.8.3-13.1_amd64.deb ...
+Unpacking libgdbm3:amd64 (1.8.3-13.1) ...
+Selecting previously unselected package sgml-base.
+Preparing to unpack .../sgml-base_1.26+nmu4ubuntu1_all.deb ...
+Unpacking sgml-base (1.26+nmu4ubuntu1) ...
+Selecting previously unselected package perl-modules-5.22.
+Preparing to unpack .../perl-modules-5.22_5.22.1-9ubuntu0.3_all.deb ...
+Unpacking perl-modules-5.22 (5.22.1-9ubuntu0.3) ...
+Selecting previously unselected package libperl5.22:amd64.
+Preparing to unpack .../libperl5.22_5.22.1-9ubuntu0.3_amd64.deb ...
+Unpacking libperl5.22:amd64 (5.22.1-9ubuntu0.3) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../perl_5.22.1-9ubuntu0.3_amd64.deb ...
+Unpacking perl (5.22.1-9ubuntu0.3) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../mime-support_3.59ubuntu1_all.deb ...
+Unpacking mime-support (3.59ubuntu1) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../libapr1_1.5.2-3_amd64.deb ...
+Unpacking libapr1:amd64 (1.5.2-3) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../libexpat1_2.1.0-7ubuntu0.16.04.3_amd64.deb ...
+Unpacking libexpat1:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Selecting previously unselected package libssl1.0.0:amd64.
+Preparing to unpack .../libssl1.0.0_1.0.2g-1ubuntu4.11_amd64.deb ...
+Unpacking libssl1.0.0:amd64 (1.0.2g-1ubuntu4.11) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../libaprutil1_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../libsqlite3-0_3.11.0-1ubuntu1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.11.0-1ubuntu1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package libgmp10:amd64.
+Preparing to unpack .../libgmp10_2%3a6.1.0+dfsg-2_amd64.deb ...
+Unpacking libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Selecting previously unselected package libnettle6:amd64.
+Preparing to unpack .../libnettle6_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libhogweed4:amd64.
+Preparing to unpack .../libhogweed4_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libidn11:amd64.
+Preparing to unpack .../libidn11_1.32-3ubuntu1.2_amd64.deb ...
+Unpacking libidn11:amd64 (1.32-3ubuntu1.2) ...
+Selecting previously unselected package libffi6:amd64.
+Preparing to unpack .../libffi6_3.2.1-4_amd64.deb ...
+Unpacking libffi6:amd64 (3.2.1-4) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../libp11-kit0_0.23.2-5~ubuntu16.04.1_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../libtasn1-6_4.7-3ubuntu0.16.04.3_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
+Selecting previously unselected package libgnutls30:amd64.
+Preparing to unpack .../libgnutls30_3.4.10-4ubuntu1.4_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.4.10-4ubuntu1.4) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../libroken18-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../libasn1-8-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../libhcrypto4-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../libheimbase1-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../libwind0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../libhx509-5-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../libkrb5-26-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../libheimntlm0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../libgssapi3-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../libsasl2-modules-db_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../libsasl2-2_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.2_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../libaprutil1-ldap_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package liblua5.1-0:amd64.
+Preparing to unpack .../liblua5.1-0_5.1.5-8ubuntu1_amd64.deb ...
+Unpacking liblua5.1-0:amd64 (5.1.5-8ubuntu1) ...
+Selecting previously unselected package libicu55:amd64.
+Preparing to unpack .../libicu55_55.1-7ubuntu0.4_amd64.deb ...
+Unpacking libicu55:amd64 (55.1-7ubuntu0.4) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../libxml2_2.9.3+dfsg1-1ubuntu0.5_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.5) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../apache2-bin_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2-bin (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../apache2-utils_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2-utils (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../apache2-data_2.4.18-2ubuntu3.5_all.deb ...
+Unpacking apache2-data (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../apache2_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2 (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../libmagic1_1%3a5.25-2ubuntu1_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.25-2ubuntu1) ...
+Selecting previously unselected package file.
+Preparing to unpack .../file_1%3a5.25-2ubuntu1_amd64.deb ...
+Unpacking file (1:5.25-2ubuntu1) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../iproute2_4.3.0-1ubuntu3.16.04.3_amd64.deb ...
+Unpacking iproute2 (4.3.0-1ubuntu3.16.04.3) ...
+Selecting previously unselected package ifupdown.
+Preparing to unpack .../ifupdown_0.8.10ubuntu1.2_amd64.deb ...
+Unpacking ifupdown (0.8.10ubuntu1.2) ...
+Selecting previously unselected package libisc-export160.
+Preparing to unpack .../libisc-export160_1%3a9.10.3.dfsg.P4-8ubuntu1.10_amd64.deb ...
+Unpacking libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Selecting previously unselected package libdns-export162.
+Preparing to unpack .../libdns-export162_1%3a9.10.3.dfsg.P4-8ubuntu1.10_amd64.deb ...
+Unpacking libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Selecting previously unselected package isc-dhcp-client.
+Preparing to unpack .../isc-dhcp-client_4.3.3-5ubuntu12.10_amd64.deb ...
+Unpacking isc-dhcp-client (4.3.3-5ubuntu12.10) ...
+Selecting previously unselected package isc-dhcp-common.
+Preparing to unpack .../isc-dhcp-common_4.3.3-5ubuntu12.10_amd64.deb ...
+Unpacking isc-dhcp-common (4.3.3-5ubuntu12.10) ...
+Selecting previously unselected package libxtables11:amd64.
+Preparing to unpack .../libxtables11_1.6.0-2ubuntu3_amd64.deb ...
+Unpacking libxtables11:amd64 (1.6.0-2ubuntu3) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../archives/netbase_5.3_all.deb ...
+Unpacking netbase (5.3) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../libsasl2-modules_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../openssl_1.0.2g-1ubuntu4.11_amd64.deb ...
+Unpacking openssl (1.0.2g-1ubuntu4.11) ...
+Selecting previously unselected package xml-core.
+Preparing to unpack .../xml-core_0.13+nmu2_all.deb ...
+Unpacking xml-core (0.13+nmu2) ...
+Selecting previously unselected package rename.
+Preparing to unpack .../archives/rename_0.20-4_all.deb ...
+Unpacking rename (0.20-4) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../ssl-cert_1.0.37_all.deb ...
+Unpacking ssl-cert (1.0.37) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21.2) ...
+Setting up libatm1:amd64 (1:2.5.1-1.5) ...
+Setting up libmnl0:amd64 (1.0.3-5) ...
+Setting up libgdbm3:amd64 (1.8.3-13.1) ...
+Setting up sgml-base (1.26+nmu4ubuntu1) ...
+Setting up perl-modules-5.22 (5.22.1-9ubuntu0.3) ...
+Setting up libperl5.22:amd64 (5.22.1-9ubuntu0.3) ...
+Setting up perl (5.22.1-9ubuntu0.3) ...
+update-alternatives: using /usr/bin/prename to provide /usr/bin/rename (rename) in auto mode
+Setting up mime-support (3.59ubuntu1) ...
+Setting up libapr1:amd64 (1.5.2-3) ...
+Setting up libexpat1:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Setting up libssl1.0.0:amd64 (1.0.2g-1ubuntu4.11) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up libaprutil1:amd64 (1.5.4-1build1) ...
+Setting up libsqlite3-0:amd64 (3.11.0-1ubuntu1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.4-1build1) ...
+Setting up libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Setting up libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libidn11:amd64 (1.32-3ubuntu1.2) ...
+Setting up libffi6:amd64 (3.2.1-4) ...
+Setting up libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Setting up libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
+Setting up libgnutls30:amd64 (3.4.10-4ubuntu1.4) ...
+Setting up libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.2) ...
+Setting up libaprutil1-ldap:amd64 (1.5.4-1build1) ...
+Setting up liblua5.1-0:amd64 (5.1.5-8ubuntu1) ...
+Setting up libicu55:amd64 (55.1-7ubuntu0.4) ...
+Setting up libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.5) ...
+Setting up apache2-bin (2.4.18-2ubuntu3.5) ...
+Setting up apache2-utils (2.4.18-2ubuntu3.5) ...
+Setting up apache2-data (2.4.18-2ubuntu3.5) ...
+Setting up apache2 (2.4.18-2ubuntu3.5) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up libmagic1:amd64 (1:5.25-2ubuntu1) ...
+Setting up file (1:5.25-2ubuntu1) ...
+Setting up iproute2 (4.3.0-1ubuntu3.16.04.3) ...
+Setting up ifupdown (0.8.10ubuntu1.2) ...
+Creating /etc/network/interfaces.
+Setting up libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Setting up libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Setting up isc-dhcp-client (4.3.3-5ubuntu12.10) ...
+Setting up isc-dhcp-common (4.3.3-5ubuntu12.10) ...
+Setting up libxtables11:amd64 (1.6.0-2ubuntu3) ...
+Setting up netbase (5.3) ...
+Setting up libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up openssl (1.0.2g-1ubuntu4.11) ...
+Setting up xml-core (0.13+nmu2) ...
+Setting up rename (0.20-4) ...
+update-alternatives: using /usr/bin/file-rename to provide /usr/bin/rename (rename) in auto mode
+Setting up ssl-cert (1.0.37) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21.2) ...
+Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
+Removing intermediate container ac2a22144da1
+ ---> f38f5ad097e6
+Step 6/21 : RUN apt-get install ufw -y
+ ---> Running in 1dee579f8dea
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  dh-python iptables libmpdec2 libnfnetlink0 libpython3-stdlib
+  libpython3.5-minimal libpython3.5-stdlib python3 python3-minimal python3.5
+  python3.5-minimal ucf
+Suggested packages:
+  libdpkg-perl python3-doc python3-tk python3-venv python3.5-venv
+  python3.5-doc binutils binfmt-support rsyslog
+The following NEW packages will be installed:
+  dh-python iptables libmpdec2 libnfnetlink0 libpython3-stdlib
+  libpython3.5-minimal libpython3.5-stdlib python3 python3-minimal python3.5
+  python3.5-minimal ucf ufw
+0 upgraded, 13 newly installed, 0 to remove and 0 not upgraded.
+Need to get 5094 kB of archives.
+After this operation, 26.9 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5-minimal amd64 3.5.2-2ubuntu0~16.04.4 [523 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python3.5-minimal amd64 3.5.2-2ubuntu0~16.04.4 [1597 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 python3-minimal amd64 3.5.1-3 [23.3 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmpdec2 amd64 2.4.2-1 [82.6 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5-stdlib amd64 3.5.2-2ubuntu0~16.04.4 [2132 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python3.5 amd64 3.5.2-2ubuntu0~16.04.4 [165 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpython3-stdlib amd64 3.5.1-3 [6818 B]
+Get:8 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 dh-python all 2.20151103ubuntu1.1 [74.1 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 python3 amd64 3.5.1-3 [8710 B]
+Get:10 http://archive.ubuntu.com/ubuntu xenial/main amd64 libnfnetlink0 amd64 1.0.1-3 [13.3 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial/main amd64 ucf all 3.0036 [52.9 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/main amd64 iptables amd64 1.6.0-2ubuntu3 [266 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/main amd64 ufw all 0.35-0ubuntu2 [149 kB]
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0m[91mdpkg-preconfigure: unable to re-open stdin: 
+[0mFetched 5094 kB in 1s (3845 kB/s)
+Selecting previously unselected package libpython3.5-minimal:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7995 files and directories currently installed.)
+Preparing to unpack .../libpython3.5-minimal_3.5.2-2ubuntu0~16.04.4_amd64.deb ...
+Unpacking libpython3.5-minimal:amd64 (3.5.2-2ubuntu0~16.04.4) ...
+Selecting previously unselected package python3.5-minimal.
+Preparing to unpack .../python3.5-minimal_3.5.2-2ubuntu0~16.04.4_amd64.deb ...
+Unpacking python3.5-minimal (3.5.2-2ubuntu0~16.04.4) ...
+Selecting previously unselected package python3-minimal.
+Preparing to unpack .../python3-minimal_3.5.1-3_amd64.deb ...
+Unpacking python3-minimal (3.5.1-3) ...
+Selecting previously unselected package libmpdec2:amd64.
+Preparing to unpack .../libmpdec2_2.4.2-1_amd64.deb ...
+Unpacking libmpdec2:amd64 (2.4.2-1) ...
+Selecting previously unselected package libpython3.5-stdlib:amd64.
+Preparing to unpack .../libpython3.5-stdlib_3.5.2-2ubuntu0~16.04.4_amd64.deb ...
+Unpacking libpython3.5-stdlib:amd64 (3.5.2-2ubuntu0~16.04.4) ...
+Selecting previously unselected package python3.5.
+Preparing to unpack .../python3.5_3.5.2-2ubuntu0~16.04.4_amd64.deb ...
+Unpacking python3.5 (3.5.2-2ubuntu0~16.04.4) ...
+Selecting previously unselected package libpython3-stdlib:amd64.
+Preparing to unpack .../libpython3-stdlib_3.5.1-3_amd64.deb ...
+Unpacking libpython3-stdlib:amd64 (3.5.1-3) ...
+Selecting previously unselected package dh-python.
+Preparing to unpack .../dh-python_2.20151103ubuntu1.1_all.deb ...
+Unpacking dh-python (2.20151103ubuntu1.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for mime-support (3.59ubuntu1) ...
+Setting up libpython3.5-minimal:amd64 (3.5.2-2ubuntu0~16.04.4) ...
+Setting up python3.5-minimal (3.5.2-2ubuntu0~16.04.4) ...
+Setting up python3-minimal (3.5.1-3) ...
+Selecting previously unselected package python3.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8911 files and directories currently installed.)
+Preparing to unpack .../python3_3.5.1-3_amd64.deb ...
+Unpacking python3 (3.5.1-3) ...
+Selecting previously unselected package libnfnetlink0:amd64.
+Preparing to unpack .../libnfnetlink0_1.0.1-3_amd64.deb ...
+Unpacking libnfnetlink0:amd64 (1.0.1-3) ...
+Selecting previously unselected package ucf.
+Preparing to unpack .../archives/ucf_3.0036_all.deb ...
+Moving old data out of the way
+Unpacking ucf (3.0036) ...
+Selecting previously unselected package iptables.
+Preparing to unpack .../iptables_1.6.0-2ubuntu3_amd64.deb ...
+Unpacking iptables (1.6.0-2ubuntu3) ...
+Selecting previously unselected package ufw.
+Preparing to unpack .../ufw_0.35-0ubuntu2_all.deb ...
+Unpacking ufw (0.35-0ubuntu2) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21.2) ...
+Setting up libmpdec2:amd64 (2.4.2-1) ...
+Setting up libpython3.5-stdlib:amd64 (3.5.2-2ubuntu0~16.04.4) ...
+Setting up python3.5 (3.5.2-2ubuntu0~16.04.4) ...
+Setting up libpython3-stdlib:amd64 (3.5.1-3) ...
+Setting up libnfnetlink0:amd64 (1.0.1-3) ...
+Setting up ucf (3.0036) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up iptables (1.6.0-2ubuntu3) ...
+Setting up dh-python (2.20151103ubuntu1.1) ...
+Setting up python3 (3.5.1-3) ...
+running python rtupdate hooks for python3.5...
+running python post-rtupdate hooks for python3.5...
+Setting up ufw (0.35-0ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+
+Creating config file /etc/ufw/before.rules with new version
+
+Creating config file /etc/ufw/before6.rules with new version
+
+Creating config file /etc/ufw/after.rules with new version
+
+Creating config file /etc/ufw/after6.rules with new version
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21.2) ...
+Removing intermediate container 1dee579f8dea
+ ---> de9a38282d04
+Step 7/21 : RUN a2enmod proxy
+ ---> Running in 5c7dfdfcf2ec
+Enabling module proxy.
+To activate the new configuration, you need to run:
+  service apache2 restart
+Removing intermediate container 5c7dfdfcf2ec
+ ---> 71c91a37c8b0
+Step 8/21 : RUN a2enmod proxy_html
+ ---> Running in 94a29df74271
+Considering dependency proxy for proxy_html:
+Module proxy already enabled
+Enabling module proxy_html.
+To activate the new configuration, you need to run:
+  service apache2 restart
+Removing intermediate container 94a29df74271
+ ---> 612e51b00b0d
+Step 9/21 : RUN a2enmod proxy_http
+ ---> Running in b118ce79d4e0
+Considering dependency proxy for proxy_http:
+Module proxy already enabled
+Enabling module proxy_http.
+To activate the new configuration, you need to run:
+  service apache2 restart
+Removing intermediate container b118ce79d4e0
+ ---> 301d840832fb
+Step 10/21 : CMD systemctl restart apache2
+ ---> Running in e96998a2c851
+Removing intermediate container e96998a2c851
+ ---> ddf91a321b70
+Step 11/21 : ENV APACHE_RUN_USER www-data
+ ---> Running in e62a6dad8805
+Removing intermediate container e62a6dad8805
+ ---> 0fbc16b65238
+Step 12/21 : ENV APACHE_RUN_GROUP www-data
+ ---> Running in 25beeb30a0ac
+Removing intermediate container 25beeb30a0ac
+ ---> 2e0edd76c911
+Step 13/21 : ENV APACHE_LOG_DIR /var/log/apache2
+ ---> Running in c40a3982fe0c
+Removing intermediate container c40a3982fe0c
+ ---> f051c9d9f5d8
+Step 14/21 : RUN mkdir -p /var/lock/apache2 /var/run/apache2
+ ---> Running in 6a48002e522c
+Removing intermediate container 6a48002e522c
+ ---> dc3b9be8eed6
+Step 15/21 : RUN groupadd -r Docker_Group && useradd -r -g Docker_Group jasontester
+ ---> Running in debcf96264ce
+Removing intermediate container debcf96264ce
+ ---> 6311670f1e8b
+Step 16/21 : EXPOSE 80
+ ---> Running in b5f5636534f4
+Removing intermediate container b5f5636534f4
+ ---> 05b46cfe5236
+Step 17/21 : VOLUME /var/www/html
+ ---> Running in 75b7f5d71e87
+Removing intermediate container 75b7f5d71e87
+ ---> 1b17156a7903
+Step 18/21 : CMD /usr/sbin/apache2ctl -D FOREGROUND
+ ---> Running in a4e3b982fd71
+Removing intermediate container a4e3b982fd71
+ ---> e084ad9bd845
+Step 19/21 : ADD  index.html /var/www/html
+ ---> 19def8cd0a37
+Step 20/21 : ADD ufw.sh .
+ ---> 52c3ff4416b9
+Step 21/21 : RUN chmod +x ./ufw.sh
+ ---> Running in 0087a2172aa9
+Removing intermediate container 0087a2172aa9
+ ---> f1b0c00053ad
+Successfully built f1b0c00053ad
+Successfully tagged test:latest
+bash-3.2$ docker run --privileged -ti #container_name /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/bash[1P /bin/basht /bin/bashe /bin/bashs /bin/basht /bin/bash
+]0;root@f48f135f6ad2: /root@f48f135f6ad2:/# [K]0;root@f48f135f6ad2: /root@f48f135f6ad2:/# su jasontester
+jasontester@f48f135f6ad2:/$ docker run -d --name cadvisor -v /:/rootfs:ro -v /va r/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080 :8080 apache/cadvisor
+bash: docker: command not found
+jasontester@f48f135f6ad2:/$ exit
+exit
+]0;root@f48f135f6ad2: /root@f48f135f6ad2:/# exit
+exit
+bash-3.2$ docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw  -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 apache/cadvi sor
+Unable to find image 'apache/cadvisor:latest' locally
+docker: Error response from daemon: pull access denied for apache/cadvisor, repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+bash-3.2$ docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw --v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 apache/cadvissor
+Unable to find image 'apache/cadvisor:latest' locally
+docker: Error response from daemon: pull access denied for apache/cadvisor, repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+bash-3.2$ docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw  -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvi sor:latest
+9c6fe737aa92c3425c3c964214b771817a566919eb16885707ba7edcdbe62d5d
+bash-3.2$ contiane[K[K[K[Kainer[K[K[K[K[K[K[K[K[Kdocker container -[Kps -a
+CONTAINER ID        IMAGE                    COMMAND                  CREATED              STATUS                       PORTS                    NAMES
+9c6fe737aa92        google/cadvisor:latest   "/usr/bin/cadvisor -…"   About a minute ago   Up About a minute            0.0.0.0:8080->8080/tcp   cadvisor
+f48f135f6ad2        test                     "/bin/bash"              3 minutes ago        Exited (127) 2 minutes ago                            wizardly_easley
+bash-3.2$ docker stop f48f135f6ad2
+f48f135f6ad2
+bash-3.2$ docker stop f48f135f6ad2[C[C[C[C[C[C[C[C[C[C[Kdocker start 

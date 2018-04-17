@@ -88,3 +88,48 @@ Die Firewall ist mit dem Befehl  `sudo ufw status` abrufbar smoit sind die Firew
 Nun beginne ich mit der LB2 bei der wir mit Docker arbeiten müssen.
 ich habe vor einen Apache webserver einzubinden mit einer sql datenbank.
 Docker compose wird genutz um mehrere Container  zu definierung und zu betreiben
+Soeben habe ich einen Webserver kreeiert und das Default html mit einem eigenen ersetzt. siehe Dokerfile
+Als nächstet installiere ich die Firewall und implementiere einen User und schaue mir das Monitoring an
+
+## _17.04.18_  
+Heute füge ich noch das Monitoring von meinem Dockerfile ein. Sowie die RAM Begrenzung. Bei jedem Dockerfile
+
+## Test
+
+
+### Firewall
+Die Firewall ist mit dem Befehl  `sudo ufw status` abrufbar smoit sind die Firewall Regeln ersichtlich und ob die Firewall aktiv ist.
+![Firewall](ufw.jpg)
+
+mit dem Befehl 
+`docker stats` kann man den Container monitoren
+![Firewall](stats.jpg)
+
+
+### Cadvisor monitoring 
+Monitoring vom Container mittels diesem Befehl
+Zugriff auf Übersicht über localhost:8080 im Browser
+`docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 apache/cadvisor`
+![cadvisor](cadvisor.jpg)
+
+### Monitoring Container
+Das Monitoring der anderen Container kann man hier sehen.
+unter **Docker Containers** --> unter **Subcontainers** --> den jeweiligen Container auswählen.
+![container](container.jpg)
+
+![container1](container1.jpg)
+
+![container1](container2.jpg)
+
+## Sicherheit
+
+### RAM Begrenzung
+Die Maximale RAM kann mit folgendem Befehl festgelegt werden.
+`docker run -m 2096m --memory-swap 2096m`
+
+## Docker User
+Ein Docker User erstellen mit folgendem Befehl
+`RUN groupadd -r Docker_Group && useradd -r -g Docker_Group jasontester`
+
+Mittels `docker run -ti Docker_NAME:Version /bin/bash` auf den Container verbinden und dann `SU jasontester` um sich mit dem User einzuloggen
+![user](user.jpg)

@@ -30,13 +30,13 @@ This is directive for CMD command to be executed.
 Set the user or UID for the container created with the image. Enable access/linked directory between the container and the host machine.
 
 stop all containers:
-docker kill $(docker ps -q)
+docker kill $(docker ps -q) .
 
 remove all containersd
 docker rm $(docker ps -a -q)
 
 remove all docker images
-docker rmi $(docker images -q)
+    docker rmi $(docker images -q)
 
 docker build -t friendlyhello .  # Create image using this directory's Dockerfile
 
@@ -70,3 +70,10 @@ docker push username/repository:tag            # Upload tagged image to registry
 
 docker run username/repository:tag                   # Run image from a registry
 
+ID  
+auf docker verbinden
+
+docker run --privileged -ti #container_name /bin/bash
+
+Docker monitoring starten 
+docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest
